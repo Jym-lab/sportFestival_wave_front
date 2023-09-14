@@ -1,0 +1,93 @@
+/* 폰트 */
+
+@font-face {
+    font-family: chineseFont;
+    src: url('../../public/font/chineseFont.ttf');
+}
+
+@font-face {
+    font-family: 'HSBombaram21-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/HSBombaram21-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquare_acEB';
+    src: url('../../public/font/NanumSquare_acEB.ttf');
+}
+
+@font-face {
+    font-family: 'NanumSquare_acB';
+    src: url('../../public/font/NanumSquare_acB.ttf');
+}
+
+@font-face {
+    font-family: 'NanumSquare_acR';
+    src: url('../../public/font/NanumSquare_acR.ttf');
+}
+
+@font-face {
+    font-family: 'NanumSquare_acL';
+    src: url('../../public/font/NanumSquare_acL.ttf');
+}
+
+@font-face {
+    font-family: 'NanumGothicLight';
+    src: url('../../public/font/NanumGothicLight.otf');
+}
+
+@font-face {
+    font-family: 'NanumGothic';
+    src: url('../../public/font/NanumGothic.otf');
+}
+
+@font-face {
+    font-family: 'NanumGothicBold';
+    src: url('../../public/font/NanumGothicBold.otf');
+}
+
+@font-face {
+    font-family: 'NanumGothicExtraBold';
+    src: url('../../public/font/NanumGothicExtraBold.otf');
+}
+
+.chineseFont {
+    font-family: chineseFont;
+}
+
+.Bombaran21 {
+    font-family: 'HSBombaram21-Regular';
+}
+
+.NanumSquareEB {
+    font-family: 'NanumSquare_acEB';
+}
+
+.NanumSquareB {
+    font-family: 'NanumSquare_acB';
+}
+
+.NanumSquareR {
+    font-family: 'NanumSquare_acR';
+}
+
+.NanumSquareL {
+    font-family: 'NanumSquare_acL';
+}
+
+.NanumGothicL {
+    font-family: 'NanumGothicLight';
+}
+
+.NanumGothicB {
+    font-family: 'NanumGothic';
+}
+
+.NanumGothicB {
+    font-family: 'NanumGothicBold';
+}
+
+.NanumGothicEB {
+    font-family: 'NanumGothicExtraBold';
+}
