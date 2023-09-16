@@ -1,6 +1,9 @@
+import Navbar from "../components/Navbar";
+
 const Home = () => {
     return (
         <>  
+        <Navbar/>
         <div className="h-screen flex flex-col items-center justify-center">
             <div className="Bombaran21 text-xl">뜨거운 가을, 우리 모두 하나된 울림</div>
             <div className="Bombaran21 text-3xl pt-10">2023</div>
