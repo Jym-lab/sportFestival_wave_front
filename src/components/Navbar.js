@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { images } from "../utils/images";
 import { BiHomeAlt } from "react-icons/bi"
 import { useEffect, useState } from "react";
+import '../css/navbar.css'
 
 const ShowNav = () => {
     return (
@@ -11,7 +12,7 @@ const ShowNav = () => {
                 <p className="absolute text-7xl pt-3">&#27874;:&#21205;</p>
             </div>
             <div className="min-h-screen flex flex-col items-center justify-center">
-                <ul className="flex flex-col items-center justify-center gap-y-6 text-3xl">
+                <ul className="NanumSquareEB flex flex-col items-center justify-center gap-y-6 text-3xl">
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
