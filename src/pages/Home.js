@@ -22,7 +22,7 @@ const Home = () => {
                 - <br />
                 2023년 9월 26일
             </div>
-            <img className="w-40" src="./img/7rings.png" alt="칠륜기" />
+            <img className="w-40" src="./img/seven_rings.png" alt="칠륜기" />
         </div>
         </>
     )
