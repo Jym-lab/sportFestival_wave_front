@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className='chineseFont'>&#27874;&#21205;</div>
+      
     </div>
   );
 }
