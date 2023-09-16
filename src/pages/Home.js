@@ -1,12 +1,14 @@
 import Navbar from "../components/Navbar";
 import { images } from "../utils/images";
 import MainMenu from "../components/MainMenu";
+import { useNavbar } from "../utils/navbar-context";
 
 const Home = () => {
+    const { isOpen } = useNavbar();
     return (
         <>  
         <Navbar/>
-        <div className="h-screen flex flex-col items-center justify-center main-background">
+        <div className={`h-screen flex flex-col items-center justify-center main-background pt-14 ${isOpen ? 'hidden' : ''}`}>
             <div className="Bombaran21 text-xl fade-in" style={{animationDelay: '1s'}}>뜨거운 가을, 우리 모두 하나된 울림</div>
             <div className="Bombaran21 text-3xl pt-10 fade-in" style={{animationDelay: '2.5s'}}>2023</div>
             <div className="text-3xl py-10 fade-in" style={{animationDelay: '2.8s'}}>
@@ -16,7 +18,7 @@ const Home = () => {
             <hr className="w-64" />
             <div className="text-8xl py-14 relative fade-in" style={{animationDelay: '0.3s'}}>
                 <div className='chineseFont wave'>&#27874;:&#21205;</div>
-                <div class="chineseFont wave-outline absolute inset-0 flex items-center justify-center">&#27874;:&#21205;</div>
+                <div className="chineseFont wave-outline absolute inset-0 flex items-center justify-center">&#27874;:&#21205;</div>
             </div>
             <hr className="w-64" />
             <div className="Bombaran21 text-center text-xl py-10 leading-tight fade-in" style={{animationDelay: '3s'}}>

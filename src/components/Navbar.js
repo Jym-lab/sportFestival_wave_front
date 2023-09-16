@@ -3,6 +3,7 @@ import { images } from "../utils/images";
 import { BiHomeAlt } from "react-icons/bi"
 import { useEffect, useState } from "react";
 import '../css/navbar.css'
+import { useNavbar } from "../utils/navbar-context";
 
 const ShowNav = () => {
     return (
@@ -25,7 +26,7 @@ const ShowNav = () => {
 }
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const {isOpen, setIsOpen} = useNavbar();
     const [scrolling, setScrolling] = useState(false)
     // const onTop = () => {
     //     window.scrollTo({
@@ -72,7 +73,6 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }
