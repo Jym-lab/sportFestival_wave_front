@@ -1,11 +1,13 @@
 @media (min-width: 375px) {
-    .App {
+    .App,
+    .Navbar{
         width: 375px;
     }
 }
 
 @media (max-width:500px) {
-    .App {
+    .App,
+    .Navbar {
         width: 100vw;
     }
 }
