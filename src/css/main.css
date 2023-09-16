@@ -22,3 +22,23 @@
 	100% { transform : scale(2); opacity : 0 }  
 }
 
+.main-background {
+    min-height: 100vh;
+    background-color: #001430;
+    background-image: url('../../public/img/background.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    to { opacity: 1; }
+}
