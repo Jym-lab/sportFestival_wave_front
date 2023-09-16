@@ -1,13 +1,17 @@
 import './App.css';
 import './css/font.css'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <div className='chineseFont'>&#27874;&#21205;</div>
-      
-    </div>
+    <BrowserRouter>
+			<div className="App">
+				<Routes>
+					<Route path='/' element={<Home />} />
+				</Routes>
+			</div>
+		</BrowserRouter>
   );
 }
 
