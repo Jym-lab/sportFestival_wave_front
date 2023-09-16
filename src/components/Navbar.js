@@ -18,7 +18,7 @@ const ShowNav = () => {
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
                 </ul>
-                <img className="fixed bottom-10 w-[156px] md:max-w-[375px]" src={images.logo} alt="logo"/>
+                <img className="fixed bottom-10 w-[156px] md:max-w-[375px]" src={images.seven_rings} alt="칠륜기"/>
             </div>
         </div>
     )
@@ -55,7 +55,7 @@ const Navbar = () => {
         <>
             <div className={`Navbar fixed top-0 flex justify-between items-center px-3 py-5 ${scrolling ? 'nav-bg-scrolled' : ''}`}>
                 <div>
-                    <img className={`w-[80px] md:max-w-[375px] transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`} src={images.logo} alt="logo"/>
+                    <img className={`w-[80px] md:max-w-[375px] transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`} src={images.seven_rings} alt="칠륜기"/>
                 </div>
                 <div className={`chineseFont text-2xl transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>&#27874;&#21205;</div>
                 <div className={`off-screen-menu ${isOpen ? 'open slideInDown fixed' : 'hidden'} flex justify-center tracking-[1px] bg-transparent`}>
