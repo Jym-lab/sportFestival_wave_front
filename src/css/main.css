@@ -1,0 +1,24 @@
+/* 파동 애니메이션 부분 */
+.wave-outline {
+    position: absolute;
+    color : transparent; /* hide actual text */
+    
+    /* create outline effect */
+    -webkit-text-stroke-width : 1px; 
+    -webkit-text-stroke-color : white;
+
+    /* apply animation */
+    animation-name : wave-animation; 
+    animation-duration : 2s; 
+	animation-iteration-count : infinite;
+	top: 0;
+	left: 0;
+	transform-origin: center;
+}
+
+@keyframes wave-animation {
+	0% { transform : scale(1); opacity : .3 }
+	90% { transform : scale(1.5); opacity : .6 }
+	100% { transform : scale(2); opacity : 0 }  
+}
+
