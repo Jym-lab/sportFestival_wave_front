@@ -5,7 +5,6 @@ const Home = () => {
     return (
         <>  
             <Navbar/>
-            <div className='chineseFont'>&#27874;&#21205;</div>
         </>
     )
 }
