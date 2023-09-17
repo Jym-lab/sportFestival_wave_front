@@ -1,0 +1,115 @@
+[{
+
+        "day": "0925",
+        "time": "10:00 - 11:00",
+        "content": "개막식",
+        "color": "white"
+    },
+    {
+        "day": "0925",
+        "time": "11:00 - 12:00",
+        "content": "농구 결승",
+        "color": "blue"
+    },
+    {
+        "day": "0925",
+        "time": "13:00 - 13:40",
+        "content": "피구 결승",
+        "color": "blue"
+    },
+    {
+        "day": "0925",
+        "time": "13:40 - 14:40",
+        "content": "축구 결승",
+        "color": "blue"
+    },
+    {
+        "day": "0925",
+        "time": "14:40 - 15:20",
+        "content": "태풍의 눈",
+        "color": "green"
+    },
+    {
+        "day": "0925",
+        "time": "15:20 - 16:10",
+        "content": "댄스 결승",
+        "color": "blue"
+    },
+    {
+        "day": "0925",
+        "time": "16:20 - 17:00",
+        "content": "족구 결승",
+        "color": "blue"
+    },
+    {
+        "day": "0925",
+        "time": "17:00 - 18:00",
+        "content": "대형 윷놀이",
+        "color": "green"
+    }, {
+        "day": "0925",
+        "time": "18:00 - 21:00",
+        "content": "가을밤의 시네마",
+        "color": "orange"
+    },
+    {
+        "day": "0926",
+        "time": "10:00 - 10:40",
+        "content": "손족구 결승",
+        "color": "blue"
+    },
+    {
+        "day": "0926",
+        "time": "10:40 - 11:40",
+        "content": "발야구 결승",
+        "color": "blue"
+    },
+    {
+        "day": "0926",
+        "time": "11:40 - 12:10",
+        "content": "바벨탑은 결국 무너져!",
+        "color": "green"
+    },
+    {
+        "day": "0926",
+        "time": "13:00 - 14:00",
+        "content": "올스타 축구",
+        "color": "orange"
+    },
+    {
+        "day": "0926",
+        "time": "14:00 - 14:30",
+        "content": "전력 줄다리기",
+        "color": "green"
+    },
+    {
+        "day": "0926",
+        "time": "14:30 - 15:00",
+        "content": "응원전",
+        "color": "orange"
+    },
+    {
+        "day": "0926",
+        "time": "15:00 - 15:50",
+        "content": "O/X 퀴즈",
+        "color": "green"
+    },
+    {
+        "day": "0926",
+        "time": "15:50 - 16:20",
+        "content": "박 터뜨리기",
+        "color": "green"
+    },
+    {
+        "day": "0926",
+        "time": "16:20 - 17:00",
+        "content": "계주",
+        "color": "green"
+    },
+    {
+        "day": "0926",
+        "time": "17:00 - 17:30",
+        "content": "폐막식",
+        "color": "white"
+    }
+]

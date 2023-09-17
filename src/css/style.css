@@ -1,17 +1,73 @@
 .pageTitleLeft {
-    padding-top: 8rem;
-    padding-bottom: 4rem;
-    font-size: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
     line-height: 1;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
     font-family: 'NanumSquare_acEB';
 }
 
 .pageTitleCenter {
-    padding-top: 8rem;
-    padding-bottom: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
     font-size: 3rem;
     line-height: 1;
     text-align: center;
     font-family: 'NanumSquare_acEB';
+}
+
+
+/* 타임테이블 스타일 */
+
+.TimeTable .timetableCirclesmall {
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+
+.TimeTable .timetableCirclebigleft {
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    right: -33px;
+    top: 10px;
+}
+
+.TimeTable .timetableCirclebigright {
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    left: -33px;
+    top: 10px;
+}
+
+.TimeTable .timetableCircle_orange {
+    background-color: #EF8E00;
+}
+
+.TimeTable .timetableCircle_green {
+    background-color: #5EEFC6;
+}
+
+.TimeTable .timetableCircle_blue {
+    background-color: #83B6FF;
+}
+
+.TimeTable .timetableCircle_white {
+    background-color: white;
+}
+
+.TimeTableCircle {
+    font-size: 8px;
+    margin-right: 10px;
+}
+
+.whitebar {
+    border-left: 3px solid white;
+    width: 34%;
+}
+
+.whitebarright {
+    border-right: 3px solid white;
+    width: 34%;
 }
