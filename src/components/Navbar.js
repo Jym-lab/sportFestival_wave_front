@@ -54,7 +54,7 @@ const Navbar = () => {
     }, []);
     return (
         <>
-            <div className={`Navbar fixed top-0 flex justify-between items-center px-3 py-5 ${scrolling ? 'nav-bg-scrolled' : ''}`}>
+            <div className={`Navbar fixed top-0 flex justify-between items-center px-3 py-5 z-10 ${scrolling && !isOpen ? 'nav-bg-scrolled' : ''}`}>
                 <div>
                     <img className={`w-[80px] md:max-w-[375px] transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`} src={images.seven_rings} alt="칠륜기"/>
                 </div>
