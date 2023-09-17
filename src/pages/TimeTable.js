@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar"
 import TimeTableCircle from "../components/TimetableCircle"
 import timetableInfo from '../json/timetableInfo.json'
+import ScrollToTop from "../components/ScrollToTop";
 
 const TimeTable = () => {
     return (
@@ -65,7 +66,9 @@ const TimeTable = () => {
                 <span>본 타임테이블은 상황에 따라 유동적으로 변경될 수 있으며,
                     학우분들의 너그러운 양해 부탁드립니다.</span>
             </div>
-        </div >
+
+            <ScrollToTop />
+        </div>
     )
 }
 
