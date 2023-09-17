@@ -10,7 +10,7 @@
 .pageTitleCenter {
     padding-top: 6rem;
     padding-bottom: 3rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1;
     text-align: center;
     font-family: 'NanumSquare_acEB';
@@ -70,4 +70,20 @@
 .whitebarright {
     border-right: 3px solid white;
     width: 34%;
+}
+
+
+/* 승부예측 경품 페이지 */
+
+.predictionbtn button {
+    background-color: #E5E7EA;
+    color: black;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 13px;
+}
+
+.playstationbox {
+    border: 1px solid white;
+    border-radius: 15px;
 }

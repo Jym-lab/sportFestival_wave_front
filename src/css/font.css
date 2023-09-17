@@ -52,6 +52,13 @@
     src: url('../../public/font/NanumGothicExtraBold.otf');
 }
 
+@font-face {
+    font-family: 'Danjo-bold-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .chineseFont {
     font-family: chineseFont;
 }
@@ -90,4 +97,8 @@
 
 .NanumGothicEB {
     font-family: 'NanumGothicExtraBold';
+}
+
+.Danjo {
+    font-family: 'Danjo-bold-Regular';
 }

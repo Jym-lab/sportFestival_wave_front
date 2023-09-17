@@ -7,6 +7,8 @@ import { NavbarProvider } from './utils/navbar-context';
 import FoodTruck from './pages/FoodTruck';
 import BoothLocation from './pages/BoothLocation';
 import TimeTable from './pages/TimeTable';
+import MatchPredictionPresent from './pages/MatchPredictionPresent';
+import MatchPrediction from './pages/MatchPrediction';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path='/foodtruck' element={<FoodTruck />} />
             <Route path='/boothlocation' element={<BoothLocation />} />
             <Route path='/timetable' element={<TimeTable />} />
+            <Route path='/matchprediction' element={<MatchPrediction />} />
+            <Route path='/matchpredictionpresent' element={<MatchPredictionPresent />} />
           </Routes>
         </div>
       </BrowserRouter>
