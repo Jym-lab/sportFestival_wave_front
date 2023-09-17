@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 const MainMenu = () => {
+    const Navigate = useNavigate();
+
     return (
-        <>  
-             <div className="h-screen flex flex-col items-center justify-center main-background">
+        <>
+            <div className="h-screen flex flex-col items-center justify-center main-background">
                 <div className="main-menu-box-1 my-8">
                     <div className="NanumSquareEB">
                         <div className="text-5xl ms-6 mt-8 leading-tight">결승전<br />승부예측<br />경품안내</div>
@@ -31,22 +35,30 @@ const MainMenu = () => {
                 <div className="NanumSquareEB text-black ">
                     <div className="main-menu-button my-3 flex items-center justify-between px-3">
                         <div className="text-lg flex items-center">학과별 결승전 승부예측 응모</div>
-                        <div className="text-sm main-menu-sub-button-1 text-center flex items-center justify-center">바로가기</div>
+                        <div className="text-sm main-menu-sub-button-1 text-center flex items-center justify-center">
+                            <button onClick={() => { Navigate('/') }}>바로가기</button>
+                        </div>
                     </div>
                     <div className="main-menu-button my-3 flex items-center justify-between px-3">
                         <div className="text-lg flex items-center">푸드트럭 메뉴 한 곳에 모았.zip</div>
-                        <div className="text-sm main-menu-sub-button-2 text-center flex items-center justify-center">바로가기</div>
+                        <div className="text-sm main-menu-sub-button-2 text-center flex items-center justify-center">
+                            <button onClick={() => { Navigate('/foodtruck') }}>바로가기</button>
+                        </div>
                     </div>
                     <div className="main-menu-button my-3 flex items-center justify-between px-3">
                         <div className="text-lg flex items-center">2023 영암체전 부스 배치도</div>
-                        <div className="text-sm main-menu-sub-button-3 text-center flex items-center justify-center">바로가기</div>
+                        <div className="text-sm main-menu-sub-button-3 text-center flex items-center justify-center">
+                            <button onClick={() => { Navigate('/') }}>바로가기</button>
+                        </div>
                     </div>
                     <div className="main-menu-button my-3 flex items-center justify-between px-3">
                         <div className="text-lg flex items-center">영암체전 타임테이블</div>
-                        <div className="text-sm main-menu-sub-button-4 text-center flex items-center justify-center">바로가기</div>
+                        <div className="text-sm main-menu-sub-button-4 text-center flex items-center justify-center">
+                            <button onClick={() => { Navigate('/') }}>바로가기</button>
+                        </div>
                     </div>
                 </div>
-            </div>       
+            </div >
         </>
     )
 }
