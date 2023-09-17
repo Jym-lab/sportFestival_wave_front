@@ -1,0 +1,53 @@
+[{
+        "id": 9,
+        "title": "League of legends",
+        "gold": "컴공",
+        "goldcontent": "결승 컴공2:0중문",
+        "sliver": "중문",
+        "slivercontent": "결승 컴공2:0중문",
+        "bronze": "도디, 음악",
+        "bronzecontent": "도디, 음악 몰수패로 공동 3등",
+        "thirdRound": "https://www.naver.com/",
+        "semifinals": "",
+        "final": ""
+    },
+    {
+        "id": 10,
+        "title": "FIFA",
+        "gold": "컴공",
+        "goldcontent": "결승 체교1:2컴공",
+        "sliver": "체교",
+        "slivercontent": "결승 체교1:2컴공",
+        "bronze": "사복",
+        "bronzecontent": "사복0:2컴공",
+        "thirdRound": "",
+        "semifinals": "",
+        "final": ""
+    },
+    {
+        "id": 7,
+        "title": "볼링",
+        "gold": "영문",
+        "goldcontent": "결승 영문2:1국제",
+        "sliver": "국제",
+        "slivercontent": "결승 영문2:1국제",
+        "bronze": "유교",
+        "bronzecontent": "유교2:1관광",
+        "thirdRound": "",
+        "semifinals": "",
+        "final": ""
+    },
+    {
+        "id": 6,
+        "title": "배드민턴",
+        "gold": "아직인듯",
+        "goldcontent": "결승 영문2:1국제",
+        "sliver": "국제",
+        "slivercontent": "결승 영문2:1국제",
+        "bronze": "유교",
+        "bronzecontent": "유교2:1관광",
+        "thirdRound": "",
+        "semifinals": "",
+        "final": ""
+    }
+]

@@ -64,12 +64,41 @@
 
 .whitebar {
     border-left: 3px solid white;
-    width: 34%;
 }
 
 .whitebarright {
     border-right: 3px solid white;
-    width: 34%;
+}
+
+.fade-in-top {
+    -webkit-animation: fade-in-top 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-top 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 
@@ -86,4 +115,32 @@
 .playstationbox {
     border: 1px solid white;
     border-radius: 15px;
+}
+
+
+/* 결졍된 승부 페이지 */
+
+.URLBtn {
+    text-align: center;
+    padding: 30px;
+}
+
+.URLBtn div button {
+    background-color: #1A3251;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin: 10px;
+    width: 140px;
+}
+
+.URLBtn div:first-child {
+    color: #00E095;
+}
+
+.URLBtn div:nth-child(2) {
+    color: #69D8FF;
+}
+
+.URLBtn div:last-child {
+    color: #FF8D8D;
 }

@@ -15,18 +15,18 @@ const ShowNav = () => {
             <div className="min-h-screen flex flex-col items-center justify-center">
                 <ul className="NanumSquareEB flex flex-col items-center justify-center gap-y-6 text-3xl">
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/sportmenu">결승전 대진표</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
                 </ul>
-                <img className="fixed bottom-10 w-[156px] md:max-w-[375px]" src={images.seven_rings} alt="칠륜기"/>
+                <img className="fixed bottom-10 w-[156px] md:max-w-[375px]" src={images.seven_rings} alt="칠륜기" />
             </div>
         </div>
     )
 }
 
 const Navbar = () => {
-    const {isOpen, setIsOpen} = useNavbar();
+    const { isOpen, setIsOpen } = useNavbar();
     const [scrolling, setScrolling] = useState(false)
     // const onTop = () => {
     //     window.scrollTo({
@@ -56,20 +56,20 @@ const Navbar = () => {
         <>
             <div className={`Navbar fixed top-0 flex justify-between items-center px-3 py-5 z-10 ${scrolling && !isOpen ? 'nav-bg-scrolled' : ''}`}>
                 <div>
-                    <img className={`w-[80px] md:max-w-[375px] transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`} src={images.seven_rings} alt="칠륜기"/>
+                    <img className={`w-[80px] md:max-w-[375px] transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`} src={images.seven_rings} alt="칠륜기" />
                 </div>
                 <div className={`chineseFont text-2xl transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>&#27874;&#21205;</div>
                 <div className={`off-screen-menu ${isOpen ? 'open slideInDown fixed' : 'hidden'} flex justify-center tracking-[1px] bg-transparent`}>
                     {isOpen && (
-                        <ShowNav/>
+                        <ShowNav />
                     )}
                 </div>
                 <div className="flex items-center space-x-2">
                     {/* <Link to="/" onClick={onTop()}><BiHomeAlt size="30" color="white"/></Link> */}
                     <div className={`mr-1 hamburger-menu ${isOpen ? 'active' : ''} cursor-pointer z-20`} onClick={() => setIsOpen(!isOpen)}>
-                        <div className="ham-bar bar-top bg-white"/>
-                        <div className="ham-bar bar-mid bg-white"/>
-                        <div className="ham-bar bar-bottom bg-white"/>
+                        <div className="ham-bar bar-top bg-white" />
+                        <div className="ham-bar bar-mid bg-white" />
+                        <div className="ham-bar bar-bottom bg-white" />
                     </div>
                 </div>
             </div>

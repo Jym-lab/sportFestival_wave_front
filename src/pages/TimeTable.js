@@ -23,11 +23,11 @@ const TimeTable = () => {
             </div>
 
             {/* 9월 25일 월요일  */}
-            <div className="NanumSquareB">
+            <div className="NanumSquareB fade-in-top">
                 <div className="text-center mb-2 text-xl">9월 25일 월요일</div>
 
-                <div className="flex justify-center">
-                    <div className="flex flex-col grow text-end pr-6 pt-4 pb-12">
+                <div className="flex justify-center w-full">
+                    <div className="flex flex-col text-end pr-6 pt-4 pb-12 w-1/2">
                         {timetableInfo
                             .filter((item) => item.day === "0925") // day가 "0925"인 요소만 필터링
                             .map((item) => (
@@ -38,16 +38,16 @@ const TimeTable = () => {
                                 </div>
                             ))}
                     </div>
-                    <div className="whitebar grow"></div>
+                    <div className="whitebar w-1/2"></div>
                 </div>
             </div>
 
             {/* 9월 25일 화요일  */}
-            <div className="NanumSquareB">
+            <div className="NanumSquareB fade-in-top">
                 <div className="text-center mb-2 mt-10 text-xl">9월 26일 화요일</div>
-                <div className="flex justify-center">
-                    <div className="whitebarright grow"></div>
-                    <div className="flex flex-col grow text-start pl-6 pt-4 pb-12">
+                <div className="flex justify-center w-full">
+                    <div className="whitebarright w-1/2"></div>
+                    <div className="flex flex-col text-start pl-6 pt-4 pb-12 w-1/2">
                         {timetableInfo
                             .filter((item) => item.day === "0925") // day가 "0925"인 요소만 필터링
                             .map((item) => (

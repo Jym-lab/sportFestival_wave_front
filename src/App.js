@@ -9,6 +9,7 @@ import BoothLocation from './pages/BoothLocation';
 import TimeTable from './pages/TimeTable';
 import MatchPredictionPresent from './pages/MatchPredictionPresent';
 import MatchPrediction from './pages/MatchPrediction';
+import SportMenu from './components/SportMenu';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path='/timetable' element={<TimeTable />} />
             <Route path='/matchprediction' element={<MatchPrediction />} />
             <Route path='/matchpredictionpresent' element={<MatchPredictionPresent />} />
+            <Route path='/sportmenu' element={<SportMenu />} />
           </Routes>
         </div>
       </BrowserRouter>
