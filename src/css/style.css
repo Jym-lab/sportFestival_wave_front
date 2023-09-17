@@ -1,0 +1,17 @@
+.pageTitleLeft {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    font-size: 3rem;
+    line-height: 1;
+    margin-left: 2.5rem;
+    font-family: 'NanumSquare_acEB';
+}
+
+.pageTitleCenter {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    font-size: 3rem;
+    line-height: 1;
+    text-align: center;
+    font-family: 'NanumSquare_acEB';
+}

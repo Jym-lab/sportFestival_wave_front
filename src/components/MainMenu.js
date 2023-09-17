@@ -48,13 +48,13 @@ const MainMenu = () => {
                     <div className="main-menu-button my-3 flex items-center justify-between px-3">
                         <div className="text-lg flex items-center">2023 영암체전 부스 배치도</div>
                         <div className="text-sm main-menu-sub-button-3 text-center flex items-center justify-center">
-                            <button onClick={() => { Navigate('/') }}>바로가기</button>
+                            <button onClick={() => { Navigate('/boothlocation') }}>바로가기</button>
                         </div>
                     </div>
                     <div className="main-menu-button my-3 flex items-center justify-between px-3">
                         <div className="text-lg flex items-center">영암체전 타임테이블</div>
                         <div className="text-sm main-menu-sub-button-4 text-center flex items-center justify-center">
-                            <button onClick={() => { Navigate('/') }}>바로가기</button>
+                            <button onClick={() => { Navigate('/timetable') }}>바로가기</button>
                         </div>
                     </div>
                 </div>
