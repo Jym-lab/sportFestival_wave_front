@@ -1,0 +1,47 @@
+.sport-menu-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tab-item {
+    margin-top: 8px;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.slick-next:before {
+    content: '>';
+}
+
+.slick-prev:before {
+    content: '<';
+}
+
+.tab-item.active {
+    opacity: 1;
+}
+
+.tab-item {
+    width: 80px;
+}
+
+.tab-item button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 18px;
+}
+
+.slick-center .tab-item button {
+    font-weight: bold;
+    color: white;
+    padding-bottom: 2px;
+    border-bottom: 1px solid white;
+}
+
+.slick-track {
+    display: flex;
+    align-items: center;
+}

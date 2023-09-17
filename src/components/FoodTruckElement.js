@@ -1,3 +1,4 @@
+
 const FoodTruckElement = () => {
     return (
         <div className="FoodTruckElement">
