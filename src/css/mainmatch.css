@@ -1,0 +1,63 @@
+.team {
+    background-color: #E5E7EA;
+    border-radius: 20px;
+}
+
+.real {
+    color: red;
+}
+
+.notReal {
+    display: none;
+}
+
+.realTime span {
+    color: red;
+    background-color: #000B19;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.realScore p {
+    color: red;
+    background-color: #000B19;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.pulsate-fwd {
+    -webkit-animation: pulsate-fwd 1s ease-in-out infinite both;
+    animation: pulsate-fwd 1s ease-in-out infinite both;
+}
+
+@-webkit-keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
