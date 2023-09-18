@@ -6,6 +6,11 @@ import '../css/navbar.css'
 import { useNavbar } from "../utils/navbar-context";
 
 const ShowNav = () => {
+    const { setIsOpen } = useNavbar();
+    const closeNav = () => {
+        setIsOpen(false)
+    }
+
     return (
         <div className="Navbar">
             <div className="relative chineseFont flex justify-center pt-14">
@@ -14,10 +19,10 @@ const ShowNav = () => {
             </div>
             <div className="min-h-screen flex flex-col items-center justify-center">
                 <ul className="NanumSquareEB flex flex-col items-center justify-center gap-y-6 text-3xl">
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/sportmenu">결승전 대진표</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about">만든이들</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/sportmenu" onClick={closeNav}>결승전 대진표</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
                 </ul>
                 <img className="fixed bottom-10 w-[156px] md:max-w-[375px]" src={images.seven_rings} alt="칠륜기" />
             </div>
@@ -28,12 +33,12 @@ const ShowNav = () => {
 const Navbar = () => {
     const { isOpen, setIsOpen } = useNavbar();
     const [scrolling, setScrolling] = useState(false)
-    // const onTop = () => {
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: 'smooth',
-    //     });
-    // };
+    const onTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
     useEffect(() => {
         // 스크롤 이벤트 핸들러를 추가
         const handleScroll = () => {
@@ -65,7 +70,7 @@ const Navbar = () => {
                     )}
                 </div>
                 <div className="flex items-center space-x-2">
-                    {/* <Link to="/" onClick={onTop()}><BiHomeAlt size="30" color="white"/></Link> */}
+                    <Link to="/" onClick={onTop}><BiHomeAlt size="30" color="white"/></Link>
                     <div className={`mr-1 hamburger-menu ${isOpen ? 'active' : ''} cursor-pointer z-20`} onClick={() => setIsOpen(!isOpen)}>
                         <div className="ham-bar bar-top bg-white" />
                         <div className="ham-bar bar-mid bg-white" />
