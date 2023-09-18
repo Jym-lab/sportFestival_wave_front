@@ -1,18 +1,52 @@
 import { useNavigate } from "react-router-dom";
+import SingleSlider from "./SingleSlider";
+import React, { useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import '../css/sportMenu.css';
+import Navbar from './Navbar';
+import DecidedMatch from './DecidedMatch';
+import MainMatch from './MainMatch';
+
 
 const MainMenu = () => {
-    const Navigate = useNavigate();
+    const Navigate = useNavigate(); const [activeTab, setActiveTab] = useState(0);
+
+    const settings = {
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        focusOnSelect: true,
+        centerPadding: '0',
+        afterChange: (currentSlide) => {
+            setActiveTab(currentSlide);
+        },
+    };
+
+    const tabs = ['축구', '농구', '손족구', '발야구', '족구', '피구', '배드민턴', '볼링', '댄스', 'LOL', 'FIFA'];
 
     return (
         <>
-            <div className="h-screen flex flex-col items-center justify-center main-background">
-                <div className="main-menu-box-1 my-8">
+            <div className="min-h-screen flex flex-col items-center justify-center main-background pt-16">
+                <div className="sport-menu-container NanumSquareEB grow-0">
+                <Slider {...settings}>
+                    {tabs.map((tab, index) => (
+                        <div key={index} className={index === activeTab ? 'tab-item active' : 'tab-item'}>
+                            <button onClick={() => setActiveTab(index)}>{tab}</button>
+                        </div>
+                    ))}
+                </Slider>
+            </div>
+                <div className="main-menu-box-1 my-4">
                     <div className="NanumSquareEB">
                         <div className="text-5xl ms-6 mt-8 leading-tight">결승전<br />승부예측<br />경품안내</div>
                         <div className="text-2xl ms-6 mt-4">바로 보러가기▶</div>
                     </div>
                 </div>
-                {/* <div className="main-menu-box-2 my-8">
+                {/*
+                <div className="main-menu-box-2 my-8">
                     <div className="NanumSquareEB">
                         <div className="text-5xl ms-6 mt-8 leading-tight">2023<br />영암체전<br />굿즈</div>
                         <div className="text-2xl ms-6 mt-4">바로 보러가기▶</div>

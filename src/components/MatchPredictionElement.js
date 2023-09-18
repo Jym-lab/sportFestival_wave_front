@@ -4,7 +4,7 @@ import PredictionChart from './PredictionChart';
 
 const MatchPredictionElement = ({ titleid }) => {
     return (
-        <div>
+        <div className='my-5'>
             {dummyData
                 .filter((item) => item.id === titleid)
                 .map((item) => {
@@ -29,7 +29,7 @@ const MatchPredictionElement = ({ titleid }) => {
                                 </div>
 
                                 <div className='-my-5'>
-                                    <PredictionChart />
+                                    <PredictionChart sport={item.id} />
                                 </div>
 
                                 <div className='letspredict flex justify-around NanumGothicEB mt-2'>

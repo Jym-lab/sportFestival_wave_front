@@ -12,7 +12,12 @@ const MatchPrediction = () => {
                 <p>승부예측</p>
             </div>
 
+            <MatchPredictionElement titleid={0} />
             <MatchPredictionElement titleid={1} />
+            <MatchPredictionElement titleid={2} />
+            <MatchPredictionElement titleid={3} />
+
+            <div className="last"></div>
         </div >
     )
 }

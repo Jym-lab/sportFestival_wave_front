@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @media (min-width: 375px) {
     .App,
     .Navbar {
@@ -37,4 +36,8 @@ body {
     font-family: 'SF_HailSnow';
     min-height: 100vh;
     margin: 0;
+}
+
+.last:last-child {
+    min-height: 60vh;
 }

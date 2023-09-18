@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 import DecidedMatch from './DecidedMatch';
 import MainMatch from './MainMatch';
 
-const SportMenu = () => {
+const SportMenu = ({main}) => {
     const [activeTab, setActiveTab] = useState(0);
 
     const settings = {
@@ -26,7 +26,7 @@ const SportMenu = () => {
 
     return (
         <>
-            <div className='flex flex-col h-screen'>
+            <div className='flex flex-col'>
                 <Navbar />
                 <div className="sport-menu-container NanumSquareEB pt-16 grow-0">
                     <Slider {...settings}>
@@ -37,11 +37,14 @@ const SportMenu = () => {
                         ))}
                     </Slider>
                 </div>
-
+                
+                {main ? '' : 
+                <>
                 <MainMatch sport={activeTab} />
-
                 {/* 결승끝난 sport */}
                 <DecidedMatch sport={activeTab} />
+                </>
+                }
             </div>
         </>
 

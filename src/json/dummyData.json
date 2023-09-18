@@ -12,24 +12,24 @@
         "id": 1,
         "title": "농구",
         "ongoing": false,
-        "teamA": "영문",
-        "teamB": "컴공",
+        "teamA": "농구",
+        "teamB": "농구",
         "time": "9월 25일 13:00"
     },
     {
         "id": 2,
         "title": "손족구",
         "ongoing": false,
-        "teamA": "영문",
-        "teamB": "컴공",
+        "teamA": "손족구1",
+        "teamB": "손족공",
         "time": "9월 25일 13:00"
     },
     {
         "id": 3,
         "title": "발야구",
         "ongoing": false,
-        "teamA": "영문",
-        "teamB": "컴공",
+        "teamA": "발문",
+        "teamB": "야구공",
         "time": "9월 25일 13:00"
     },
     {
