@@ -9,8 +9,8 @@ const SingleSlider = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     const settings = {
-        autoplay: true, //자동 재생 할 것인지
-        autoplaySpeed: 2000,
+        autoPlay : true, 
+        autoplaySpeed: 3000,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -28,6 +28,7 @@ const SingleSlider = () => {
         <div>
             <div className="sport-menu-container NanumSquareE firstarrow">
                 <Slider {...settings}>
+                    
                     {tabs.map((tab, index) => (
                         <div key={index} className={index === activeTab ? 'tab-item active' : 'tab-item'}>
                             <button className='first' onClick={() => setActiveTab(index)}>

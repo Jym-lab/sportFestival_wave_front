@@ -6,6 +6,7 @@ const MainMenuRe = () => {
         <div className="MainMenuRe min-h-screen">
                 <SportMenu main={true} />
                 <SingleSlider />
+                
         </div>
     )
 }
