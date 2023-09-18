@@ -39,12 +39,6 @@ const Navbar = () => {
             behavior: 'smooth',
         });
     };
-    const onTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
     useEffect(() => {
         // 스크롤 이벤트 핸들러를 추가
         const handleScroll = () => {
