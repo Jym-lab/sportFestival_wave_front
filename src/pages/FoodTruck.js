@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import '../css/style.css';
-import SportMenu from "../components/SportMenu";
 import { useNavbar } from "../utils/navbar-context";
 
 

@@ -1,5 +1,6 @@
 import { images } from '../utils/images';
 import dummyData from '../json/dummyData.json';
+import PredictionChart from './PredictionChart';
 
 const MatchPredictionElement = ({ titleid }) => {
     return (
@@ -27,9 +28,11 @@ const MatchPredictionElement = ({ titleid }) => {
                                     </div>
                                 </div>
 
-                                <div>chart</div>
+                                <div className='-my-5'>
+                                    <PredictionChart />
+                                </div>
 
-                                <div className='letspredict flex justify-around NanumGothicEB'>
+                                <div className='letspredict flex justify-around NanumGothicEB mt-2'>
                                     <div><button>응모하기</button></div>
                                     <div><button>응모하기</button></div>
                                 </div>
@@ -38,9 +41,8 @@ const MatchPredictionElement = ({ titleid }) => {
                     )
                 })
             }
-
         </div>
     )
 }
 
-export default MatchPredictionElement
+export default MatchPredictionElement;

@@ -39,6 +39,7 @@ const SportMenu = () => {
                 </div>
 
                 <MainMatch sport={activeTab} />
+
                 {/* 결승끝난 sport */}
                 <DecidedMatch sport={activeTab} />
             </div>

@@ -6,7 +6,7 @@ import '../css/mainmatch.css';
 
 const MainMatch = ({ sport }) => {
     return (
-        <div className='grow'>
+        <div>
             {dummyData
                 .filter((item) => item.id === sport)
                 .map((item) => {
