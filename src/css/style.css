@@ -144,3 +144,19 @@
 .URLBtn div:last-child {
     color: #FF8D8D;
 }
+
+
+/* 굿즈 페이지 */
+
+.goodsText {
+    color: #00E2F9;
+}
+
+.goodsTitle {
+    border-bottom: 1px solid white;
+    width: 95%;
+}
+
+.towelcontent {
+    font-size: 10px;
+}

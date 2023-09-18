@@ -22,7 +22,7 @@ const SingleSlider = () => {
         focusOnSelect: true,
         centerPadding: '0', 
         autoplay : true, 
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
         afterChange: (currentSlide) => {
             setActiveTab(currentSlide);
         },

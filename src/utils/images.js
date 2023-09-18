@@ -6,6 +6,11 @@ export const images = {
     gold: PATH + '/img/medal/gold.png',
     sliver: PATH + '/img/medal/sliver.png',
     bronze: PATH + '/img/medal/bronze.png',
+    kiring: PATH + '/img/goods/kiring.png',
+    airStick: PATH + '/img/goods/airStick.png',
+    hairpin: PATH + '/img/goods/hairpin.png',
+    tatoo: PATH + '/img/goods/tatoo.png',
+    towel: PATH + '/img/goods/towel.png',
     // 임시
     img: PATH + '/img/aboutLogo/renew.png'
 };
