@@ -10,6 +10,8 @@ import TimeTable from './pages/TimeTable';
 import MatchPredictionPresent from './pages/MatchPredictionPresent';
 import MatchPrediction from './pages/MatchPrediction';
 import SportMenu from './components/SportMenu';
+import Goods from './pages/Goods';
+import Cinema from './pages/Cinema';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path='/matchprediction' element={<MatchPrediction />} />
             <Route path='/matchpredictionpresent' element={<MatchPredictionPresent />} />
             <Route path='/sportmenu' element={<SportMenu />} />
+            <Route path='/goods' element={<Goods />} />
+            <Route path='/cinema' element={<Cinema />} />
           </Routes>
         </div>
       </BrowserRouter>

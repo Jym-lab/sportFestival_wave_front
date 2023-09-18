@@ -90,20 +90,20 @@
 
 .main-menu-button {
     width: 330px;
-    height: 50px;
+    height: 45px;
     background-color: #ffffff;
     border-radius: 10px;
 }
 
-.main-menu-sub-button-1 {
+.main-menu-sub-button-red {
     width: 80px;
-    height: 35px;
+    height: 32px;
     background-color: #FFE1E1;
     border-radius: 5px;
     color: #B20000;
 }
 
-.main-menu-sub-button-2 {
+.main-menu-sub-button-green {
     width: 80px;
     height: 35px;
     background-color: #E6FFE8;
@@ -111,7 +111,7 @@
     color: #028E02;
 }
 
-.main-menu-sub-button-3 {
+.main-menu-sub-button-blue {
     width: 80px;
     height: 35px;
     background-color: #E3F1FF;
@@ -119,7 +119,7 @@
     color: #0057AD;
 }
 
-.main-menu-sub-button-4 {
+.main-menu-sub-button-yellow {
     width: 80px;
     height: 35px;
     background-color: #FFFCE3;
@@ -151,17 +151,21 @@
 }
 
 .Backcolor_0 {
-    background: linear-gradient(to right, #EC6842, transparent);
+    background: linear-gradient(to right, #ff2020, transparent);
 }
 
 .Backcolor_1 {
-    background: linear-gradient(to right, #1197AD, transparent);
+    background: linear-gradient(to right, #EC6842, transparent);
 }
 
 .Backcolor_2 {
-    background: linear-gradient(to right, #271708, transparent);
+    background: linear-gradient(to right, #1197AD, transparent);
 }
 
 .Backcolor_3 {
+    background: linear-gradient(to right, #271708, transparent);
+}
+
+.Backcolor_4 {
     background: linear-gradient(to right, #3B8E64, transparent);
 }

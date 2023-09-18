@@ -1,13 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import SingleSlider from "./SingleSlider";
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../css/sportMenu.css';
-import Navbar from './Navbar';
-import DecidedMatch from './DecidedMatch';
-import MainMatch from './MainMatch';
 
 
 const MainMenu = () => {

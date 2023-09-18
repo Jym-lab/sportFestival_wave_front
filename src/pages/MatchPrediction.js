@@ -1,6 +1,7 @@
 import MatchPredictionElement from '../components/MatchPredictionElement';
 import Navbar from '../components/Navbar';
 import '../css/Prediction.css';
+import ScrollToTop from '../components/ScrollToTop';
 
 
 const MatchPrediction = () => {
@@ -18,6 +19,7 @@ const MatchPrediction = () => {
             <MatchPredictionElement titleid={3} />
 
             <div className="last"></div>
+            <ScrollToTop />
         </div >
     )
 }

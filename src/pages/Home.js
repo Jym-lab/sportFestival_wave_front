@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import { images } from "../utils/images";
-import MainMenu from "../components/MainMenu";
 import { useNavbar } from "../utils/navbar-context";
 import MainMenuRe from "../components/MainMenuRe";
 
