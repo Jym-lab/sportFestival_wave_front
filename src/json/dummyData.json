@@ -3,7 +3,9 @@
         "title": "축구",
         "ongoing": false,
         "teamA": "영문",
+        "teamA_img": "",
         "teamB": "컴공",
+        "teamB_img": "",
         "time": "9월 25일 13:00"
     },
     {

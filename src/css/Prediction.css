@@ -1,0 +1,13 @@
+.predictTeam {
+    background-color: #E5E8EB;
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+}
+
+.letspredict button {
+    background-color: #E5E8EB;
+    color: #34299B;
+    padding: 2px 10px;
+    border-radius: 10px;
+}

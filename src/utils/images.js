@@ -7,5 +7,5 @@ export const images = {
     sliver: PATH + '/img/medal/sliver.png',
     bronze: PATH + '/img/medal/bronze.png',
     // 임시
-    img: PATH + '/img/aboutLogo/renew.png',
+    img: PATH + '/img/aboutLogo/renew.png'
 };

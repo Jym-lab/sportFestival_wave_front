@@ -36,7 +36,7 @@ const MainMenu = () => {
                     <div className="main-menu-button my-3 flex items-center justify-between px-3">
                         <div className="text-lg flex items-center">학과별 결승전 승부예측 응모</div>
                         <div className="text-sm main-menu-sub-button-1 text-center flex items-center justify-center">
-                            <button onClick={() => { Navigate('/') }}>바로가기</button>
+                            <button onClick={() => { Navigate('/matchprediction') }}>바로가기</button>
                         </div>
                     </div>
                     <div className="main-menu-button my-3 flex items-center justify-between px-3">

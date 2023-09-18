@@ -26,9 +26,9 @@ const SportMenu = () => {
 
     return (
         <>
-            <div>
+            <div className='flex flex-col h-screen'>
                 <Navbar />
-                <div className="sport-menu-container NanumSquareEB pt-16">
+                <div className="sport-menu-container NanumSquareEB pt-16 grow-0">
                     <Slider {...settings}>
                         {tabs.map((tab, index) => (
                             <div key={index} className={index === activeTab ? 'tab-item active' : 'tab-item'}>

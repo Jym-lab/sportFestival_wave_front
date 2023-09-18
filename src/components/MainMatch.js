@@ -6,12 +6,12 @@ import '../css/mainmatch.css';
 
 const MainMatch = ({ sport }) => {
     return (
-        <div>
+        <div className='grow'>
             {dummyData
                 .filter((item) => item.id === sport)
                 .map((item) => {
                     return (
-                        <div className='text-center'>
+                        <div className='text-center flex flex-col'>
                             <div className={`${item.ongoing ? 'pulsate-fwd' : ''} NanumGothicEB text-center my-8 text-3xl`}>{item.title}</div>
                             <div className={`${item.ongoing ? '' : 'notReal'} realTime NanumSquareB`}>
                                 <span className='text-sm'>경기 진행 00:00분</span>

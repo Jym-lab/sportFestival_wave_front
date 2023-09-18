@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { images } from "../utils/images";
-import { BiHomeAlt } from "react-icons/bi"
+import { SlHome } from "react-icons/sl"
 import { useEffect, useState } from "react";
 import '../css/navbar.css'
 import { useNavbar } from "../utils/navbar-context";
@@ -39,6 +39,12 @@ const Navbar = () => {
             behavior: 'smooth',
         });
     };
+    const onTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
     useEffect(() => {
         // 스크롤 이벤트 핸들러를 추가
         const handleScroll = () => {
@@ -70,7 +76,7 @@ const Navbar = () => {
                     )}
                 </div>
                 <div className="flex items-center space-x-2">
-                    <Link to="/" onClick={onTop}><BiHomeAlt size="30" color="white"/></Link>
+                    <Link to='/' onClick={() => { onTop() }}><SlHome size={25} /></Link>
                     <div className={`mr-1 hamburger-menu ${isOpen ? 'active' : ''} cursor-pointer z-20`} onClick={() => setIsOpen(!isOpen)}>
                         <div className="ham-bar bar-top bg-white" />
                         <div className="ham-bar bar-mid bg-white" />
