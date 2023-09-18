@@ -11,6 +11,8 @@ export const images = {
     hairpin: PATH + '/img/goods/hairpin.png',
     tatoo: PATH + '/img/goods/tatoo.png',
     towel: PATH + '/img/goods/towel.png',
+    poster: PATH + '/img/cinema/poster.png',
+    popcon: PATH + '/img/cinema/popcon.png',
     // 임시
     img: PATH + '/img/aboutLogo/renew.png'
 };

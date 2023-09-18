@@ -160,3 +160,19 @@
 .towelcontent {
     font-size: 10px;
 }
+
+
+/* 시네마 */
+
+.cinemacontent {
+    font-size: 13px;
+}
+
+.cinemacontent1 {
+    font-size: 10px;
+}
+
+.poster {
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
