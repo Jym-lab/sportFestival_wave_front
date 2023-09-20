@@ -12,6 +12,7 @@ import MatchPrediction from './pages/MatchPrediction';
 import SportMenu from './components/SportMenu';
 import Goods from './pages/Goods';
 import Cinema from './pages/Cinema';
+import { Callback } from './utils/Auth';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path='/sportmenu' element={<SportMenu />} />
             <Route path='/goods' element={<Goods />} />
             <Route path='/cinema' element={<Cinema />} />
+            <Route path='/login/callback' element={<Callback/>}/>
           </Routes>
         </div>
       </BrowserRouter>
