@@ -13,6 +13,7 @@ import SportMenu from './components/SportMenu';
 import Goods from './pages/Goods';
 import Cinema from './pages/Cinema';
 import { Callback } from './utils/Auth';
+import MainMatch from './components/MainMatch';
 
 function App() {
   return (
@@ -28,8 +29,9 @@ function App() {
             <Route path='/matchpredictionpresent' element={<MatchPredictionPresent />} />
             <Route path='/sportmenu' element={<SportMenu />} />
             <Route path='/goods' element={<Goods />} />
+            <Route path='/mainmatch' element={<SportMenu />} />
             <Route path='/cinema' element={<Cinema />} />
-            <Route path='/login/callback' element={<Callback/>}/>
+            <Route path='/login/callback' element={<Callback />} />
           </Routes>
         </div>
       </BrowserRouter>

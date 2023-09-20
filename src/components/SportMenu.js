@@ -6,8 +6,9 @@ import '../css/sportMenu.css';
 import Navbar from './Navbar';
 import DecidedMatch from './DecidedMatch';
 import MainMatch from './MainMatch';
+import ScrollToTop from './ScrollToTop';
 
-const SportMenu = ({main}) => {
+const SportMenu = ({ main }) => {
     const [activeTab, setActiveTab] = useState(0);
 
     const settings = {
@@ -37,14 +38,15 @@ const SportMenu = ({main}) => {
                         ))}
                     </Slider>
                 </div>
-                
-                {main ? '' : 
-                <>
-                <MainMatch sport={activeTab} />
-                {/* 결승끝난 sport */}
-                <DecidedMatch sport={activeTab} />
-                </>
+
+                {main ? '' :
+                    <>
+                        <MainMatch sport={activeTab} />
+                        {/* 결승끝난 sport */}
+                        <DecidedMatch sport={activeTab} />
+                    </>
                 }
+                <ScrollToTop />
             </div>
         </>
 
