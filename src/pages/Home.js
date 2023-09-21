@@ -2,9 +2,16 @@ import Navbar from "../components/Navbar";
 import { images } from "../utils/images";
 import { useNavbar } from "../utils/navbar-context";
 import MainMenuRe from "../components/MainMenuRe";
+import { authenticate, getToken } from "../utils/Auth";
+import { useEffect, useState } from "react";
 
 const Home = () => {
     const { isOpen } = useNavbar();
+    const [isAuthed, setAuthed] = useState(false);
+
+    useEffect(() => {
+        setAuthed(authenticate(getToken()));
+    }, []);
     return (
         <>
             <Navbar />

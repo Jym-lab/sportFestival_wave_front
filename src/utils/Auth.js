@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import axios from 'axios';
 import Navbar from '../components/Navbar';
 import { useNavbar } from './navbar-context';
 
@@ -26,7 +26,27 @@ export const Callback = () => {
         );
     };
 
-const Auth = () => {
+export const getToken = () => localStorage.getItem('token');
+
+export const authenticate = async (token) => {
+    try {
+        if (token) {
+            const response = await axios.get('http://127.0.0.1:8000/validation', {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+            if (response.data.validation === true){
+                console.log('유효한 로그인')
+            }
+        }
+    }
+    catch (error){
+        console.log(error)
+    }
+};
+
+const LoginBtn = () => {
     const Login = () => {
         window.location.href = 'http://127.0.0.1:8000/login';
     }
@@ -39,4 +59,4 @@ const Auth = () => {
       );
 };
 
-export default Auth
+export default LoginBtn
