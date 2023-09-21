@@ -13,6 +13,7 @@ export const images = {
     towel: PATH + '/img/goods/towel.png',
     poster: PATH + '/img/cinema/poster.png',
     popcon: PATH + '/img/cinema/popcon.png',
+    sungkyul: PATH + 'img/sungkyul.png',
     // 임시
     img: PATH + '/img/aboutLogo/renew.png'
 };
