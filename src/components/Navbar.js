@@ -44,10 +44,10 @@ const Navbar = () => {
     useEffect(() => {
         // 스크롤 이벤트 핸들러를 추가
         const handleScroll = () => {
-            if (window.scrollY > 300) {
-                setScrolling(true); // 스크롤 위치가 300px 이상이면 scrolling 상태를 true로 설정
+            if (window.scrollY > 150) {
+                setScrolling(true);
             } else {
-                setScrolling(false); // 그 외의 경우에는 scrolling 상태를 false로 설정
+                setScrolling(false);
             }
         };
 

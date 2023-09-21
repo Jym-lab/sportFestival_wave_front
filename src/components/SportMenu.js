@@ -7,9 +7,11 @@ import Navbar from './Navbar';
 import DecidedMatch from './DecidedMatch';
 import MainMatch from './MainMatch';
 import ScrollToTop from './ScrollToTop';
+import { useNavbar } from '../utils/navbar-context';
 
 const SportMenu = ({ main }) => {
     const [activeTab, setActiveTab] = useState(0);
+    const { isOpen } = useNavbar()
 
     const settings = {
         infinite: true,
@@ -29,24 +31,26 @@ const SportMenu = ({ main }) => {
         <>
             <div className='flex flex-col'>
                 <Navbar />
-                <div className="sport-menu-container NanumSquareEB pt-16 grow-0">
-                    <Slider {...settings}>
-                        {tabs.map((tab, index) => (
-                            <div key={index} className={index === activeTab ? 'tab-item active' : 'tab-item'}>
-                                <button onClick={() => setActiveTab(index)}>{tab}</button>
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
+                <div className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
+                    <div className="sport-menu-container NanumSquareEB pt-16 grow-0">
+                        <Slider {...settings}>
+                            {tabs.map((tab, index) => (
+                                <div key={index} className={index === activeTab ? 'tab-item active' : 'tab-item'}>
+                                    <button onClick={() => setActiveTab(index)}>{tab}</button>
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
 
-                {main ? '' :
-                    <>
-                        <MainMatch sport={activeTab} />
-                        {/* 결승끝난 sport */}
-                        <DecidedMatch sport={activeTab} />
-                    </>
-                }
-                <ScrollToTop />
+                    {main ? '' :
+                        <>
+                            <MainMatch sport={activeTab} />
+                            {/* 결승끝난 sport */}
+                            <DecidedMatch sport={activeTab} />
+                        </>
+                    }
+                    <ScrollToTop />
+                </div>
             </div>
         </>
 
