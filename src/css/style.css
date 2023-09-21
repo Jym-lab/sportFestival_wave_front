@@ -176,3 +176,11 @@
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 20px;
 }
+
+
+/* 응원가 page */
+
+.rightarrow {
+    right: 40px;
+    top: 32%;
+}

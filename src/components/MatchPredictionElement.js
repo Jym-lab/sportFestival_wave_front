@@ -14,9 +14,11 @@ const MatchPredictionElement = ({ titleid }) => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${userToken}`
+                    //'Authorization': `Bearer ${userToken}`
                 },
-                body: JSON.stringify({ title, prediction: selectedBtn }),
+                body: JSON.stringify({
+                    category: title, prediction: selectedBtn
+                }),
             });
 
             if (!response.ok) {

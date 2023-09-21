@@ -14,6 +14,7 @@ import Goods from './pages/Goods';
 import Cinema from './pages/Cinema';
 import { Callback } from './utils/Auth';
 import MainMatch from './components/MainMatch';
+import Cheers from './pages/Cheers';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path='/mainmatch' element={<SportMenu />} />
             <Route path='/cinema' element={<Cinema />} />
             <Route path='/login/callback' element={<Callback />} />
+            <Route path='/cheers' element={<Cheers />} />
           </Routes>
         </div>
       </BrowserRouter>
