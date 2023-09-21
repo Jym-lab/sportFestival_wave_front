@@ -1,8 +1,34 @@
 import { images } from '../utils/images';
 import dummyData from '../json/dummyData.json';
 import PredictionChart from './PredictionChart';
+import { useState } from 'react';
 
 const MatchPredictionElement = ({ titleid }) => {
+    const [selectedBtn, setSelectedBtn] = useState(null);
+
+    const handleClickBtn = async (buttonIndex, title) => {
+        setSelectedBtn(buttonIndex);
+
+        try {
+            const response = await fetch('/apiUrl ', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${userToken}`
+                },
+                body: JSON.stringify({ title, prediction: selectedBtn }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`오류 : ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('서버 응답:', data);
+        } catch (error) {
+            console.error('오류 발생:', error);
+        }
+    }
     return (
         <div className='my-5'>
             {dummyData
@@ -33,8 +59,8 @@ const MatchPredictionElement = ({ titleid }) => {
                                 </div>
 
                                 <div className='letspredict flex justify-around NanumGothicEB mt-2'>
-                                    <div><button>응모하기</button></div>
-                                    <div><button>응모하기</button></div>
+                                    <div><button onClick={() => handleClickBtn(1, item.title)}>응모하기</button></div>
+                                    <div><button onClick={() => handleClickBtn(0, item.title)}>응모하기</button></div>
                                 </div>
                             </div>
                         </>
