@@ -1,0 +1,64 @@
+.pbox {
+    width: 120px;
+    height: 170px;
+    background-color: #565656;
+    border-radius: 10px;
+}
+
+.Pimg {
+    height: 70px;
+    width: auto;
+    margin-bottom: 11px;
+}
+
+.pbox {
+    padding: 5px;
+}
+
+.pbox span {
+    display: block;
+}
+
+.Pinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 3px;
+    align-items: center;
+}
+
+.Pinfo img {
+    height: 18px;
+    width: auto;
+    margin-right: 5px;
+}
+
+.Pinfo span {
+    font-size: 5px;
+}
+
+.Pdepart {
+    margin: 0;
+    font-size: 9px;
+    color: #f3cf4e;
+}
+
+.Pposi {
+    font-size: 9px;
+    margin: 0;
+}
+
+hr {
+    margin: 0.2rem;
+}
+
+.Prole {
+    margin-top: 5px;
+    font-size: 11px;
+}
+.gridpeople {
+    grid-gap: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}

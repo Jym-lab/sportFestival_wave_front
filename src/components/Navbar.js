@@ -41,6 +41,7 @@ const ShowNav = () => {
                         <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link onClick={Login}>로그인</Link></li>
                     }
                     <img className="w-[156px] md:max-w-[375px] mt-20" src={images.seven_rings} alt="칠륜기" />
+
                 </ul>
                 
             </div>

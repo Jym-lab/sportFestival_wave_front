@@ -14,6 +14,8 @@ export const images = {
     poster: PATH + '/img/cinema/poster.png',
     popcon: PATH + '/img/cinema/popcon.png',
     sungkyul: PATH + 'img/sungkyul.png',
+    likelion_logo: PATH + '/img/aboutLogo/likelion.png',
+    renew_logo: PATH + '/img/aboutLogo/renew.png',
     boothAll: PATH + 'img/boothLocation/boothAll.png',
     locateMenu: PATH + 'img/boothLocation/locateMenu.png',
     사복: PATH + '/img/departmentLogo/사복.png',
@@ -22,6 +24,5 @@ export const images = {
     유교: PATH + '/img/departmentLogo/유교.png',
     연기: PATH + '/img/departmentLogo/연영.png',
     국제: PATH + '/img/departmentLogo/국제.png',
-    // 임시
-    img: PATH + '/img/aboutLogo/renew.png'
+
 };
