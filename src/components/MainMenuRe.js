@@ -4,7 +4,7 @@ import Mainbottom from "./Mainbottom";
 
 const MainMenuRe = () => {
     return (
-        <div className="MainMenuRe min-h-screen  flex flex-col justify-center">
+        <div className="MainMenuRe min-h-screen  flex flex-col justify-center main-background">
             {/* <SportMenu main={true} /> */}
             <div>
                 <SingleSlider />
