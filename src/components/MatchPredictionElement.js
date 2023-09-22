@@ -34,24 +34,24 @@ const MatchPredictionElement = ({ titleid }) => {
     return (
         <div className='my-5'>
             {dummyData
-                .filter((item) => item.id === titleid)
+                .filter((item) => item.title === titleid)
                 .map((item) => {
                     return (
                         <>
                             <div className='text-center mb-5 text-2xl'>{item.title}</div>
                             <div>
                                 <div>
-                                    <div className='predictTeam w-10/12 mx-auto flex justify-center items-center text-xl'>
+                                    <div className='predictTeam w-10/12 mx-auto flex justify-evenly items-center text-xl'>
                                         <div className='flex justify-evenly'>
-                                            <img className='w-3/12' src={images.img} alt="" />
-                                            <span>{item.teamA}</span>
+                                            <img className='w-8' src={images[item.teamA]} alt="학과로고" />
+                                            <span className='ml-3'>{item.teamA}</span>
                                         </div>
 
                                         <div>VS</div>
 
                                         <div className='flex justify-evenly'>
-                                            <span>{item.teamB}</span>
-                                            <img className='w-3/12' src={images.img} alt="" />
+                                            <span className='mr-3'>{item.teamB}</span>
+                                            <img className='w-8' src={images[item.teamB]} alt="" />
                                         </div>
                                     </div>
                                 </div>

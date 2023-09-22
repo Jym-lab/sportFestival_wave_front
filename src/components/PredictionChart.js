@@ -57,7 +57,7 @@ class PredictionChart extends React.Component {
                     enabled: false, // 툴팁 비활성화
                 },
                 toolbar: {
-                    show: false,
+                    enabled: false,
                 },
                 labels: {
                     show: false,

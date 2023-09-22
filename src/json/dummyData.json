@@ -2,50 +2,48 @@
         "id": 0,
         "title": "축구",
         "ongoing": false,
-        "teamA": "영문",
-        "teamA_img": "",
-        "teamB": "컴공",
-        "teamB_img": "",
-        "time": "9월 25일 13:00"
+        "teamA": "사복",
+        "teamB": "경영",
+        "time": "9월 25일 월 13:40"
     },
     {
         "id": 1,
         "title": "농구",
         "ongoing": false,
-        "teamA": "농구",
-        "teamB": "농구",
-        "time": "9월 25일 13:00"
+        "teamA": "사복",
+        "teamB": "글물",
+        "time": "9월 25일 월 11:00"
     },
     {
         "id": 2,
-        "title": "손족구",
+        "title": "피구",
         "ongoing": false,
-        "teamA": "손족구1",
-        "teamB": "손족공",
-        "time": "9월 25일 13:00"
+        "teamA": "유교",
+        "teamB": "연기",
+        "time": "9월 25일 월 13:00"
     },
     {
         "id": 3,
-        "title": "발야구",
+        "title": "손족구",
         "ongoing": false,
-        "teamA": "발문",
-        "teamB": "야구공",
-        "time": "9월 25일 13:00"
+        "teamA": "유교",
+        "teamB": "연기",
+        "time": "9월 26일 화 10:00"
     },
     {
         "id": 4,
-        "title": "족구",
+        "title": "발야구",
         "ongoing": true,
-        "teamA": "영문",
-        "teamB": "컴공",
-        "time": "9월 25일 13:00"
+        "teamA": "유교",
+        "teamB": "연기",
+        "time": "9월 26일 화 10:40"
     },
     {
         "id": 5,
-        "title": "피구",
+        "title": "족구",
         "ongoing": true,
-        "teamA": "영문",
-        "teamB": "컴공",
-        "time": "9월 25일 13:00"
+        "teamA": "연기",
+        "teamB": "국제",
+        "time": "9월 25일 월 16:20"
     }
 ]

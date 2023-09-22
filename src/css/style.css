@@ -184,3 +184,12 @@
     right: 40px;
     top: 32%;
 }
+
+
+/* chart */
+
+.apexcharts-menu-icon,
+.apexcharts-reset-icon,
+.apexcharts-zoom-icon {
+    display: none;
+}

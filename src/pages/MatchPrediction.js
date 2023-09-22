@@ -15,10 +15,12 @@ const MatchPrediction = () => {
                     <p className="mb-2">학과별 결승전</p>
                     <p>승부예측</p>
                 </div>
-                <MatchPredictionElement titleid={0} />
-                <MatchPredictionElement titleid={1} />
-                <MatchPredictionElement titleid={2} />
-                <MatchPredictionElement titleid={3} />
+                <MatchPredictionElement titleid={'축구'} />
+                <MatchPredictionElement titleid={'농구'} />
+                <MatchPredictionElement titleid={'피구'} />
+                <MatchPredictionElement titleid={'손족구'} />
+                <MatchPredictionElement titleid={'발야구'} />
+                <MatchPredictionElement titleid={'족구'} />
                 <div className="last"></div>
                 <ScrollToTop />
             </div >
