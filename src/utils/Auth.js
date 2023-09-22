@@ -2,7 +2,6 @@ import axios from 'axios';
 import Navbar from '../components/Navbar';
 import { useNavbar } from './navbar-context';
 import { images } from './images';
-import { useState } from 'react';
 
 export const Callback = () => {
     const { isOpen } = useNavbar();
@@ -39,24 +38,6 @@ export const Callback = () => {
     };
 
 export const getToken = () => localStorage.getItem('token');
-
-// export const authenticate = async (token) => {
-//     const baseURL = 'http://127.0.0.1:8000/validation';
-//     try {
-//         if (token) {
-//             const response = await axios.get(baseURL, {
-//                 headers: {
-//                     Authorization: `Bearer ${token}`,
-//                 },
-//             });
-//             return response.data.validation === true;
-//         }
-//     } catch (error) {
-//         localStorage.removeItem('token')
-//         console.error(error);
-//     }
-//     return false;
-// };
 
 export const authenticate = (token) => axios.create({
     baseURL: 'http://127.0.0.1:8000',

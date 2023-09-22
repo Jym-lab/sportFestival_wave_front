@@ -3,7 +3,7 @@ import '../css/Prediction.css';
 import ScrollToTop from '../components/ScrollToTop';
 import { useNavbar } from '../utils/navbar-context';
 import LoginBtn, { authenticate, getToken } from '../utils/Auth';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const MyPage = () => {
@@ -12,22 +12,34 @@ const MyPage = () => {
     const [student_num, setStudent_num] = useState('');
     const [phone_num, setPhone_num] = useState('');
 
+    useEffect(() => {
+        const info_state = async () => {
+            const response = await authenticate(getToken()).get(`/user/info`);
+            return response.data
+        }
+        info_state().then((res) => {
+            setStudent_num(res.student_num);
+            setPhone_num(res.phone_num);
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }, []);
     const submitHandle = async (e) => {
-        e.preventDefault();
-
         try{
             const formData = {
                 student_num,
                 phone_num,
             }
 
-            const apiClient = authenticate(getToken());
+            await authenticate(getToken()).post(`/user/info`, formData);
 
-            await apiClient.post(`/user/info`, formData)
-
-            setStudent_num('')
+            setStudent_num('');
             setPhone_num('');
-            window.location.href = localStorage.getItem('last')
+            if (localStorage.getItem('last').match('/mypage'))
+                window.location.href = '/'
+            else
+                window.location.href = localStorage.getItem('last')
         } catch (e) {
             console.error(e)
             //에러 처리
