@@ -14,6 +14,8 @@ export const images = {
     poster: PATH + '/img/cinema/poster.png',
     popcon: PATH + '/img/cinema/popcon.png',
     sungkyul: PATH + 'img/sungkyul.png',
+    boothAll: PATH + 'img/boothLocation/boothAll.png',
+    locateMenu: PATH + 'img/boothLocation/locateMenu.png',
     // 임시
     img: PATH + '/img/aboutLogo/renew.png'
 };

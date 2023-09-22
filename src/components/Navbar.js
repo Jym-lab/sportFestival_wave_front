@@ -9,7 +9,7 @@ import LoginBtn, { getToken, get_current_user } from "../utils/Auth";
 const ShowNav = () => {
     const { setIsOpen } = useNavbar();
     const ACCESS_TOKEN = getToken();
-    const [ isLogin, setIsLogin ] = useState(false)
+    const [isLogin, setIsLogin] = useState(false)
     const closeNav = () => {
         setIsOpen(false)
     }
@@ -22,13 +22,13 @@ const ShowNav = () => {
         setIsOpen(false)
     }
     useEffect(() => {
-        if (ACCESS_TOKEN){
+        if (ACCESS_TOKEN) {
             get_current_user()
-            .then(response => {
-                setIsLogin(response.validation)
-            }).catch(error => {
-                console.error(error)
-            })
+                .then(response => {
+                    setIsLogin(response.validation)
+                }).catch(error => {
+                    console.error(error)
+                })
         }
     }, [ACCESS_TOKEN])
 
@@ -42,9 +42,9 @@ const ShowNav = () => {
                 <ul className="NanumSquareEB flex flex-col items-center justify-center gap-y-6 text-3xl">
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/sportmenu" onClick={closeNav}>결승전 대진표</Link></li>
-                    {isLogin ? 
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link onClick={LogOut}>로그아웃</Link></li> :
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link onClick={Login}>로그인</Link></li>
+                    {isLogin ?
+                        <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link onClick={LogOut}>로그아웃</Link></li> :
+                        <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link onClick={Login}>로그인</Link></li>
                     }
                 </ul>
                 <img className="fixed bottom-10 w-[156px] md:max-w-[375px]" src={images.seven_rings} alt="칠륜기" />
@@ -85,9 +85,12 @@ const Navbar = () => {
         <>
             <div className={`Navbar fixed top-0 flex justify-between items-center px-3 py-5 z-10 ${scrolling && !isOpen ? 'nav-bg-scrolled' : ''}`}>
                 <div>
-                    <img className={`w-[80px] md:max-w-[375px] transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`} src={images.seven_rings} alt="칠륜기" />
+                    <Link to='/' onClick={() => { onTop() }}>
+                        <img className={`w-[80px] md:max-w-[375px] transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`} src={images.seven_rings} alt="칠륜기" />
+                    </Link>
                 </div>
-                <div className={`chineseFont text-2xl transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>&#27874;&#21205;</div>
+                <div className={`chineseFont text-2xl transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
+                    <Link to='/' onClick={() => { onTop() }}>&#27874;&#21205;</Link></div>
                 <div className={`off-screen-menu ${isOpen ? 'open slideInDown fixed' : 'hidden'} flex justify-center tracking-[1px] bg-transparent`}>
                     {isOpen && (
                         <ShowNav />
@@ -101,7 +104,7 @@ const Navbar = () => {
                         <div className="ham-bar bar-bottom bg-white" />
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
