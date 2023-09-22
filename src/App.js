@@ -1,6 +1,7 @@
 import './App.css';
 import './css/font.css'
 import './css/main.css'
+import './css/about.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { NavbarProvider } from './utils/navbar-context';
