@@ -27,6 +27,7 @@ const MyPage = () => {
 
             setStudent_num('')
             setPhone_num('');
+            window.location.href = localStorage.getItem('last')
         } catch (e) {
             console.error(e)
             //에러 처리
