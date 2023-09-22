@@ -22,14 +22,16 @@ const ShowNav = () => {
     }
 
     return (
-        <div className="Navbar">
+        <div className="Navbar min-h-screen overflow-y-auto">
             <div className="relative chineseFont flex justify-center pt-14">
                 <p className="absolute text-stroke text-transparent text-8xl">&#27874;:&#21205;</p>
                 <p className="absolute text-7xl pt-3">&#27874;:&#21205;</p>
             </div>
-            <div className="min-h-screen flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center pt-36">
                 <ul className="NanumSquareEB flex flex-col items-center justify-center gap-y-6 text-3xl">
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-10 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/timetable" onClick={closeNav}>타임테이블</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/boothlocation" onClick={closeNav}>부스배치도</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/sportmenu" onClick={closeNav}>결승전 대진표</Link></li>
                     {ACCESS_TOKEN ?
                     <>
@@ -38,8 +40,9 @@ const ShowNav = () => {
                     </>:
                         <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link onClick={Login}>로그인</Link></li>
                     }
+                    <img className="w-[156px] md:max-w-[375px] mt-20" src={images.seven_rings} alt="칠륜기" />
                 </ul>
-                <img className="fixed bottom-10 w-[156px] md:max-w-[375px]" src={images.seven_rings} alt="칠륜기" />
+                
             </div>
         </div>
     )

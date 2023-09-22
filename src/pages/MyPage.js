@@ -26,6 +26,7 @@ const MyPage = () => {
         })
     }, []);
     const submitHandle = async (e) => {
+        e.preventDefault()
         try{
             const formData = {
                 student_num,
@@ -36,7 +37,7 @@ const MyPage = () => {
 
             setStudent_num('');
             setPhone_num('');
-            if (localStorage.getItem('last').match('/mypage'))
+            if (localStorage.getItem('last').includes('/mypage'))
                 window.location.href = '/'
             else
                 window.location.href = localStorage.getItem('last')
@@ -60,7 +61,7 @@ const MyPage = () => {
                         <form className="text-black px mt-14 w-10/12" onSubmit={submitHandle}>
                             <div className='flex text-center bg-white/[0.8] rounded-xl'>
                                 <div className='px-5 py-3 border-black border-r'>학 번</div>
-                                <input type='text'
+                                <input type='number'
                                     className='bg-transparent text-center w-9/12' 
                                     placeholder='예시) 20231234' id="student_num" 
                                     value={student_num} 
@@ -69,7 +70,7 @@ const MyPage = () => {
                             </div>
                             <div className='flex text-center bg-white/[0.8] rounded-xl mt-6'>
                             <div className='px-4 py-3 border-black border-r'>연락처</div>
-                                <input type='text'
+                                <input type='number'
                                     className='bg-transparent text-center w-9/12'
                                     placeholder='예시) 01012345678' id="phone_num"
                                     value={phone_num} onChange={(e) => setPhone_num(e.target.value)}
