@@ -7,7 +7,7 @@
         "slivercontent": "결승 컴공2:0중문",
         "bronze": "도디, 음악",
         "bronzecontent": "도디, 음악 몰수패로 공동 3등",
-        "thirdRound": "https://www.naver.com/",
+        "thirdRound": "",
         "semifinals": "",
         "final": ""
     },
@@ -40,12 +40,12 @@
     {
         "id": 6,
         "title": "배드민턴",
-        "gold": "아직인듯",
-        "goldcontent": "결승 영문2:1국제",
+        "gold": "신학",
+        "goldcontent": "결승 신학2:0국제",
         "sliver": "국제",
-        "slivercontent": "결승 영문2:1국제",
-        "bronze": "유교",
-        "bronzecontent": "유교2:1관광",
+        "slivercontent": "결승 신학2:0국제",
+        "bronze": "경영",
+        "bronzecontent": "국문0:2경영",
         "thirdRound": "",
         "semifinals": "",
         "final": ""

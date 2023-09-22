@@ -9,7 +9,7 @@ const PredictionChart = ({ sport }) => {
             data: [50],
         }, {
             name: 'teamB',
-            data: [80],
+            data: [30],
         }],
         options: {
             chart: {

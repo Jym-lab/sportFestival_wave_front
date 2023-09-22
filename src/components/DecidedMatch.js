@@ -41,18 +41,31 @@ const DecidedMatch = ({ sport }) => {
 
                                 <hr className="mx-5" />
 
-                                <div className="URLBtn NanumGothicB">
-                                    <div>
-                                        <button><Link to={`${item.thirdRound}`}>3강 예선보러가기</Link></button>
-                                    </div>
-                                    <div>
-                                        <button><Link to={`${item.semifinals}`}>4강 예선보러가기</Link></button>
-                                    </div>
-                                    <div>
-                                        <button><Link to={`${item.final}`}>결승전 보러가기</Link></button>
-                                    </div>
+                                <div className="text-center mt-8 NanumGothicB">
+                                    하단 버튼을 클릭하면<br />영상 시청이 가능합니다.
                                 </div>
-                            </div>
+                                <div className="URLBtn NanumGothicB">
+                                    {item.id === 9 || item.id === 10 ?
+                                        <>
+                                            <div>
+                                                <button><Link to={`${item.final}`}>결승전 보러가기</Link></button>
+                                            </div>
+                                        </>
+                                        :
+                                        <>
+                                            <div>
+                                                <button><Link to={`${item.thirdRound}`}>3,4위전 보러가기</Link></button>
+                                            </div>
+                                            <div>
+                                                <button><Link to={`${item.semifinals}`}>4강 보러가기</Link></button>
+                                            </div>
+                                            <div>
+                                                <button><Link to={`${item.final}`}>결승전 보러가기</Link></button>
+                                            </div>
+                                        </>}
+
+                                </div >
+                            </div >
                         </>
                     )
                 })}
