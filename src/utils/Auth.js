@@ -30,25 +30,36 @@ export const Callback = () => {
 
 export const getToken = () => localStorage.getItem('token');
 
-export const authenticate = async (token) => {
-    const authURL = 'http://127.0.0.1:8000/validation';
-    try {
-        if (token) {
-            const response = await axios.get(authURL, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            });
-            return response.data.validation === true;
-        }
-    } catch (error) {
-        localStorage.removeItem('token')
-        console.error(error);
-    }
-    return false;
-};
+// export const authenticate = async (token) => {
+//     const baseURL = 'http://127.0.0.1:8000/validation';
+//     try {
+//         if (token) {
+//             const response = await axios.get(baseURL, {
+//                 headers: {
+//                     Authorization: `Bearer ${token}`,
+//                 },
+//             });
+//             return response.data.validation === true;
+//         }
+//     } catch (error) {
+//         localStorage.removeItem('token')
+//         console.error(error);
+//     }
+//     return false;
+// };
 
+export const authenticate = (token) => axios.create({
+    baseURL: 'http://127.0.0.1:8000',
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+    },
+});
 
+export const get_current_user = async () => {
+    const response = await authenticate(getToken()).get(`/validation`);
+    return response.data
+}
 
 const LoginBtn = () => {
     const Login = () => {
