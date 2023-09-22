@@ -23,7 +23,7 @@ const MyPage = () => {
 
             const apiClient = authenticate(getToken());
 
-            await apiClient.post(`/ggggg`, formData)
+            await apiClient.post(`/user/info`, formData)
 
             setStudent_num('')
             setPhone_num('');
@@ -46,7 +46,7 @@ const MyPage = () => {
                         <p className='text-sm pt-4'>인적정보 불일치 또는 미입력 시 경품 수령이 불가합니다.</p>
                         <form className="text-black px mt-14 w-10/12" onSubmit={submitHandle}>
                             <div className='flex text-center bg-white/[0.8] rounded-xl'>
-                                <div className='px-5 py-3'>학 번</div>
+                                <div className='px-5 py-3 border-black border-r'>학 번</div>
                                 <input type='text'
                                     className='bg-transparent text-center w-9/12' 
                                     placeholder='예시) 20231234' id="student_num" 
@@ -55,7 +55,7 @@ const MyPage = () => {
                                     required/>
                             </div>
                             <div className='flex text-center bg-white/[0.8] rounded-xl mt-6'>
-                            <div className='px-4 py-3'>연락처</div>
+                            <div className='px-4 py-3 border-black border-r'>연락처</div>
                                 <input type='text'
                                     className='bg-transparent text-center w-9/12'
                                     placeholder='예시) 01012345678' id="phone_num"

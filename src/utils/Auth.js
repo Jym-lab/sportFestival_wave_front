@@ -2,17 +2,27 @@ import axios from 'axios';
 import Navbar from '../components/Navbar';
 import { useNavbar } from './navbar-context';
 import { images } from './images';
+import { useState } from 'react';
 
 export const Callback = () => {
     const { isOpen } = useNavbar();
     const urlParams = new URLSearchParams(window.location.search);
-
     const token = urlParams.get('token');
     const err_msg = urlParams.get('error');
+    const userValid = async () => {
+        const response = await authenticate(getToken()).get(`/user/valid`);
+        return response.data
+    }
         if (token) {
             localStorage.setItem('token', token);
-            // 로그인 전 조회하고 있던 페이지로 돌아가기
-            window.location.href = localStorage.getItem('last')
+            userValid()
+            .then(res => {
+                if (res.validation === true)
+                    window.location.href = localStorage.getItem('last')
+                else
+                    window.location.href = '/mypage'
+            })
+            .catch(e => console.error(e))
         }
         console.log('에러메시지 출력 후 홈으로 돌아가는 버튼 출력');
         return (
