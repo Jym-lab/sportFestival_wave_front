@@ -36,10 +36,12 @@ const About = () => {
                     <div className="text-xs mt-3">성결대학교 멋쟁이사자처럼 11기</div>
                     <a className="flex items-center text-xs mb-3" href="https://www.instagram.com/likelion_sku/" target='_blank' rel="noopener noreferrer"><FaInstagram className="me-1"/> likelion_sku</a>
                     <div className="gridpeople">
+                        <Person0 id={1}/>
+                        <Person0 id={2}/>
+                        <Person0 id={3}/>
+                        <Person0 id={4}/>
+                        <Person0 id={5}/>
                         <Person0 id={6}/>
-                        <Person0 id={7}/>
-                        <Person0 id={8}/>
-                        <Person0 id={9}/>
                     </div>
                 </div>
                 
@@ -48,10 +50,7 @@ const About = () => {
                     <div className="text-xs mt-3">RE:NEW 총학생회</div>
                     <a className="flex items-center text-xs mb-3" href="https://www.instagram.com/sku_39th_renew/" target='_blank' rel="noopener noreferrer"><FaInstagram className="me-1"/> sku_39th_renew</a>
                     <div className="gridpeople">
-                        <Person0 id={1}/>
-                        <Person0 id={2}/>
-                        <Person0 id={3}/>
-                        <Person0 id={4}/>
+                        <Person0 id={7}/>
                     </div>
                 </div>
             </div>
