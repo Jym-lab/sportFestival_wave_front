@@ -19,7 +19,7 @@ const ShowNav = () => {
     }
     const LogOut = () => {
         localStorage.removeItem('token');
-        setIsOpen(false)
+        window.location.reload();
     }
     useEffect(() => {
         if (ACCESS_TOKEN) {

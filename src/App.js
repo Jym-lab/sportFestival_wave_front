@@ -15,6 +15,7 @@ import Cinema from './pages/Cinema';
 import { Callback } from './utils/Auth';
 import MainMatch from './components/MainMatch';
 import Cheers from './pages/Cheers';
+import MyPage from './pages/MyPage';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path='/cinema' element={<Cinema />} />
             <Route path='/login/callback' element={<Callback />} />
             <Route path='/cheers' element={<Cheers />} />
+            <Route path='/mypage' element={<MyPage />}/>
           </Routes>
         </div>
       </BrowserRouter>
