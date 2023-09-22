@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 const MatchPredictionElement = ({ titleid }) => {
     const [selectedBtn, setSelectedBtn] = useState(null);
+    console.log(selectedBtn)
 
     const handleClickBtn = async (buttonIndex, title) => {
         setSelectedBtn(buttonIndex);
@@ -61,15 +62,24 @@ const MatchPredictionElement = ({ titleid }) => {
                                 </div>
 
                                 <div className='letspredict flex justify-around NanumGothicEB mt-2'>
-                                    <div><button onClick={() => handleClickBtn(1, item.title)}>응모하기</button></div>
-                                    <div><button onClick={() => handleClickBtn(0, item.title)}>응모하기</button></div>
+                                    {/* 서버에서 받아온 data : true면~ 수정 필요한 부분*/}
+                                    {true ? (
+                                        <>
+                                            <div className={selectedBtn === 1 ? 'letspredictEnd' : ''}><button>응모완료</button></div>
+                                            <div className={selectedBtn === 0 ? 'letspredictEnd' : ''}><button>응모완료</button></div>
+                                        </>) :
+                                        (<>
+                                            <div><button onClick={() => handleClickBtn(1, item.title)}>응모하기</button></div>
+                                            <div><button onClick={() => handleClickBtn(0, item.title)}>응모하기</button></div>
+                                        </>)
+                                    }
                                 </div>
-                            </div>
+                            </div >
                         </>
                     )
                 })
             }
-        </div>
+        </div >
     )
 }
 
