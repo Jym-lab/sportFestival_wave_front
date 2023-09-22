@@ -33,7 +33,7 @@ const SingleSlider = () => {
         { "title": '결승전 승부예측 경품안내', "url": '/matchpredictionpresent' },
         { "title": '2023 영암체전 굿즈', "url": '/goods' },
         { "title": '가을밤의 시네마', "url": '/cinema' },
-        { "title": '영암체전 응원전', "url": '/' },
+        { "title": '영암체전 응원전', "url": '/cheers' },
     ];
 
     return (

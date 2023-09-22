@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 const MatchPredictionElement = ({ titleid }) => {
     const [selectedBtn, setSelectedBtn] = useState(null);
+    console.log(selectedBtn)
 
     const handleClickBtn = async (buttonIndex, title) => {
         setSelectedBtn(buttonIndex);
@@ -14,9 +15,11 @@ const MatchPredictionElement = ({ titleid }) => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${userToken}`
+                    //'Authorization': `Bearer ${userToken}`
                 },
-                body: JSON.stringify({ title, prediction: selectedBtn }),
+                body: JSON.stringify({
+                    category: title, prediction: selectedBtn
+                }),
             });
 
             if (!response.ok) {
@@ -32,24 +35,24 @@ const MatchPredictionElement = ({ titleid }) => {
     return (
         <div className='my-5'>
             {dummyData
-                .filter((item) => item.id === titleid)
+                .filter((item) => item.title === titleid)
                 .map((item) => {
                     return (
                         <>
                             <div className='text-center mb-5 text-2xl'>{item.title}</div>
                             <div>
                                 <div>
-                                    <div className='predictTeam w-10/12 mx-auto flex justify-center items-center text-xl'>
+                                    <div className='predictTeam w-10/12 mx-auto flex justify-evenly items-center text-xl'>
                                         <div className='flex justify-evenly'>
-                                            <img className='w-3/12' src={images.img} alt="" />
-                                            <span>{item.teamA}</span>
+                                            <img className='w-8' src={images[item.teamA]} alt="학과로고" />
+                                            <span className='ml-3'>{item.teamA}</span>
                                         </div>
 
                                         <div>VS</div>
 
                                         <div className='flex justify-evenly'>
-                                            <span>{item.teamB}</span>
-                                            <img className='w-3/12' src={images.img} alt="" />
+                                            <span className='mr-3'>{item.teamB}</span>
+                                            <img className='w-8' src={images[item.teamB]} alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -59,15 +62,24 @@ const MatchPredictionElement = ({ titleid }) => {
                                 </div>
 
                                 <div className='letspredict flex justify-around NanumGothicEB mt-2'>
-                                    <div><button onClick={() => handleClickBtn(1, item.title)}>응모하기</button></div>
-                                    <div><button onClick={() => handleClickBtn(0, item.title)}>응모하기</button></div>
+                                    {/* 서버에서 받아온 data : true면~ 수정 필요한 부분*/}
+                                    {true ? (
+                                        <>
+                                            <div className={selectedBtn === 1 ? 'letspredictEnd' : ''}><button>응모완료</button></div>
+                                            <div className={selectedBtn === 0 ? 'letspredictEnd' : ''}><button>응모완료</button></div>
+                                        </>) :
+                                        (<>
+                                            <div><button onClick={() => handleClickBtn(1, item.title)}>응모하기</button></div>
+                                            <div><button onClick={() => handleClickBtn(0, item.title)}>응모하기</button></div>
+                                        </>)
+                                    }
                                 </div>
-                            </div>
+                            </div >
                         </>
                     )
                 })
             }
-        </div>
+        </div >
     )
 }
 

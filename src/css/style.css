@@ -176,3 +176,26 @@
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 20px;
 }
+
+
+/* 응원가 page */
+
+.rightarrow {
+    right: 40px;
+    top: 32%;
+}
+
+
+/* chart */
+
+.apexcharts-menu-icon,
+.apexcharts-reset-icon,
+.apexcharts-zoom-icon {
+    display: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
