@@ -74,7 +74,6 @@ class PredictionChart extends React.Component {
 
     render() {
         const { sport } = this.props;
-        console.log(sport)
 
         return (
             <div id="chart" className='w-10/12 mx-auto'>

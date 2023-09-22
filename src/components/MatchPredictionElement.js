@@ -2,32 +2,26 @@ import { images } from '../utils/images';
 import dummyData from '../json/dummyData.json';
 import PredictionChart from './PredictionChart';
 import { useState } from 'react';
+import { authenticate } from '../utils/Auth';
+import { getToken } from '../utils/Auth';
 
 const MatchPredictionElement = ({ titleid }) => {
-    const [selectedBtn, setSelectedBtn] = useState(null);
-    console.log(selectedBtn)
+    // const [selectedBtn, setSelectedBtn] = useState(null);
 
     const handleClickBtn = async (buttonIndex, title) => {
-        setSelectedBtn(buttonIndex);
-
+        // setSelectedBtn(buttonIndex);
         try {
-            const response = await fetch('/apiUrl ', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    //'Authorization': `Bearer ${userToken}`
-                },
-                body: JSON.stringify({
-                    category: title, prediction: selectedBtn
-                }),
-            });
+            const formData = {
+                "category": title, "predict": buttonIndex
+            }
+            const response = await authenticate(getToken()).post(`/user/game`, formData);
 
-            if (!response.ok) {
+            if (!response.data) {
                 throw new Error(`오류 : ${response.status}`);
             }
-
-            const data = await response.json();
-            console.log('서버 응답:', data);
+            console.log(response.data);
+            console.log(response.data.축구 !== null);
+            return response.data
         } catch (error) {
             console.error('오류 발생:', error);
         }
@@ -63,10 +57,10 @@ const MatchPredictionElement = ({ titleid }) => {
 
                                 <div className='letspredict flex justify-around NanumGothicEB mt-2'>
                                     {/* 서버에서 받아온 data : true면~ 수정 필요한 부분*/}
-                                    {true ? (
+                                    {false ? (
                                         <>
-                                            <div className={selectedBtn === 1 ? 'letspredictEnd' : ''}><button>응모완료</button></div>
-                                            <div className={selectedBtn === 0 ? 'letspredictEnd' : ''}><button>응모완료</button></div>
+                                            <div><button>응모완료</button></div>
+                                            <div><button>응모완료</button></div>
                                         </>) :
                                         (<>
                                             <div><button onClick={() => handleClickBtn(1, item.title)}>응모하기</button></div>
