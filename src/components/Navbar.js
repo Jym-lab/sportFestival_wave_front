@@ -22,8 +22,8 @@ const ShowNav = () => {
                 <ul className="NanumSquareEB flex flex-col items-center justify-center gap-y-6 text-3xl">
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/sportmenu" onClick={closeNav}>결승전 대진표</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
+                    {/* <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li> */}
                     <LoginBtn />
                 </ul>
                 <img className="fixed bottom-10 w-[156px] md:max-w-[375px]" src={images.seven_rings} alt="칠륜기" />

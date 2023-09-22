@@ -12,6 +12,7 @@ import MatchPrediction from './pages/MatchPrediction';
 import SportMenu from './components/SportMenu';
 import Goods from './pages/Goods';
 import Cinema from './pages/Cinema';
+import About from './pages/About';
 import { Callback } from './utils/Auth';
 import MainMatch from './components/MainMatch';
 
@@ -22,6 +23,7 @@ function App() {
         <div className="App">
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
             <Route path='/foodtruck' element={<FoodTruck />} />
             <Route path='/boothlocation' element={<BoothLocation />} />
             <Route path='/timetable' element={<TimeTable />} />
