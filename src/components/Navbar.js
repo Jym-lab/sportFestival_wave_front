@@ -93,7 +93,7 @@ const Navbar = () => {
                     )}
                 </div>
                 <div className="flex items-center space-x-2">
-                    <Link to='/' onClick={() => { onTop() }}><SlHome size={25} /></Link>
+                    <Link to='/' className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`} onClick={() => { onTop() }}><SlHome size={25} /></Link>
                     <div className={`mr-1 hamburger-menu ${isOpen ? 'active' : ''} cursor-pointer z-20`} onClick={() => setIsOpen(!isOpen)}>
                         <div className="ham-bar bar-top bg-white" />
                         <div className="ham-bar bar-mid bg-white" />
