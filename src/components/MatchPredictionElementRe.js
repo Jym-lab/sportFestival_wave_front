@@ -6,7 +6,7 @@ import { authenticate } from '../utils/Auth';
 import { getToken } from '../utils/Auth';
 
 const MatchPredictionElement = ({ title, teamA, teamB }) => {
-    const [result, setResult] = useState('');
+    const [result, setResult] = useState(null);
 
     useEffect(() => {
         const result_state = async () => {
@@ -14,7 +14,7 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
             return response.data
         }
         result_state().then((res) => {
-            setResult(res.response.data[title]);
+            setResult(res[title]);
         }).catch(error => {
             console.error(error);
         })
