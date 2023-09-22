@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import '../css/style.css';
 import { useNavbar } from "../utils/navbar-context";
+import ScrollToTop from "../components/ScrollToTop";
 
 
 const FoodTruck = () => {
@@ -91,6 +92,7 @@ const FoodTruck = () => {
                 </div>
                 
             </div>
+            <ScrollToTop />
         </div>
     )
 }
