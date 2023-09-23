@@ -7,7 +7,6 @@ export const Callback = () => {
     const { isOpen } = useNavbar();
     const urlParams = new URLSearchParams(window.location.search);
     const token = urlParams.get('token');
-    const err_msg = urlParams.get('error');
     const userValid = async () => {
         const response = await authenticate(getToken()).get(`/user/valid`);
         return response.data
@@ -47,6 +46,12 @@ export const authenticate = (token) => axios.create({
     },
 });
 
+export const APIClient = () => axios.create({
+	baseURL: 'http://127.0.0.1:8000',
+	headers: {
+		'Content-Type': 'application/json',
+	}
+})
 
 export const get_current_user = async () => {
     const response = await authenticate(getToken()).get(`/validation`);
