@@ -32,10 +32,9 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
-                console.log(response.data)
-                const resultValue = response.data[title];
+                const res = response.data;
+                const resultValue = await res[title];
                 setResult(resultValue)
-                console.log(result)
             } catch (error) {
                 console.error('오류 발생:', error);
             }
@@ -63,13 +62,22 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
                 </div>
 
                 <div className='-my-5'>
-                    <PredictionChart sport={title} />
+                    <PredictionChart sport={title} result={result} />
                 </div>
 
                 <div className='letspredict flex justify-around NanumGothicEB mt-2'>
                     {result !== null ? (
                         <>
-                            <div>응모완료</div>
+                            {result === 1 ?
+                                (<>
+                                    <div className='letspredictEnd'><button>응모완료</button></div>
+                                    <div className=''><button>응모완료</button></div>
+                                </>) :
+                                (<>
+                                    <div className=''><button>응모완료</button></div>
+                                    <div className='letspredictEnd'><button>응모완료</button></div>
+                                </>)
+                            }
                         </>) :
                         (<>
                             <div><button onClick={() => handleClickBtn(1, title)}>응모하기</button></div>

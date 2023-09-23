@@ -4,7 +4,7 @@ import '../css/Prediction.css';
 import { authenticate } from '../utils/Auth';
 import { getToken } from '../utils/Auth';
 
-const PredictionChart = ({ sport }) => {
+const PredictionChart = ({ sport, result }) => {
     const [chartData, setChartData] = useState({
         series: [{
             name: 'teamA',
@@ -92,7 +92,7 @@ const PredictionChart = ({ sport }) => {
         };
 
         ratio_state();
-    }, [sport]);
+    }, [sport, result]);
 
     return (
         <div id="chart" className='w-10/12 mx-auto'>
