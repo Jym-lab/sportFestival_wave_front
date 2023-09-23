@@ -27,8 +27,6 @@ const SportMenu = ({ main }) => {
     };
 
     const tabs = ['축구', '농구', '피구', '손족구', '발야구', '족구', '배드민턴', '볼링', '댄스', 'LOL', 'FIFA'];
-
-    console.log(activeTab);
     return (
         <>
             <div className='flex flex-col'>
@@ -44,12 +42,12 @@ const SportMenu = ({ main }) => {
                         </Slider>
                     </div>
 
-                    {activeTab === 0 && <MainMatchRe category={'축구'} teamA={'사복'} teamB={'경영'} />}
-                    {activeTab === 1 && <MainMatchRe category={'농구'} teamA={'사복'} teamB={'글물'} />}
-                    {activeTab === 2 && <MainMatchRe category={'손족구'} teamA={'유교'} teamB={'연기'} />}
-                    {activeTab === 3 && <MainMatchRe category={'발야구'} teamA={'유교'} teamB={'연기'} />}
-                    {activeTab === 4 && <MainMatchRe category={'족구'} teamA={'연기'} teamB={'국제'} />}
-                    {activeTab === 5 && <MainMatchRe category={'피구'} teamA={'유교'} teamB={'연기'} />}
+                    {activeTab === 0 && <MainMatchRe category={'축구'} teamA={'사복'} teamB={'경영'} time={'13:40'} />}
+                    {activeTab === 1 && <MainMatchRe category={'농구'} teamA={'사복'} teamB={'글물'} time={'11:00'} />}
+                    {activeTab === 2 && <MainMatchRe category={'피구'} teamA={'유교'} teamB={'연기'} time={'13:00'} />}
+                    {activeTab === 3 && <MainMatchRe category={'손족구'} teamA={'유교'} teamB={'연기'} time={'10:00'} />}
+                    {activeTab === 4 && <MainMatchRe category={'발야구'} teamA={'유교'} teamB={'연기'} time={'10:40'} />}
+                    {activeTab === 5 && <MainMatchRe category={'족구'} teamA={'연기'} teamB={'국제'} time={'16:20'} />}
 
                     {/* 결승끝난 sport */}
                     <DecidedMatch sport={activeTab} />

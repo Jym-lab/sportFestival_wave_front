@@ -68,22 +68,27 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
         }
     }
 
+    // 경기 시작
     const handleStartState = async () => {
         const adminConfirmed = window.confirm(`${category}를 시작할까요?`);
 
         if (adminConfirmed) {
             const formattedDateTime = formatDate(currentDateTime); // 시간 형식
+            //const formattedDateTime = currentDateTime.toISOString();
+            console.log(formattedDateTime);
+
             try {
                 const formData = {
-                    category,
+                    category: category,
                     time: formattedDateTime
                 }
                 const response = await authenticate(getToken()).post(`game/start/${category}`, formData);
 
+                console.log(response.data);
+
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
-                console.log(response.config.data);
             } catch (error) {
                 console.error('오류 발생:', error);
             }

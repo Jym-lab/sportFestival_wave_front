@@ -55,7 +55,7 @@ const MainMatch = ({ sport }) => {
                                 </div>
                                 <div className='flex items-center justify-evenly'>
                                     <AiOutlineCalendar className='mr-1' />
-                                    일정 : {item.time}
+                                    일정 : 9월 25일 월
                                 </div>
                             </div>
                         </div>
