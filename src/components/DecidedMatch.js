@@ -48,22 +48,21 @@ const DecidedMatch = ({ sport }) => {
                                     {item.id === 9 || item.id === 10 ?
                                         <>
                                             <div>
-                                                <button><Link to={`${item.final}`}>결승전 보러가기</Link></button>
+                                                <button><Link to={`${item.final}`} target='_blank'>결승전 보러가기</Link></button>
                                             </div>
                                         </>
                                         :
                                         <>
                                             <div>
-                                                <button><Link to={`${item.thirdRound}`}>3,4위전 보러가기</Link></button>
+                                                <button><Link to={`${item.thirdRound}`} target='_blank'>3,4위전 보러가기</Link></button>
                                             </div>
                                             <div>
-                                                <button><Link to={`${item.semifinals}`}>4강 보러가기</Link></button>
+                                                <button><Link to={`${item.semifinals}`} target='_blank'>4강 보러가기</Link></button>
                                             </div>
                                             <div>
-                                                <button><Link to={`${item.final}`}>결승전 보러가기</Link></button>
+                                                <button><Link to={`${item.final}`} target='_blank'>결승전 보러가기</Link></button>
                                             </div>
                                         </>}
-
                                 </div >
                             </div >
                         </>

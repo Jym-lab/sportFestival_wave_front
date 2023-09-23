@@ -42,7 +42,7 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
     }
 
     return (
-        <div className='my-5'>
+        <div className='my-8'>
             <div className='text-center mb-5 text-2xl'>{title}</div>
             <div>
                 <div>
@@ -70,12 +70,12 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
                         <>
                             {result === 1 ?
                                 (<>
-                                    <div className='letspredictEnd'><button>응모완료</button></div>
+                                    <div className='letspredictEnd swirl-in-fwd'><button>응모완료</button></div>
                                     <div className=''><button>응모완료</button></div>
                                 </>) :
                                 (<>
                                     <div className=''><button>응모완료</button></div>
-                                    <div className='letspredictEnd'><button>응모완료</button></div>
+                                    <div className='letspredictEnd swirl-in-fwd'><button>응모완료</button></div>
                                 </>)
                             }
                         </>) :

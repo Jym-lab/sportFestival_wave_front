@@ -70,6 +70,7 @@ const TimeTable = () => {
                 </div>
 
                 <ScrollToTop />
+                <div className="last"></div>
             </div>
         </div>
     )
