@@ -30,7 +30,7 @@ const ShowNav = () => {
             <div className="flex flex-col items-center justify-center pt-36">
                 <ul className="NanumSquareEB flex flex-col items-center justify-center gap-y-6 text-2xl">
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/timetable" onClick={closeNav}>타임테이블</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/boothlocation" onClick={closeNav}>부스배치도</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/boothlocation" onClick={closeNav}>부스 배치도</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/sportmenu" onClick={closeNav}>결승전 대진표</Link></li>
                     <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
                     {ACCESS_TOKEN ?

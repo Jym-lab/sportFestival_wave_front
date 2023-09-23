@@ -19,12 +19,12 @@ const MatchPrediction = () => {
                 </div>
                 {ACCESS_TOKEN ?
                     <>
-                        <MatchPredictionElementRe title={'축구'} teamA={'사복'} teamB={'경영'} />
                         <MatchPredictionElementRe title={'농구'} teamA={'사복'} teamB={'글물'} />
                         <MatchPredictionElementRe title={'피구'} teamA={'유교'} teamB={'연기'} />
+                        <MatchPredictionElementRe title={'축구'} teamA={'사복'} teamB={'경영'} />
+                        <MatchPredictionElementRe title={'족구'} teamA={'연기'} teamB={'국제'} />
                         <MatchPredictionElementRe title={'손족구'} teamA={'유교'} teamB={'연기'} />
                         <MatchPredictionElementRe title={'발야구'} teamA={'유교'} teamB={'연기'} />
-                        <MatchPredictionElementRe title={'족구'} teamA={'연기'} teamB={'국제'} />
                     </> :
                     <div className={`flex flex-col justify-center items-center`}>
                         <div className='text-lg text-center pt-10'>
