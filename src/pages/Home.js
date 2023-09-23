@@ -7,9 +7,10 @@ const Home = () => {
     const { isOpen } = useNavbar();
     return (
         <>
+        <div className="about-background">
             <Navbar />
             <div className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
-                <div className={`min-h-screen flex flex-col items-center justify-center main-background pt-14`}>
+                <div className={`min-h-screen flex flex-col items-center justify-center pt-14`}>
                     <div className="Bombaran21 text-xl fade-in" style={{ animationDelay: '1s' }}>뜨거운 가을, 우리 모두 하나된 울림</div>
                     <div className="Bombaran21 text-3xl pt-6 fade-in" style={{ animationDelay: '2.5s' }}>2023</div>
                     <div className="text-3xl py-6 fade-in" style={{ animationDelay: '2.8s' }}>
@@ -31,6 +32,7 @@ const Home = () => {
                 </div>
                 <MainMenuRe />
             </div>
+        </div>
         </>
     )
 }

@@ -7,7 +7,7 @@ import ScrollToTop from "../components/ScrollToTop";
 const FoodTruck = () => {
     const { isOpen } = useNavbar();
     return (
-        <div className="FoodTruck">
+        <div className="FoodTruck about-background">
             <Navbar />
             <div className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
                 <div className={"pageTitleLeft "}>

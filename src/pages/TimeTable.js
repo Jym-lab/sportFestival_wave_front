@@ -7,7 +7,7 @@ import { useNavbar } from "../utils/navbar-context";
 const TimeTable = () => {
     const { isOpen } = useNavbar()
     return (
-        <div className="TimeTable">
+        <div className="TimeTable about-background">
             <Navbar />
             <div className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="pageTitleLeft flex items-end">
