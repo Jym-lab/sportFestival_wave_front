@@ -8,7 +8,7 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
     const [ongoing, setOngoing] = useState(false);
     const [scoreA, setScoreA] = useState(0);
     const [scoreB, setScoreB] = useState(0);
-    const [result, setResult] = useState(null)
+    const [result, setResult] = useState("진행중")
     const [Stime, setSTime] = useState(0);
     const [duration, setDuration] = useState(0);
 
@@ -51,7 +51,7 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
     return (
         <div>
             <div className='text-center flex flex-col'>
-                <div className={`${ongoing ? 'pulsate-fwd' : ''} NanumGothicEB text-center my-8 text-3xl`}>{category}</div>
+                <div className={`${ongoing && result === "진행중" ? 'pulsate-fwd' : ''} NanumGothicEB text-center my-8 text-3xl`}>{category}</div>
                 <div className={`${ongoing ? '' : 'notReal'} realTime NanumSquareB`}>
                     {result==="진행중" ? <span className='text-sm'>경기 진행 {formatTime(duration)}초</span> : ''}
                 </div>
