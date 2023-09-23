@@ -8,6 +8,7 @@ import DecidedMatch from './DecidedMatch';
 import MainMatch from './MainMatch';
 import ScrollToTop from './ScrollToTop';
 import { useNavbar } from '../utils/navbar-context';
+import MainMatchRe from './MainMatchRe';
 
 const SportMenu = ({ main }) => {
     const [activeTab, setActiveTab] = useState(0);
@@ -27,6 +28,7 @@ const SportMenu = ({ main }) => {
 
     const tabs = ['축구', '농구', '피구', '손족구', '발야구', '족구', '배드민턴', '볼링', '댄스', 'LOL', 'FIFA'];
 
+    console.log(activeTab);
     return (
         <>
             <div className='flex flex-col'>
@@ -42,13 +44,15 @@ const SportMenu = ({ main }) => {
                         </Slider>
                     </div>
 
-                    {main ? '' :
-                        <>
-                            <MainMatch sport={activeTab} />
-                            {/* 결승끝난 sport */}
-                            <DecidedMatch sport={activeTab} />
-                        </>
-                    }
+                    {activeTab === 0 && <MainMatchRe category={'축구'} teamA={'사복'} teamB={'경영'} />}
+                    {activeTab === 1 && <MainMatchRe category={'농구'} teamA={'사복'} teamB={'글물'} />}
+                    {activeTab === 2 && <MainMatchRe category={'손족구'} teamA={'유교'} teamB={'연기'} />}
+                    {activeTab === 3 && <MainMatchRe category={'발야구'} teamA={'유교'} teamB={'연기'} />}
+                    {activeTab === 4 && <MainMatchRe category={'족구'} teamA={'연기'} teamB={'국제'} />}
+                    {activeTab === 5 && <MainMatchRe category={'피구'} teamA={'유교'} teamB={'연기'} />}
+
+                    {/* 결승끝난 sport */}
+                    <DecidedMatch sport={activeTab} />
                     <ScrollToTop />
                 </div>
             </div>

@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { authenticate } from '../utils/Auth';
 import { getToken } from '../utils/Auth';
+import { VscDebugStart } from "react-icons/vsc";
 
 const AdminEachgame = ({ category, teamA, teamB }) => {
-    const [scores, setScores] = useState({ scoreA: '', scoreB: '' });
+    const [scores, setScores] = useState({ scoreA: '0', scoreB: '0' });
     const [winnerTeam, setWinnerTeam] = useState(null);
+
+    const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
     const handleScoreChange = (e) => {
         const { name, value } = e.target;
@@ -65,9 +68,52 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
         }
     }
 
+    const handleStartState = async () => {
+        const adminConfirmed = window.confirm(`${category}를 시작할까요?`);
+
+        if (adminConfirmed) {
+            const formattedDateTime = formatDate(currentDateTime); // 시간 형식
+            try {
+                const formData = {
+                    category,
+                    time: formattedDateTime
+                }
+                const response = await authenticate(getToken()).post(`game/start/${category}`, formData);
+
+                if (!response.data) {
+                    throw new Error(`오류 : ${response.status}`);
+                }
+                console.log(response.config.data);
+            } catch (error) {
+                console.error('오류 발생:', error);
+            }
+        }
+    }
+
+    useEffect(() => {
+        // 1초마다 현재 날짜와 시간 업데이트
+        const interval = setInterval(() => {
+            setCurrentDateTime(new Date());
+        }, 1000)
+    });
+
+    function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        const seconds = String(date.getSeconds()).padStart(2, "0");
+
+        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    }
+
     return (
         <div className="NanumSquareEB text-center mt-10 text-white" >
-            <div className="text-4xl">{category}</div>
+            <div className="flex justify-center items-center">
+                <div className="text-4xl mr-5">{category}</div>
+                <VscDebugStart size={30} onClick={handleStartState} />
+            </div>
             <div>
                 <div className="flex justify-evenly text-2xl mt-5">
                     <div>
