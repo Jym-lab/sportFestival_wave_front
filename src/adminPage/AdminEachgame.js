@@ -32,27 +32,30 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     "result": null // 진행중
                 }
                 const response = await authenticate(getToken()).post(`/game/${category}`, formData);
+
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
+                console.log(response.config.data);
             } catch (error) {
                 console.error('오류 발생:', error);
             }
         }
-        setScores({ scoreA: '', scoreB: '' });
+        // setScores({ scoreA: '', scoreB: '' });
     }
 
     const handleWinTeamSubmit = async () => {
-        const adminWinConfirmed = window.confirm(`승리팀을 입력하시겠습니까?`);
+        const adminWinConfirmed = window.confirm(`승리팀 입력을 확정하시겠습니까? 확인을 누를 시 경기가 종료됩니다.`);
 
         if (adminWinConfirmed) {
             try {
                 const formData = {
-                    "score_A": 0,
-                    "score_B": 0,
+                    "score_A": scores.scoreA,
+                    "score_B": scores.scoreB,
                     "result": winnerTeam // teamA - true / teamB - false
                 }
                 const response = await authenticate(getToken()).post(`/game/${category}`, formData);
+                console.log(response.config.data);
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
@@ -90,15 +93,6 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     <input
                         type="radio"
                         name="SelectWinnerTeam"
-                        value=''
-                        onChange={handleWinnerTeamChange}
-                    />
-                    진행중
-                </label>
-                <label>
-                    <input
-                        type="radio"
-                        name="SelectWinnerTeam"
                         value="true"
                         onChange={handleWinnerTeamChange}
                     />
@@ -114,7 +108,9 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     {teamB}
                 </label>
 
-                <button onClick={handleWinTeamSubmit}>확인</button>
+                <div className="adminScoreSubmitBtn">
+                    <button onClick={handleWinTeamSubmit}>확인</button>
+                </div>
             </div>
         </div >
     )

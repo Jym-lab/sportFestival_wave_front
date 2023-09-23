@@ -133,15 +133,15 @@
     width: 140px;
 }
 
-.URLBtn div:first-child {
+.URLBtn div:first-child button {
     color: #00E095;
 }
 
-.URLBtn div:nth-child(2) {
+.URLBtn div:nth-child(2) button {
     color: #69D8FF;
 }
 
-.URLBtn div:last-child {
+.URLBtn div:last-child button {
     color: #FF8D8D;
 }
 

@@ -17,8 +17,7 @@
     width: 100px;
 }
 
-.adminScoreSubmitBtn button,
-button {
+.adminScoreSubmitBtn button {
     background-color: #d3d3d3;
     padding: 3px;
     border-radius: 10px;
