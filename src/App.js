@@ -18,6 +18,8 @@ import { Callback } from './utils/Auth';
 import MainMatch from './components/MainMatch';
 import Cheers from './pages/Cheers';
 import MyPage from './pages/MyPage';
+import AdminSelectGame from './adminPage/AdminSelectGame';
+import AdminEachgame from './adminPage/AdminEachgame';
 
 function App() {
   return (
@@ -38,7 +40,9 @@ function App() {
             <Route path='/cinema' element={<Cinema />} />
             <Route path='/login/callback' element={<Callback />} />
             <Route path='/cheers' element={<Cheers />} />
-            <Route path='/mypage' element={<MyPage />}/>
+            <Route path='/mypage' element={<MyPage />} />
+            <Route path='/admin' element={<AdminSelectGame />} />
+            <Route path='/admineachgame' element={<AdminEachgame />} />
           </Routes>
         </div>
       </BrowserRouter>

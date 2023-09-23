@@ -1,0 +1,27 @@
+.gameBtn {
+    background-color: #d3d3d3;
+    width: 70px;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    margin: 5px;
+}
+
+.inputScore {
+    width: 130px;
+    color: black;
+}
+
+.WinnerTeam {
+    color: black;
+    width: 100px;
+}
+
+.adminScoreSubmitBtn button,
+button {
+    background-color: #d3d3d3;
+    padding: 3px;
+    border-radius: 10px;
+    color: black;
+    width: 60px;
+}
