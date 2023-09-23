@@ -21,7 +21,6 @@ const AdminSelectGame = () => {
                 <div className="gameBtn NanumGothicB"><button onClick={(e) => { handleEachGame(e) }}>족구</button></div>
                 <div className="gameBtn NanumGothicB"><button onClick={(e) => { handleEachGame(e) }}>손족구</button></div>
                 <div className="gameBtn NanumGothicB"><button onClick={(e) => { handleEachGame(e) }}>농구</button></div>
-                <div className="gameBtn NanumGothicB"><button onClick={(e) => { handleEachGame(e) }}>댄스</button></div>
             </div>
 
             {game === '축구' && <AdminEachgame category={'축구'} teamA={'사복'} teamB={'경영'} />}

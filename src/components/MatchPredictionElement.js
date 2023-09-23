@@ -6,21 +6,21 @@ import { authenticate } from '../utils/Auth';
 import { getToken } from '../utils/Auth';
 
 const MatchPredictionElement = ({ titleid }) => {
-    // const [selectedBtn, setSelectedBtn] = useState(null);
+    const [selectedBtn, setSelectedBtn] = useState(null);
 
     const handleClickBtn = async (buttonIndex, title) => {
-        // setSelectedBtn(buttonIndex);
+        setSelectedBtn(buttonIndex);
+
         try {
             const formData = {
                 "category": title, "predict": buttonIndex
             }
             const response = await authenticate(getToken()).post(`/user/game`, formData);
+            console.log(response);
 
             if (!response.data) {
                 throw new Error(`오류 : ${response.status}`);
             }
-            console.log(response.data);
-            console.log(response.data.축구 !== null);
             return response.data
         } catch (error) {
             console.error('오류 발생:', error);

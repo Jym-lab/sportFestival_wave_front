@@ -34,26 +34,26 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
         return response.data;
     }
     loading()
-    .then((res) => {
-        setOngoing(res.is_start);
-        setScoreA(res.score_A);
-        setScoreB(res.score_B)
-        if (res.result !== null)
-            setResult(res.result)
-        else
-            setResult("진행중");
-        setSTime(res.start_time)
-        TimerOn();
-    })
-    .catch((error) => {
-        console.error(error);
-    });
+        .then((res) => {
+            setOngoing(res.is_start);
+            setScoreA(res.score_A);
+            setScoreB(res.score_B)
+            if (res.result !== null)
+                setResult(res.result)
+            else
+                setResult("진행중");
+            setSTime(res.start_time)
+            TimerOn();
+        })
+        .catch((error) => {
+            console.error(error);
+        });
     return (
         <div>
             <div className='text-center flex flex-col'>
                 <div className={`${ongoing ? 'pulsate-fwd' : ''} NanumGothicEB text-center my-8 text-3xl`}>{category}</div>
                 <div className={`${ongoing ? '' : 'notReal'} realTime NanumSquareB`}>
-                    {result==="진행중" ? <span className='text-sm'>경기 진행 {formatTime(duration)}초</span> : ''}
+                    {result === "진행중" ? <span className='text-sm'>경기 진행 {formatTime(duration)}초</span> : ''}
                 </div>
 
                 <div className='w-10/12 mx-auto flex justify-around items-center text-center'>
@@ -80,8 +80,8 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
                             <div>
                                 <img className='w-20' src={images[teamB]} alt="임시" />
                                 <p className='NanumGothicB text-black pt-3 flex justify-center items-center'>
-                                {teamB}
-                                {result === "진행중" ? '' : result ? <img src={images.gold} className='winTeam ml-1' alt="메달" /> : ''}
+                                    {teamB}
+                                    {result === "진행중" ? '' : result ? <img src={images.gold} className='winTeam ml-1' alt="메달" /> : ''}
                                 </p>
                             </div>
                         </div>

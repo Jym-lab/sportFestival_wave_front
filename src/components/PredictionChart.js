@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import '../css/Prediction.css';
+import { authenticate } from '../utils/Auth';
+import { getToken } from '../utils/Auth';
 
 const PredictionChart = ({ sport }) => {
     const [chartData, setChartData] = useState({
         series: [{
             name: 'teamA',
-            data: [50],
+            data: [],
         }, {
             name: 'teamB',
-            data: [30],
+            data: [],
         }],
         options: {
             chart: {
@@ -66,7 +68,30 @@ const PredictionChart = ({ sport }) => {
     });
 
     useEffect(() => {
-        // 이펙트 로직 (예: API 호출)
+        const ratio_state = async () => {
+            try {
+                const response = await authenticate(getToken()).get(`/game/ratio/${sport}`);
+                const data = response.data;
+
+                setChartData((prevChartData) => ({
+                    ...prevChartData,
+                    series: [
+                        {
+                            ...prevChartData.series[0],
+                            data: [data["A"]],
+                        },
+                        {
+                            ...prevChartData.series[1],
+                            data: [data["B"]],
+                        },
+                    ],
+                }));
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        ratio_state();
     }, [sport]);
 
     return (

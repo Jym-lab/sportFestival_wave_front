@@ -39,7 +39,6 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
-                console.log(response.config.data);
             } catch (error) {
                 console.error('오류 발생:', error);
             }
@@ -58,7 +57,6 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     "result": winnerTeam // teamA - true / teamB - false
                 }
                 const response = await authenticate(getToken()).post(`/game/${category}`, formData);
-                console.log(response.config.data);
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
@@ -74,8 +72,6 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
 
         if (adminConfirmed) {
             const formattedDateTime = formatDate(currentDateTime); // 시간 형식
-            //const formattedDateTime = currentDateTime.toISOString();
-            console.log(formattedDateTime);
 
             try {
                 const formData = {
@@ -83,8 +79,6 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     time: formattedDateTime
                 }
                 const response = await authenticate(getToken()).post(`game/start/${category}`, formData);
-
-                console.log(response.data);
 
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
@@ -144,7 +138,7 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     <input
                         type="radio"
                         name="SelectWinnerTeam"
-                        value="true"
+                        value="false"
                         onChange={handleWinnerTeamChange}
                     />
                     {teamA}
@@ -153,7 +147,7 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     <input
                         type="radio"
                         name="SelectWinnerTeam"
-                        value="false"
+                        value="true"
                         onChange={handleWinnerTeamChange}
                     />
                     {teamB}
