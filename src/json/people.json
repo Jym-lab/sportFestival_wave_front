@@ -27,7 +27,7 @@
 },
 {
     "id": 4,
-    "image": "img/about/youngmin.png",
+    "image": "img/about/minwoo.png",
     "logo": "img/aboutLogo/likelion.png",
     "name": "천민우",
     "department": "컴퓨터공학과 18",
@@ -54,11 +54,56 @@
 },
 {
     "id": 7,
-    "image": "img/about/minjo.png",
+    "image": "img/about/minjoo.png",
     "logo": "img/aboutLogo/renew.png",
     "name": "서민주",
     "department": "관광개발학과 22",
-    "position": "홍보미디어국장",
-    "role": "웹 디자인"
+    "position": "홍보미디어국 국장",
+    "role": "웹디자인"
+},
+{
+    "id": 8,
+    "image": "img/about/jiye.png",
+    "logo": "img/aboutLogo/renew.png",
+    "name": "백지예",
+    "department": "도시디자인정보공학과 22",
+    "position": "홍보미디어국 차장",
+    "role": "영상촬영 및 편집"
+},
+{
+    "id": 9,
+    "image": "img/about/joohyuk.png",
+    "logo": "img/aboutLogo/renew.png",
+    "name": "박주혁",
+    "department": "중어중문학과 17",
+    "position": "총학생회장",
+    "role": "기획총괄 및 검수"
+},
+{
+    "id": 10,
+    "image": "img/about/dabin.png",
+    "logo": "img/aboutLogo/renew.png",
+    "name": "홍다빈",
+    "department": "경영학과 21",
+    "position": "총무국 차장",
+    "role": "검수"
+},
+{
+    "id": 11,
+    "image": "img/about/gumin.png",
+    "logo": "img/aboutLogo/renew.png",
+    "name": "정구민",
+    "department": "국어국문학과 22",
+    "position": "사업기획국 차장",
+    "role": "영상 촬영"
+},
+{
+    "id": 12,
+    "image": "img/about/minjung.png",
+    "logo": "img/aboutLogo/renew.png",
+    "name": "성민정",
+    "department": "연극영화학부 20",
+    "position": "총무국 국장",
+    "role": "검수"
 }
 ]

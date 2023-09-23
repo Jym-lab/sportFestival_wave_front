@@ -8,10 +8,9 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
     const [ongoing, setOngoing] = useState(false);
     const [scoreA, setScoreA] = useState(0);
     const [scoreB, setScoreB] = useState(0);
-    const [result, setResult] = useState(null)
+    const [result, setResult] = useState("진행중")
     const [Stime, setSTime] = useState(0);
     const [duration, setDuration] = useState(0);
-
 
     const TimerOn = () => {
         const serverTime = new Date(Stime);
@@ -21,8 +20,8 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
         setDuration(timeDiffInSeconds);
     }
     setInterval(() => {
-        TimerOn()
-    }, 1000)
+        TimerOn();
+    }, 1000);
     const formatTime = (timeInSeconds) => {
         const minutes = Math.floor(timeInSeconds / 60);
         const seconds = Math.floor(timeInSeconds % 60);
@@ -48,10 +47,28 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
         .catch((error) => {
             console.error(error);
         });
+    useEffect(() => {
+        loading()
+            .then((res) => {
+                setOngoing(res.is_start);
+                setScoreA(res.score_A);
+                setScoreB(res.score_B)
+                if (res.result !== null)
+                    setResult(res.result)
+                else
+                    setResult("진행중");
+                setSTime(res.start_time)
+                TimerOn();
+                console.log(res)
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }, [])
     return (
         <div>
             <div className='text-center flex flex-col'>
-                <div className={`${ongoing ? 'pulsate-fwd' : ''} NanumGothicEB text-center my-8 text-3xl`}>{category}</div>
+                <div className={`${ongoing && result === "진행중" ? 'pulsate-fwd' : ''} NanumGothicEB text-center my-8 text-3xl`}>{category}</div>
                 <div className={`${ongoing ? '' : 'notReal'} realTime NanumSquareB`}>
                     {result === "진행중" ? <span className='text-sm'>경기 진행 {formatTime(duration)}초</span> : ''}
                 </div>
