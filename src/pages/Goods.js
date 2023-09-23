@@ -45,12 +45,13 @@ const Goods = () => {
                                 <div className="towelcontent ml-8">선착순(500명)</div>
                             </div>
                         </div>
+                        {/* 
                         <div className="flex justify-start ml-10 items-center py-6 NanumSquareB">
                             <div className="w-3/12 shrink-0 "> <img className='' src={images.tatoo} alt="타투스티커" /></div>
                             <div>
                                 <div className="text-lg ml-8">타투스티커</div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

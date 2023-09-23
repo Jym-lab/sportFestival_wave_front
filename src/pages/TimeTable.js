@@ -13,7 +13,7 @@ const TimeTable = () => {
                 <div className="pageTitleLeft flex items-end">
                     <div className="grow">
                         <p className="mb-1">영암체전</p>
-                        <p>타임테이블</p>
+                        <p className="">타임테이블</p>
                     </div>
 
                     <div className="NanumSquareR">

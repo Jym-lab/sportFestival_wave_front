@@ -5,6 +5,7 @@ import '../css/style.css';
 import { RiArrowRightSLine } from "react-icons/ri";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Cheers = () => {
     const { isOpen } = useNavbar();
@@ -134,6 +135,7 @@ const Cheers = () => {
                     )}
                 </div>
             </div >
+            <ScrollToTop />
         </div >
     );
 };

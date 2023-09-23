@@ -14,8 +14,8 @@ const MatchPrediction = () => {
             <Navbar />
             <div className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="pageTitleCenter">
-                    <p className="mb-2 pt-8">결승전</p>
-                    <p>승부예측</p>
+                    <p className="mb-2 pt-8 tracking-in-contract">결승전</p>
+                    <p className='tracking-in-contract'>승부예측</p>
                 </div>
                 {ACCESS_TOKEN ?
                     <>

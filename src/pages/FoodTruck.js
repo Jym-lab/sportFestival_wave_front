@@ -11,8 +11,8 @@ const FoodTruck = () => {
             <Navbar />
             <div className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
                 <div className={"pageTitleLeft "}>
-                    <p className="mb-1">푸드트럭</p>
-                    <p>메뉴안내</p>
+                    <p className="mb-1 tracking-in-contract">푸드트럭</p>
+                    <p className="tracking-in-contract">메뉴안내</p>
                 </div>
                 <div className="flex flex-col justify-center items-center pb-10">
                     <div className="text-center text-lg NanumSquareEB mb-1">꺼리분식</div>
@@ -94,7 +94,7 @@ const FoodTruck = () => {
             </div>
             <ScrollToTop />
             <div className="last"></div>
-        </div>
+        </div >
     )
 }
 

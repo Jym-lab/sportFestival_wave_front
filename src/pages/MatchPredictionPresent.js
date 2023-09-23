@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import Navbar from "../components/Navbar"
 import { images } from "../utils/images";
 import { useNavbar } from "../utils/navbar-context";
+import ScrollToTop from "../components/ScrollToTop";
 
 const MatchPredictionPresent = () => {
     const Navigate = useNavigate();
@@ -17,7 +18,7 @@ const MatchPredictionPresent = () => {
                     </div>
 
                     <div className="predictionbtn text-center NanumGothicB">
-                        <button onClick={() => { Navigate('/matchprediction') }}>승부예측 참여하러 가기 ▶</button>
+                        <button className='heartbeat' onClick={() => { Navigate('/matchprediction') }}>승부예측 참여하러 가기 ▶</button>
                     </div>
 
                     <div className="text-center p-3 my-8">
@@ -31,6 +32,8 @@ const MatchPredictionPresent = () => {
                     </div>
                 </div>
             </div>
+            <ScrollToTop />
+            <div className="last"></div>
         </div>
     )
 }

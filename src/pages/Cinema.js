@@ -10,8 +10,8 @@ const Cinema = () => {
             <Navbar />
             <div className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="pageTitleCenter">
-                    <p className="mb-2">가을밤의</p>
-                    <p>시네마</p>
+                    <p className="mb-2 tracking-in-contract">가을밤의</p>
+                    <p className="tracking-in-contract">시네마</p>
                 </div>
 
                 <div className="NanumSquareL text-center cinemacontent">
