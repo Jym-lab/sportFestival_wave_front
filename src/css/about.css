@@ -69,3 +69,12 @@ hr {
 .renew-color{
     color: #b69414;
 }
+.about-background {
+    min-height: 100vh;
+    background-color: #001430;
+    background-image: url('../../public/img/about-background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}

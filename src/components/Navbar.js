@@ -22,7 +22,7 @@ const ShowNav = () => {
     }
 
     return (
-        <div className="Navbar min-h-screen overflow-y-auto">
+        <div className="Navbar min-h-screen overflow-y-auto main-background">
             <div className="relative chineseFont flex justify-center pt-14">
                 <p className="absolute text-stroke text-transparent text-8xl">&#27874;:&#21205;</p>
                 <p className="absolute text-7xl pt-3">&#27874;:&#21205;</p>
