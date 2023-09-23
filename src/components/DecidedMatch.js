@@ -23,20 +23,20 @@ const DecidedMatch = ({ sport }) => {
                                     </div>
 
                                     <div className="flex justify-center items-center mb-10 mx-auto">
-                                        <img className='w-2/12' src={images.sliver} alt="금메달" />
+                                        <img className='w-2/12' src={images.sliver} alt="은메달" />
                                         <div className="ml-7 w-32 shrink">
                                             <p className="mb-2 NanumGothicEB text-2xl">{item.sliver}</p>
                                             <span className="NanumGothicL text-sm">{item.slivercontent}</span>
                                         </div>
                                     </div>
-
-                                    <div className="flex justify-center items-center mb-10 mx-auto">
-                                        <img className='w-2/12' src={images.bronze} alt="금메달" />
-                                        <div className="ml-7 w-32 shrink">
-                                            <p className="mb-2 NanumGothicEB text-2xl">{item.bronze}</p>
-                                            <span className="NanumGothicL text-sm">{item.bronzecontent}</span>
-                                        </div>
-                                    </div>
+                                    {item.id === 9 ? '' :
+                                        <div className="flex justify-center items-center mb-10 mx-auto">
+                                            <img className='w-2/12' src={images.bronze} alt="동메달" />
+                                            <div className="ml-7 w-32 shrink">
+                                                <p className="mb-2 NanumGothicEB text-2xl">{item.bronze}</p>
+                                                <span className="NanumGothicL text-sm">{item.bronzecontent}</span>
+                                            </div>
+                                        </div>}
                                 </div>
 
                                 <hr className="mx-5" />

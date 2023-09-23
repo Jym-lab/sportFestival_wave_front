@@ -9,6 +9,7 @@ import MainMatch from './MainMatch';
 import ScrollToTop from './ScrollToTop';
 import { useNavbar } from '../utils/navbar-context';
 import MainMatchRe from './MainMatchRe';
+import MainMatchDance from './MainMatchDance';
 
 const SportMenu = ({ main }) => {
     const [activeTab, setActiveTab] = useState(0);
@@ -48,6 +49,7 @@ const SportMenu = ({ main }) => {
                     {activeTab === 3 && <MainMatchRe category={'손족구'} teamA={'유교'} teamB={'연기'} time={'10:00'} />}
                     {activeTab === 4 && <MainMatchRe category={'발야구'} teamA={'유교'} teamB={'연기'} time={'10:40'} />}
                     {activeTab === 5 && <MainMatchRe category={'족구'} teamA={'연기'} teamB={'국제'} time={'16:20'} />}
+                    {activeTab === 8 && <MainMatchDance />}
 
                     {/* 결승끝난 sport */}
                     <DecidedMatch sport={activeTab} />

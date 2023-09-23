@@ -24,5 +24,9 @@ export const images = {
     유교: PATH + '/img/departmentLogo/유교.png',
     연기: PATH + '/img/departmentLogo/연영.png',
     국제: PATH + '/img/departmentLogo/국제.png',
-
+    문선: PATH + '/img/departmentLogo/문선.png',
+    체교: PATH + '/img/departmentLogo/체교.png',
+    중문: PATH + '/img/departmentLogo/중문.png',
+    신학: PATH + '/img/departmentLogo/신학.png',
+    뷰티: PATH + '/img/departmentLogo/뷰티.png',
 };
