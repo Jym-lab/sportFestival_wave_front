@@ -12,7 +12,6 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
     const [Stime, setSTime] = useState(0);
     const [duration, setDuration] = useState(0);
 
-
     const TimerOn = () => {
         const serverTime = new Date(Stime);
         const currentTime = new Date();
@@ -21,8 +20,8 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
         setDuration(timeDiffInSeconds);
     }
     setInterval(() => {
-        TimerOn()
-    }, 1000)
+        TimerOn();
+    }, 1000);
     const formatTime = (timeInSeconds) => {
         const minutes = Math.floor(timeInSeconds / 60);
         const seconds = Math.floor(timeInSeconds % 60);
@@ -33,21 +32,24 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
         const response = await APIClient().get(`/game/${category}`);
         return response.data;
     }
-    loading()
-    .then((res) => {
-        setOngoing(res.is_start);
-        setScoreA(res.score_A);
-        setScoreB(res.score_B)
-        if (res.result !== null)
-            setResult(res.result)
-        else
-            setResult("진행중");
-        setSTime(res.start_time)
-        TimerOn();
-    })
-    .catch((error) => {
-        console.error(error);
-    });
+    useEffect(() => {
+        loading()
+        .then((res) => {
+            setOngoing(res.is_start);
+            setScoreA(res.score_A);
+            setScoreB(res.score_B)
+            if (res.result !== null)
+                setResult(res.result)
+            else
+                setResult("진행중");
+            setSTime(res.start_time)
+            TimerOn();
+            console.log(res)
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }, [])
     return (
         <div>
             <div className='text-center flex flex-col'>
