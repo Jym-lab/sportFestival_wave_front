@@ -1,6 +1,9 @@
 import Navbar from "../components/Navbar";
 import React, { useState } from "react";
 import { useNavbar } from "../utils/navbar-context";
+import '../css/style.css';
+import { RiArrowRightSLine } from "react-icons/ri";
+import { RiArrowLeftSLine } from "react-icons/ri";
 
 const Cheers = () => {
     const { isOpen } = useNavbar();
@@ -10,7 +13,7 @@ const Cheers = () => {
     const handleCheersongButtonClick = () => {
         setShowCheersong(false);
         setShowCheeringslogan(true);
- // 애니메이션 시간(0.5초) 이후에 Cheeringslogan 컴포넌트 표시
+        // 애니메이션 시간(0.5초) 이후에 Cheeringslogan 컴포넌트 표시
     };
 
     const handleCheeringsloganButtonClick = () => {
@@ -24,20 +27,22 @@ const Cheers = () => {
                 <Navbar />
                 <div className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
                     {showCheersong && (
-                        <div className={`${!showCheeringslogan ? 'display-block' : 'display-none'}`}>
+                        <div className={`${!showCheeringslogan ? 'display-block  fade-in-right' : 'display-none'}`}>
                             <div className="flex flex-row justify-center items-center">
                                 <div className="w-3/12"></div>
                                 <div className="pageTitleCenter">
                                     <p className="mb-2 pt-8">성결대학교</p>
                                     <p>응원가</p>
                                 </div>
-                                <div className="w-3/12 pt-20 px-8 text-5xl cursor-pointer" onClick={handleCheersongButtonClick}>▶</div>
+                                <div className="w-3/12 pt-20 px-6 text-5xl cursor-pointer" onClick={handleCheersongButtonClick}>
+                                    <RiArrowRightSLine />
+                                </div>
                             </div>
-                            <div className="text-center text-xs NanumSquareR pb-8">
+                            <div className="text-center text-xs NanumSquareR pb-8 leading-5">
                                 응원가는 인스타그램 @sku_39th_renew에서<br />
                                 감상하실 수 있습니다.
                             </div>
-                            <div className="text-center text-xs NanumSquareL pb-8">
+                            <div className="text-center text-xs NanumSquareR pb-8 leading-5">
                                 던져 내 몸을 이 심장으로<br />
                                 저기 높은 하늘을 보며<br />
                                 신발끈을 동여매 검정에서<br />
@@ -79,10 +84,13 @@ const Cheers = () => {
                             </div>
                         </div>
                     )}
+
                     {showCheeringslogan && (
-                        <div className={`slide-right ${!showCheersong ? 'display-block' : 'display-none'}`}>
+                        <div className={`slide-right ${!showCheersong ? 'display-block  fade-in-left' : 'display-none'}`}>
                             <div className="flex flex-row justify-center items-center">
-                                <div className="w-3/12 pt-20 px-8 text-5xl cursor-pointer" onClick={handleCheeringsloganButtonClick}>◀</div>
+                                <div className="w-3/12 pt-20 px-6 text-5xl cursor-pointer" onClick={handleCheeringsloganButtonClick}>
+                                    <RiArrowLeftSLine />
+                                </div>
                                 <div className="pageTitleCenter">
                                     <p className="mb-2 pt-8">단과대학별</p>
                                     <p>응원구호</p>
@@ -92,39 +100,39 @@ const Cheers = () => {
                             <div className="text-center text-xs NanumSquareR pb-8">각 단과대학별 응원구호가 상이하니 참고 부탁드립니다.</div>
                             <div className="flex flex-col justify-center items-center py-5">
                                 <div className="text-center text-sm NanumSquareEB pb-3">글로벌경영기술대학</div>
-                                <hr className="w-48 text-center"/>
+                                <hr className="w-48 text-center" />
                                 <div className="text-center text-sm NanumSquareB pt-3">siuuu!!!</div>
                             </div>
                             <div className="flex flex-col justify-center items-center py-5">
                                 <div className="text-center text-sm NanumSquareEB pb-3">사범대학</div>
-                                <hr className="w-48 text-center"/>
+                                <hr className="w-48 text-center" />
                                 <div className="text-center text-sm NanumSquareB pt-3">유교 어이! 체교 어이! 사범 어이!</div>
                             </div>
                             <div className="flex flex-col justify-center items-center py-5">
                                 <div className="text-center text-sm NanumSquareEB pb-3">사회과학대학</div>
-                                <hr className="w-48 text-center"/>
+                                <hr className="w-48 text-center" />
                                 <div className="text-center text-sm NanumSquareB pt-3">사과대 자 두과자</div>
                             </div>
                             <div className="flex flex-col justify-center items-center py-5">
                                 <div className="text-center text-sm NanumSquareEB pb-3">신학대학</div>
-                                <hr className="w-48 text-center"/>
+                                <hr className="w-48 text-center" />
                                 <div className="text-center text-sm NanumSquareB pt-3">shema, Vamos</div>
                             </div>
                             <div className="flex flex-col justify-center items-center py-5">
                                 <div className="text-center text-sm NanumSquareEB pb-3">예술대학</div>
-                                <hr className="w-48 text-center"/>
+                                <hr className="w-48 text-center" />
                                 <div className="text-center text-sm NanumSquareB pt-3">예대우승 ! 진행시켜 ! 영~차 !</div>
                             </div>
                             <div className="flex flex-col justify-center items-center py-5">
                                 <div className="text-center text-sm NanumSquareEB pb-3">IT공과대학</div>
-                                <hr className="w-48 text-center"/>
+                                <hr className="w-48 text-center" />
                                 <div className="text-center text-sm NanumSquareB pt-3">우리가 누구? 최강공대</div>
                             </div>
                         </div>
                     )}
                 </div>
             </div >
-        </div>
+        </div >
     );
 };
 

@@ -1,7 +1,7 @@
 .pbox {
     width: 120px;
     height: 170px;
-    background-color: #565656;
+    background-color: rgb(255, 255, 255, 0.3);
     border-radius: 10px;
 }
 
@@ -56,6 +56,7 @@ hr {
     margin-top: 5px;
     font-size: 11px;
 }
+
 .gridpeople {
     grid-gap: 20px;
     display: grid;

@@ -46,7 +46,7 @@ const SingleSlider = () => {
                                 <div className='text-start pl-8 pt-10 w-8/12 break-keep'>
                                     {tab.title}<br />
                                 </div>
-                                {tab.title[0] === '가' ?
+                                {/* {tab.title[0] === '가' ?
                                     (
                                         <>
                                             <div className='text-2xl overflow-x-visible text-start pl-8 pt-1'>
@@ -54,7 +54,7 @@ const SingleSlider = () => {
                                             </div>
                                         </>
                                     )
-                                    : ''}
+                                    : ''} */}
                                 <div className='pt-6 text-2xl text-start pl-8'>바로 보러가기 ▶</div>
                             </div>
                         </button>

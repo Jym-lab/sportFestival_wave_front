@@ -28,22 +28,22 @@ const ShowNav = () => {
                 <p className="absolute text-7xl pt-3">&#27874;:&#21205;</p>
             </div>
             <div className="flex flex-col items-center justify-center pt-36">
-                <ul className="NanumSquareEB flex flex-col items-center justify-center gap-y-6 text-3xl">
-                    <li className="bg-[#0F2949] rounded-2xl px-10 py-3"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/timetable" onClick={closeNav}>타임테이블</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/boothlocation" onClick={closeNav}>부스배치도</Link></li>
-                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/sportmenu" onClick={closeNav}>결승전 대진표</Link></li>
+                <ul className="NanumSquareEB flex flex-col items-center justify-center gap-y-6 text-2xl">
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/timetable" onClick={closeNav}>타임테이블</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/boothlocation" onClick={closeNav}>부스배치도</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/sportmenu" onClick={closeNav}>결승전 대진표</Link></li>
+                    <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/about" onClick={closeNav}>만든이들</Link></li>
                     {ACCESS_TOKEN ?
-                    <>
-                        <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link to="/mypage" onClick={closeNav}>정보수정</Link></li>
-                        <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link onClick={LogOut}>로그아웃</Link></li>
-                    </>:
-                        <li className="bg-[#0F2949] rounded-2xl px-7 py-3"><Link onClick={Login}>로그인</Link></li>
+                        <>
+                            <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link to="/mypage" onClick={closeNav}>정보수정</Link></li>
+                            <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link onClick={LogOut}>로그아웃</Link></li>
+                        </> :
+                        <li className="bg-[#0F2949] rounded-2xl px-7 py-3 w-full text-center"><Link onClick={Login}>로그인</Link></li>
                     }
-                    <img className="w-[156px] md:max-w-[375px] mt-20" src={images.seven_rings} alt="칠륜기" />
+                    <img className="w-[156px] md:max-w-[375px] mt-20 pb-10" src={images.seven_rings} alt="칠륜기" />
 
                 </ul>
-                
+
             </div>
         </div>
     )

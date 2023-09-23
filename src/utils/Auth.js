@@ -28,8 +28,8 @@ export const Callback = () => {
         <>
             <Navbar />
             <div className={`min-h-screen flex flex-col justify-center items-center transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
-                <p>{err_msg}</p>
-                <button class="bg-white text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onClick={() => window.location.href = '/'}>
+                <p className='text-2xl NanumSquareEB text-center mb-5'>성결대학교 구글 계정으로 <br />로그인 가능합니다.</p>
+                <button class="bg-white text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded-xl shadow" onClick={() => window.location.href = '/'}>
                     홈으로
                 </button>
             </div>

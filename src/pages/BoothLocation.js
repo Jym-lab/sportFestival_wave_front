@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar"
+import ScrollToTop from "../components/ScrollToTop";
 import { images } from "../utils/images";
 import { useNavbar } from "../utils/navbar-context"
 
@@ -13,10 +14,11 @@ const BoothLocation = () => {
                     <p className="-mb-10">부스배치도</p>
                 </div>
                 <div className="w-11/12 mx-auto flex flex-col items-center justify-between last">
-                <img src={images.boothAll} alt="전체부스지도" />
-                <img src={images.locateMenu} alt="각부스위치" className="mt-10" />
+                    <img src={images.boothAll} alt="전체부스지도" />
+                    <img src={images.locateMenu} alt="각부스위치" className="mt-10" />
+                </div>
             </div>
-            </div>
+            <ScrollToTop />
         </div>
     )
 }
