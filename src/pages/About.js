@@ -52,6 +52,11 @@ const About = () => {
                         <a className="flex items-center text-xs mb-3" href="https://www.instagram.com/sku_39th_renew/" target='_blank' rel="noopener noreferrer"><FaInstagram className="me-1" /> sku_39th_renew</a>
                         <div className="gridpeople">
                             <Person0 id={7} />
+                            <Person0 id={8} />
+                            <Person0 id={9} />
+                            <Person0 id={10} />
+                            <Person0 id={11} />
+                            <Person0 id={12} />
                         </div>
                     </div>
                 </div>
