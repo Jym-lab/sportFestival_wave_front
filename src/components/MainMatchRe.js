@@ -50,7 +50,7 @@ const TimerOn = (start_time) => {
             <div className='text-center flex flex-col'>
                 <div className={`${ongoing && result === "진행중" ? 'pulsate-fwd' : ''} NanumGothicEB text-center my-8 text-3xl`}>{category}</div>
                 <div className={`${ongoing ? '' : 'notReal'} realTime NanumSquareB`}>
-                    {result === "진행중" ? <span className='text-sm'>경기 진행 {formatTime(duration)}초</span> : ''}
+                    {result === "진행중" ? <span className='text-sm'>경기 진행 {`${minute}분 ${second}초`}</span> : ''}
                 </div>
 
                 <div className='w-10/12 mx-auto flex justify-around items-center text-center'>
