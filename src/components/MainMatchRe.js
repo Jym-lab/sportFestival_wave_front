@@ -1,7 +1,7 @@
 import { images } from "../utils/images";
 import { IoLocationSharp } from "react-icons/io5";
 import { AiOutlineCalendar } from "react-icons/ai";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { APIClient } from "../utils/Auth";
 
 const MainMatchRe = ({ category, teamA, teamB, time }) => {
@@ -9,62 +9,42 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
     const [scoreA, setScoreA] = useState(0);
     const [scoreB, setScoreB] = useState(0);
     const [result, setResult] = useState("진행중")
-    const [Stime, setSTime] = useState(0);
-    const [duration, setDuration] = useState(0);
+    const [minute, setMinute] = useState(0);
+    const [second, setSecond] = useState(0);
+    const serverTimeRef = useRef(null)
 
-    const TimerOn = () => {
-        const serverTime = new Date(Stime);
+const TimerOn = (start_time) => {
+        if (!serverTimeRef.current)
+            serverTimeRef.current = new Date(start_time);
         const currentTime = new Date();
 
-        const timeDiffInSeconds = Math.floor((currentTime - serverTime) / 1000);
-        setDuration(timeDiffInSeconds);
+        const timeDiffInSeconds = Math.floor((currentTime - serverTimeRef.current) / 1000);
+        const minutes = Math.floor(timeDiffInSeconds / 60);
+        const seconds = Math.floor(timeDiffInSeconds % 60);
+        setMinute(minutes);
+        setSecond(seconds);
     }
-    setInterval(() => {
-        TimerOn();
-    }, 1000);
-    const formatTime = (timeInSeconds) => {
-        const minutes = Math.floor(timeInSeconds / 60);
-        const seconds = Math.floor(timeInSeconds % 60);
 
-        return `${minutes}:${seconds}`;
-    }
     const loading = async () => {
-        const response = await APIClient().get(`/game/${category}`);
-        return response.data;
-    }
-    loading()
-        .then((res) => {
-            setOngoing(res.is_start);
-            setScoreA(res.score_A);
-            setScoreB(res.score_B)
-            if (res.result !== null)
-                setResult(res.result)
+        try {
+            const response = await APIClient().get(`/game/${category}`);
+            setOngoing(response.data.is_start);
+            setScoreA(response.data.score_A);
+            setScoreB(response.data.score_B)
+            if (response.data.result !== null)
+                setResult(response.data.result)
             else
                 setResult("진행중");
-            setSTime(res.start_time)
-            TimerOn();
-        })
-        .catch((error) => {
+            TimerOn(response.data.start_time);
+        } catch (error) {
             console.error(error);
-        });
+        }
+    }
     useEffect(() => {
-        loading()
-            .then((res) => {
-                setOngoing(res.is_start);
-                setScoreA(res.score_A);
-                setScoreB(res.score_B)
-                if (res.result !== null)
-                    setResult(res.result)
-                else
-                    setResult("진행중");
-                setSTime(res.start_time)
-                TimerOn();
-                console.log(res)
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    }, [])
+        loading();
+        const interval = setInterval(() => TimerOn(), 1000)
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div>
             <div className='text-center flex flex-col'>
