@@ -16,11 +16,11 @@ const Cinema = () => {
 
                 <div className="NanumSquareL text-center cinemacontent">
                     <p className="mb-2">Q : '가을밤의 시네마'란?</p>
-                    <p className="mb-2">A : 총학생회에서 주관한 <span className="NanumSquareB">'우리가 만드는 행사'에서 1등</span> 으로 선정된<br />
+                    <p className="mb-2">A : 총학생회 주관행사 <span className="NanumSquareB">‘우리가 만드는 행사’ 대상작으로 선정된</span><br />
                         조유정 학우님의 기획안을 바탕으로 제작된 프로그램입니다.
                     </p>
                     <p>2023 영암체전 본식 첫째날,
-                        <br /><span className="NanumSquareB">9월 25일 18시에 기념관 대강당에서 진행됩니다.</span>
+                        <br /><span className="NanumSquareB">9월 25일 18시에 기념관 대강당</span>에서 진행됩니다.
                     </p>
                 </div>
 

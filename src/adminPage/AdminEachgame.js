@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { authenticate } from '../utils/Auth';
 import { getToken } from '../utils/Auth';
 

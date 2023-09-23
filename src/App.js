@@ -15,7 +15,6 @@ import Goods from './pages/Goods';
 import Cinema from './pages/Cinema';
 import About from './pages/About';
 import { Callback } from './utils/Auth';
-import MainMatch from './components/MainMatch';
 import Cheers from './pages/Cheers';
 import MyPage from './pages/MyPage';
 import AdminSelectGame from './adminPage/AdminSelectGame';

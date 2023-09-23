@@ -51,7 +51,7 @@ const TimeTable = () => {
                         <div className="whitebarright w-1/2"></div>
                         <div className="flex flex-col text-start pl-6 pt-4 pb-12 w-1/2">
                             {timetableInfo
-                                .filter((item) => item.day === "0925") // day가 "0925"인 요소만 필터링
+                                .filter((item) => item.day === "0926") // day가 "0925"인 요소만 필터링
                                 .map((item) => (
                                     <div key={item.id} className="mb-3 relative">
                                         <div className={`timetableCirclebigright timetableCircle_${item.color} absolute`}></div>

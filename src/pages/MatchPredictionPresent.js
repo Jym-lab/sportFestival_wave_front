@@ -12,7 +12,7 @@ const MatchPredictionPresent = () => {
             <div className={`transition duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="flex flex-col justify-center items-center h-screen">
                     <div className="pageTitleCenter">
-                        <p className="mb-2">학과별 결승전</p>
+                        <p className="mb-2">결승전</p>
                         <p>승부예측 경품안내</p>
                     </div>
 

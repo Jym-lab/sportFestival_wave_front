@@ -57,7 +57,7 @@ const MyPage = () => {
                 {ACCESS_TOKEN ?
                     <>
                         <div className='NanumSquareR flex flex-col items-center text-center pt-6'>
-                            <p className='text-lg'>경품 수령 시 필요한 인적정보를 입력해주세요</p>
+                            <p className='text-lg'>경품 수령 시 필요한 인적정보를 입력해 주세요</p>
                             <p className='text-sm pt-4'>인적정보 불일치 또는 미입력 시 경품 수령이 불가합니다.</p>
                             <form className="text-black px mt-14 w-10/12" onSubmit={submitHandle}>
                                 <div className='flex text-center bg-white/[0.8] rounded-xl'>

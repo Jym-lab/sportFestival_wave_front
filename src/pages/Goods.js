@@ -22,8 +22,8 @@ const Goods = () => {
                         <div>
                             <div className="text-lg">리늉이 키링</div>
                             <div className="text-xs NanumSquareB mr-1">판매 가격<span className="towelcontent NanumSquareL">(선착순 판매 600명)</span></div>
-                            <div className="towelcontent NanumSquareL">학생회비 납부자 : 1000원</div>
-                            <div className="towelcontent NanumSquareL">학생회비 미납부자 : 2000원</div>
+                            <div className="towelcontent NanumSquareL">학생회비 납부자 : 1,000원</div>
+                            <div className="towelcontent NanumSquareL">학생회비 미납부자 : 2,000원</div>
                         </div>
                     </div>
                 </div>

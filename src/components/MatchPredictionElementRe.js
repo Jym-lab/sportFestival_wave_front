@@ -1,5 +1,4 @@
 import { images } from '../utils/images';
-import dummyData from '../json/dummyData.json';
 import PredictionChart from './PredictionChart';
 import { useEffect, useState } from 'react';
 import { authenticate } from '../utils/Auth';

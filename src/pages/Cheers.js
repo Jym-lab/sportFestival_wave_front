@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useNavbar } from "../utils/navbar-context";
 
 const Cheers = () => {
@@ -89,7 +89,7 @@ const Cheers = () => {
                                 </div>
                                 <div className="w-3/12"></div>
                             </div>
-                            <div className="text-center text-xs NanumSquareR pb-8">각 단과대학별 응원구호가 상이하니 참고부탁드립니다.</div>
+                            <div className="text-center text-xs NanumSquareR pb-8">각 단과대학별 응원구호가 상이하니 참고 부탁드립니다.</div>
                             <div className="flex flex-col justify-center items-center py-5">
                                 <div className="text-center text-sm NanumSquareEB pb-3">글로벌경영기술대학</div>
                                 <hr className="w-48 text-center"/>
