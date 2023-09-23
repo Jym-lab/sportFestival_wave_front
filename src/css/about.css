@@ -54,7 +54,7 @@ hr {
 
 .Prole {
     margin-top: 5px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .gridpeople {
@@ -62,4 +62,10 @@ hr {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr;
+}
+.likelion-color {
+    color: #7193c3;
+}
+.renew-color{
+    color: #b69414;
 }
