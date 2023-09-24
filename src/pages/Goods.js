@@ -21,7 +21,7 @@ const Goods = () => {
                         <img className='w-3/12' src={images.kiring} alt="리늉이 키링" />
                         <div>
                             <div className="text-lg">리늉이 키링</div>
-                            <div className="text-xs NanumSquareB mr-1">판매 가격<span className="towelcontent NanumSquareL">(선착순 판매 600명)</span></div>
+                            <div className="text-xs NanumSquareB mr-1">판매 가격<span className="towelcontent NanumSquareL ">(선착순 판매 600명)</span></div>
                             <div className="towelcontent NanumSquareL">학생회비 납부자 : 1,000원</div>
                             <div className="towelcontent NanumSquareL">학생회비 미납부자 : 2,000원</div>
                         </div>
@@ -45,6 +45,13 @@ const Goods = () => {
                                 <div className="towelcontent ml-8">선착순(500명)</div>
                             </div>
                         </div>
+                        <div className="flex justify-evenly items-center py-6 NanumSquareB">
+                            <img className='w-3/12' src={images.towel} alt="리늉이 키링" />
+                            <div>
+                                <div className="text-lg">스포츠 타올</div>
+                                <div className="towelcontent">*단과대학별로 디자인이 상이하며<br />응원 머플러로 사용 가능합니다.</div>
+                            </div>
+                        </div>
                         {/* 
                         <div className="flex justify-start ml-10 items-center py-6 NanumSquareB">
                             <div className="w-3/12 shrink-0 "> <img className='' src={images.tatoo} alt="타투스티커" /></div>
@@ -52,17 +59,6 @@ const Goods = () => {
                                 <div className="text-lg ml-8">타투스티커</div>
                             </div>
                         </div> */}
-                    </div>
-                </div>
-
-                <div className="flex flex-col items-center justify-center w-10/12 mx-auto NanumSquareEB mb-3">
-                    <div className="goodsTitle py-3 text-center text-xl">학생회비 납부자 혜택</div>
-                    <div className="flex justify-evenly items-center py-6 NanumSquareB">
-                        <img className='w-3/12' src={images.towel} alt="리늉이 키링" />
-                        <div>
-                            <div className="text-lg">스포츠 타올</div>
-                            <div className="towelcontent">*단과대학별로 디자인이 상이하여<br />응원 머플러로 사용 가능합니다.</div>
-                        </div>
                     </div>
                 </div>
                 <div className="last"></div>
