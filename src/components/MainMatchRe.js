@@ -62,11 +62,13 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
             console.error(error);
         }
     }
+
     useEffect(() => {
         loading();
         const interval = setInterval(() => TimerOn(), 1000)
         return () => clearInterval(interval);
     }, []);
+
     return (
         <div>
             <div className='text-center flex flex-col'>

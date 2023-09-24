@@ -4,11 +4,55 @@ import ScrollToTop from '../components/ScrollToTop';
 import { useNavbar } from '../utils/navbar-context';
 import LoginBtn, { getToken } from '../utils/Auth';
 import MatchPredictionElementRe from '../components/MatchPredictionElementRe'
+import { useEffect, useState } from 'react';
 
 
 const MatchPrediction = () => {
     const { isOpen } = useNavbar()
     const ACCESS_TOKEN = getToken();
+
+    const [t_basketball, setT_basketball] = useState(false);
+    const [t_football, setT_football] = useState(false);
+    const [t_dodgeball, setT_dodgeball] = useState(false);
+    const [t_soccer, setT_soccer] = useState(false);
+    const [t_handball, setT_handball] = useState(false);
+    const [t_kickbaseball, setT_kickbaseball] = useState(false);
+
+    const TimeOut_basketball = new Date(2023, 8, 25, 10, 49, 59);
+    const TimeOut_football = new Date(2023, 8, 25, 16, 19, 59);
+    const TimeOut_dodgeball = new Date(2023, 8, 25, 12, 49, 59);
+    const TimeOut_soccer = new Date(2023, 8, 25, 13, 29, 59);
+    const TimeOut_handball = new Date(2023, 8, 26, 9, 49, 59);
+    const TimeOut_kickbaseball = new Date(2023, 8, 26, 10, 39, 59);
+
+    const TimeOutPredict = () => {
+        const currentTime = new Date();
+
+        if (currentTime - TimeOut_basketball > 0) {
+            setT_basketball(true);
+        }
+        if (currentTime - TimeOut_football > 0) {
+            setT_football(true);
+        }
+        if (currentTime - TimeOut_dodgeball > 0) {
+            setT_dodgeball(true);
+        }
+        if (currentTime - TimeOut_soccer > 0) {
+            setT_soccer(true);
+        }
+        if (currentTime - TimeOut_handball > 0) {
+            setT_handball(true);
+        }
+        if (currentTime - TimeOut_kickbaseball > 0) {
+            setT_kickbaseball(true);
+        }
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => TimeOutPredict(), 1000)
+        return () => clearInterval(interval);
+    }, [])
+
     return (
         <div className='NanumSquareEB'>
             <Navbar />
@@ -25,12 +69,12 @@ const MatchPrediction = () => {
                                 <p className='text-xs NanumSquareL'>확인 버튼을 누르시면 수정 혹은 재참여가 불가합니다.</p>
                             </div>
                         </div>
-                        <MatchPredictionElementRe title={'농구'} teamA={'사복'} teamB={'글물'} />
-                        <MatchPredictionElementRe title={'피구'} teamA={'유교'} teamB={'연기'} />
-                        <MatchPredictionElementRe title={'축구'} teamA={'사복'} teamB={'경영'} />
-                        <MatchPredictionElementRe title={'족구'} teamA={'연기'} teamB={'국제'} />
-                        <MatchPredictionElementRe title={'손족구'} teamA={'유교'} teamB={'연기'} />
-                        <MatchPredictionElementRe title={'발야구'} teamA={'유교'} teamB={'연기'} />
+                        <MatchPredictionElementRe title={'농구'} teamA={'사복'} teamB={'글물'} TimeOut={t_basketball} />
+                        <MatchPredictionElementRe title={'피구'} teamA={'유교'} teamB={'연기'} TimeOut={t_dodgeball} />
+                        <MatchPredictionElementRe title={'축구'} teamA={'사복'} teamB={'경영'} TimeOut={t_soccer} />
+                        <MatchPredictionElementRe title={'족구'} teamA={'연기'} teamB={'국제'} TimeOut={t_football} />
+                        <MatchPredictionElementRe title={'손족구'} teamA={'유교'} teamB={'연기'} TimeOut={t_handball} />
+                        <MatchPredictionElementRe title={'발야구'} teamA={'유교'} teamB={'연기'} TimeOut={t_kickbaseball} />
                     </> :
                     <div className={`flex flex-col justify-center items-center`}>
                         <div className='text-lg text-center pt-10'>

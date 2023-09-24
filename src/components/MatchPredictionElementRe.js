@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { authenticate } from '../utils/Auth';
 import { getToken } from '../utils/Auth';
 
-const MatchPredictionElement = ({ title, teamA, teamB }) => {
+const MatchPredictionElement = ({ title, teamA, teamB, TimeOut }) => {
     const [result, setResult] = useState('미완료');
 
     const convertCategoryToEnglish = (category) => {
@@ -41,27 +41,34 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
-                const res = response.data;
-                const resultValue = await res[englishCategory];
-                setResult(resultValue)
+
+                const resultValue = response.data[englishCategory];
+                setResult(resultValue);
+
             } catch (error) {
                 console.error('오류 발생:', error);
             }
         }
     }
 
-    useEffect(() => {
-        const englishCategory = convertCategoryToEnglish(title);
-        const result_state = async () => {
+    const loading = async () => {
+        try {
+            const englishCategory = convertCategoryToEnglish(title);
             const response = await authenticate(getToken()).get(`/user/game`);
-            return response.data
-        }
-        result_state().then((res) => {
-            setResult(res[englishCategory]);
-        }).catch(error => {
+
+            if (response.data[englishCategory] !== null)
+                setResult(response.data[englishCategory])
+            else
+                setResult("미완료");
+        } catch (error) {
             console.error(error);
-        })
-    }, [handleClickBtn])
+        }
+    }
+
+    useEffect(() => {
+        loading();
+    }, []);
+
 
     return (
         <div className='my-8'>
@@ -87,29 +94,34 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
                     <PredictionChart sport={title} result={result} />
                 </div>
 
-                <div className='letspredict flex justify-around NanumGothicEB mt-2'>
-                    {result === '미완료' ? (
-                        <>
-                            (<>
-                                <div><button onClick={() => handleClickBtn(1, title)}>응모하기</button></div>
-                                <div><button onClick={() => handleClickBtn(0, title)}>응모하기</button></div>
-                            </>)
-
-                        </>) :
-                        (<>
-                            {result === 1 ?
-                                (<>
-                                    <div className='letspredictEnd swirl-in-fwd'><button>응모완료</button></div>
-                                    <div className=''><button>응모완료</button></div>
-                                </>) :
-                                (<>
-                                    <div className=''><button>응모완료</button></div>
-                                    <div className='letspredictEnd swirl-in-fwd'><button>응모완료</button></div>
-                                </>)
-                            }
-                        </>)
-                    }
-                </div>
+                {TimeOut ?
+                    <div className='text-center my-2'>
+                        <p>응모가 마감되었습니다.</p>
+                    </div>
+                    :
+                    <div className='letspredict flex justify-around NanumGothicEB mt-2'>
+                        {result === '미완료' ?
+                            <>
+                                <>
+                                    <div><button onClick={() => handleClickBtn(1, title)}>응모하기</button></div>
+                                    <div><button onClick={() => handleClickBtn(0, title)}>응모하기</button></div>
+                                </>
+                            </> :
+                            <>
+                                {result === 1 ?
+                                    <>
+                                        <div className='letspredictEnd swirl-in-fwd'><button>응모완료</button></div>
+                                        <div className=''><button>응모완료</button></div>
+                                    </> :
+                                    <>
+                                        <div className=''><button>응모완료</button></div>
+                                        <div className='letspredictEnd swirl-in-fwd'><button>응모완료</button></div>
+                                    </>
+                                }
+                            </>
+                        }
+                    </div>
+                }
             </div >
         </div >
     )
