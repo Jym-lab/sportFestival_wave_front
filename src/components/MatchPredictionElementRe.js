@@ -26,13 +26,13 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
         }
     };
 
-    const englishCategory = convertCategoryToEnglish(title);
 
     const handleClickBtn = async (buttonIndex, title) => {
         const userConfirmed = window.confirm(`응모하시겠습니까?`);
 
         if (userConfirmed) {
             try {
+                const englishCategory = convertCategoryToEnglish(title);
                 const formData = {
                     "category": englishCategory, "predict": buttonIndex
                 }
@@ -51,6 +51,7 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
     }
 
     useEffect(() => {
+        const englishCategory = convertCategoryToEnglish(title);
         const result_state = async () => {
             const response = await authenticate(getToken()).get(`/user/game`);
             return response.data
@@ -60,7 +61,7 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
         }).catch(error => {
             console.error(error);
         })
-    }, [])
+    }, [handleClickBtn])
 
     return (
         <div className='my-8'>
