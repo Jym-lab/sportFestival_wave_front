@@ -52,8 +52,6 @@ function App() {
       })
   }
 
-  localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRtZGdtbDI1OTVAc3VuZ2t5dWwuYWMua3IiLCJleHBpcmUiOiIyMDIzLTA5LTI1IDAwOjMzOjQwIn0.oDgAbhAd_xIc9_kkLAjf3d2ZCPiP31PukB4xi-PoDQk');
-
   return (
     <NavbarProvider>
       <BrowserRouter>
@@ -76,7 +74,6 @@ function App() {
             <Route path='/admin' element={<AdminSelectGame />} />
             <Route path='/admineachgame' element={<AdminEachgame />} />
           </Routes>
-
 
         </div>
       </BrowserRouter>
