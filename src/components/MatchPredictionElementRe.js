@@ -5,7 +5,7 @@ import { authenticate } from '../utils/Auth';
 import { getToken } from '../utils/Auth';
 
 const MatchPredictionElement = ({ title, teamA, teamB }) => {
-    const [result, setResult] = useState(null);
+    const [result, setResult] = useState('미완료');
 
     const convertCategoryToEnglish = (category) => {
         switch (category) {
@@ -22,28 +22,17 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
             case '피구':
                 return 'dodgeball';
             default:
-                return category;
+                return 'soccer';
         }
     };
 
-    useEffect(() => {
-        const result_state = async () => {
-            const response = await authenticate(getToken()).get(`/user/game`);
-            return response.data
-        }
-        result_state().then((res) => {
-            setResult(res[title]);
-        }).catch(error => {
-            console.error(error);
-        })
-    }, [])
+    const englishCategory = convertCategoryToEnglish(title);
 
     const handleClickBtn = async (buttonIndex, title) => {
         const userConfirmed = window.confirm(`응모하시겠습니까?`);
 
         if (userConfirmed) {
             try {
-                const englishCategory = convertCategoryToEnglish(title);
                 const formData = {
                     "category": englishCategory, "predict": buttonIndex
                 }
@@ -60,6 +49,18 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
             }
         }
     }
+
+    useEffect(() => {
+        const result_state = async () => {
+            const response = await authenticate(getToken()).get(`/user/game`);
+            return response.data
+        }
+        result_state().then((res) => {
+            setResult(res[englishCategory]);
+        }).catch(error => {
+            console.error(error);
+        })
+    }, [])
 
     return (
         <div className='my-8'>
@@ -86,7 +87,7 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
                 </div>
 
                 <div className='letspredict flex justify-around NanumGothicEB mt-2'>
-                    {result !== null ? (
+                    {result !== '미완료' ? (
                         <>
                             {result === 1 ?
                                 (<>
