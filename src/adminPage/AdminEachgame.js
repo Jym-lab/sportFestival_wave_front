@@ -70,12 +70,32 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
     const handleStartState = async () => {
         const adminConfirmed = window.confirm(`${category}를 시작할까요?`);
 
+        const convertCategoryToEnglish = (category) => {
+            switch (category) {
+                case '축구':
+                    return 'soccer';
+                case '농구':
+                    return 'basketball';
+                case '손족구':
+                    return 'handball';
+                case '발야구':
+                    return 'kickbaseball';
+                case '족구':
+                    return 'football';
+                case '피구':
+                    return 'dodgeball';
+                default:
+                    return category; // 다른 경우에는 그대로 반환
+            }
+        };
+
         if (adminConfirmed) {
             const formattedDateTime = formatDate(currentDateTime); // 시간 형식
 
             try {
+                const englishCategory = convertCategoryToEnglish(category);
                 const formData = {
-                    category: category,
+                    category: englishCategory,
                     time: formattedDateTime
                 }
                 const response = await authenticate(getToken()).post(`game/start/${category}`, formData);

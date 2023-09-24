@@ -7,6 +7,25 @@ import { getToken } from '../utils/Auth';
 const MatchPredictionElement = ({ title, teamA, teamB }) => {
     const [result, setResult] = useState(null);
 
+    const convertCategoryToEnglish = (category) => {
+        switch (category) {
+            case '축구':
+                return 'soccer';
+            case '농구':
+                return 'basketball';
+            case '손족구':
+                return 'handball';
+            case '발야구':
+                return 'kickbaseball';
+            case '족구':
+                return 'football';
+            case '피구':
+                return 'dodgeball';
+            default:
+                return category;
+        }
+    };
+
     useEffect(() => {
         const result_state = async () => {
             const response = await authenticate(getToken()).get(`/user/game`);
@@ -24,8 +43,9 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
 
         if (userConfirmed) {
             try {
+                const englishCategory = convertCategoryToEnglish(title);
                 const formData = {
-                    "category": title, "predict": buttonIndex
+                    "category": englishCategory, "predict": buttonIndex
                 }
                 const response = await authenticate(getToken()).post(`/user/game`, formData);
 

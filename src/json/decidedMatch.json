@@ -7,9 +7,12 @@
         "slivercontent": "결승 컴공2:0중문",
         "bronze": "",
         "bronzecontent": "",
-        "thirdRound": "",
-        "semifinals": "",
-        "final": ""
+        "blueURL_1": "",
+        "blueURL_1_content": "",
+        "blueURL_2": "",
+        "blueURL_2_content": "",
+        "greenURL": "",
+        "redURL": "https://youtu.be/D4b-2qU-Jz4?si=Z0UL8VRKRI0-hqZ7"
     },
     {
         "id": 10,
@@ -20,9 +23,12 @@
         "slivercontent": "결승 체교1:2컴공",
         "bronze": "사복",
         "bronzecontent": "사복0:2컴공",
-        "thirdRound": "",
-        "semifinals": "",
-        "final": ""
+        "blueURL_1": "",
+        "blueURL_1_content": "",
+        "blueURL_2": "",
+        "blueURL_2_content": "",
+        "greenURL": "",
+        "redURL": "https://youtu.be/D0Ba4HK2BAA?si=-FcqiVLSeyuFE1y"
     },
     {
         "id": 7,
@@ -33,9 +39,12 @@
         "slivercontent": "결승 영문2:1국제",
         "bronze": "유교",
         "bronzecontent": "유교2:1관광",
-        "thirdRound": "",
-        "semifinals": "",
-        "final": ""
+        "blueURL_1": "",
+        "blueURL_1_content": "국제vs관광",
+        "blueURL_2": "",
+        "blueURL_2_content": "영문vs유교",
+        "greenURL": "",
+        "redURL": ""
     },
     {
         "id": 6,
@@ -46,8 +55,11 @@
         "slivercontent": "결승 신학2:0국제",
         "bronze": "경영",
         "bronzecontent": "국문0:2경영",
-        "thirdRound": "https://tailwindcss.com/docs/font-size",
-        "semifinals": "",
-        "final": ""
+        "blueURL_1": "https://youtu.be/UpzmX9kKSpE?si=gaNon8JtwG7zDoN9",
+        "blueURL_1_content": "신학vs국문",
+        "blueURL_2": "https://youtu.be/n0sDRGIGRK4?si=fHJo-lHEPf-zmGK9",
+        "blueURL_2_content": "국제vs경영",
+        "greenURL": "https://youtu.be/sX_40ofq5xQ?si=jKjXDr95MhuNNfkp",
+        "redURL": "https://youtu.be/yJogEjdTXp4?si=GkNW7JyEPMh71Wn9"
     }
 ]
