@@ -3,6 +3,8 @@ import { IoLocationSharp } from "react-icons/io5";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 import { APIClient } from "../utils/Auth";
+import '../css/mainmatch.css';
+
 
 const MainMatchRe = ({ category, teamA, teamB, time }) => {
     const [ongoing, setOngoing] = useState(false);
@@ -13,7 +15,7 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
     const [second, setSecond] = useState(0);
     const serverTimeRef = useRef(null)
 
-const TimerOn = (start_time) => {
+    const TimerOn = (start_time) => {
         if (!serverTimeRef.current)
             serverTimeRef.current = new Date(start_time);
         const currentTime = new Date();
