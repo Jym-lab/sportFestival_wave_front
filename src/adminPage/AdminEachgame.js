@@ -23,6 +23,25 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
         setWinnerTeam(winner);
     }
 
+    // 경기 시작
+    const convertCategoryToEnglish = (category) => {
+        switch (category) {
+            case '축구':
+                return 'soccer';
+            case '농구':
+                return 'basketball';
+            case '손족구':
+                return 'handball';
+            case '발야구':
+                return 'kickbaseball';
+            case '족구':
+                return 'football';
+            case '피구':
+                return 'dodgeball';
+            default:
+                return category; // 다른 경우에는 그대로 반환
+        }
+    };
     // TeamA or TeamB 점수입력 후 확인 누르면
     const handleScoreSubmit = async (e) => {
         const adminConfirmed = window.confirm(`점수를 입력하시겠습니까?`);
@@ -34,7 +53,8 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     "score_B": scores.scoreB,
                     "result": null // 진행중
                 }
-                const response = await authenticate(getToken()).post(`/game/${category}`, formData);
+                const englishCategory = convertCategoryToEnglish(category);
+                const response = await authenticate(getToken()).post(`/game/${englishCategory}`, formData);
 
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
@@ -56,7 +76,8 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     "score_B": scores.scoreB,
                     "result": winnerTeam // teamA - true / teamB - false
                 }
-                const response = await authenticate(getToken()).post(`/game/${category}`, formData);
+                const englishCategory = convertCategoryToEnglish(category);
+                const response = await authenticate(getToken()).post(`/game/${englishCategory}`, formData);
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
@@ -66,28 +87,10 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
         }
     }
 
-    // 경기 시작
+
+
     const handleStartState = async () => {
         const adminConfirmed = window.confirm(`${category}를 시작할까요?`);
-
-        const convertCategoryToEnglish = (category) => {
-            switch (category) {
-                case '축구':
-                    return 'soccer';
-                case '농구':
-                    return 'basketball';
-                case '손족구':
-                    return 'handball';
-                case '발야구':
-                    return 'kickbaseball';
-                case '족구':
-                    return 'football';
-                case '피구':
-                    return 'dodgeball';
-                default:
-                    return category; // 다른 경우에는 그대로 반환
-            }
-        };
 
         if (adminConfirmed) {
             const formattedDateTime = formatDate(currentDateTime); // 시간 형식
@@ -98,7 +101,7 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                     category: englishCategory,
                     time: formattedDateTime
                 }
-                const response = await authenticate(getToken()).post(`game/start/${category}`, formData);
+                const response = await authenticate(getToken()).post(`game/start/${englishCategory}`, formData);
 
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
