@@ -67,10 +67,30 @@ const PredictionChart = ({ sport, result }) => {
         },
     });
 
+    const convertCategoryToEnglish = (category) => {
+        switch (category) {
+            case '축구':
+                return 'soccer';
+            case '농구':
+                return 'basketball';
+            case '손족구':
+                return 'handball';
+            case '발야구':
+                return 'kickbaseball';
+            case '족구':
+                return 'football';
+            case '피구':
+                return 'dodgeball';
+            default:
+                return category;
+        }
+    };
+
     useEffect(() => {
         const ratio_state = async () => {
             try {
-                const response = await authenticate(getToken()).get(`/game/ratio/${sport}`);
+                const englishCategory = convertCategoryToEnglish(sport);
+                const response = await authenticate(getToken()).get(`/game/ratio/${englishCategory}`);
                 const data = response.data;
 
                 setChartData((prevChartData) => ({
