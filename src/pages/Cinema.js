@@ -77,8 +77,8 @@ const Cinema = () => {
                             <br /><br />
                             가을밤의 시네마를 <br />
                             찾아주시는 학우분들께는
-                            <br />팝콘과 음료과 제공될 예정입니다.<br />
-                            *음료수 선착순 50개
+                            <br />팝콘과 음료가 무료로 <br />제공될 예정입니다.<br />
+                            *음료수 선착순 30개
                         </p>
                     </div>
                     <div className="w-1/2 ml-3"><img src={images.popcon} alt="팝콘" /></div>

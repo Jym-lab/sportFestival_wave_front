@@ -19,6 +19,12 @@ const MatchPrediction = () => {
                 </div>
                 {ACCESS_TOKEN ?
                     <>
+                        <div className={`flex flex-col justify-center items-center`}>
+                            <div className='text-sm text-center'>
+                                <p className='mb-1'>추후 개별 문자로 당첨 결과가 전송될 예정입니다.</p>
+                                <p className='text-xs NanumSquareL'>확인 버튼을 누르시면 수정 혹은 재참여가 불가합니다.</p>
+                            </div>
+                        </div>
                         <MatchPredictionElementRe title={'농구'} teamA={'사복'} teamB={'글물'} />
                         <MatchPredictionElementRe title={'피구'} teamA={'유교'} teamB={'연기'} />
                         <MatchPredictionElementRe title={'축구'} teamA={'사복'} teamB={'경영'} />

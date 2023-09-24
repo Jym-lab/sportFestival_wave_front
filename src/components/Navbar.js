@@ -14,7 +14,7 @@ const ShowNav = () => {
     }
     const Login = () => {
         localStorage.setItem('last', window.location.href)
-        window.location.href = 'http://wave-renew.sku-sku.com:8000/login';
+        window.location.href = 'https://wave-renew.sku-sku.com:8000/login';
     }
     const LogOut = () => {
         localStorage.removeItem('token');

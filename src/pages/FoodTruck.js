@@ -30,7 +30,7 @@ const FoodTruck = () => {
                     <div className="text-center text-lg NanumSquareEB mt-5 mb-1">파파</div>
                     <div className="text-lg text-black NanumSquareEB flex flex-col foodmenu-background rounded-2xl bg-gray-200 w-80 py-3 px-4">
                         <div>닭꼬치 - 5,000원</div>
-                        <div>염통꼬치 - 2개 5,000원</div>
+                        <div>염통꼬치 - 2개 6,000원</div>
                     </div>
                     <div className="text-center text-lg NanumSquareEB mt-5 mb-1">모니카</div>
                     <div className="text-lg text-black NanumSquareEB flex flex-col foodmenu-background rounded-2xl bg-gray-200 w-80 py-3 px-4">
