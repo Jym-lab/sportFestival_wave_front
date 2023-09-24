@@ -87,8 +87,15 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
                 </div>
 
                 <div className='letspredict flex justify-around NanumGothicEB mt-2'>
-                    {result !== '미완료' ? (
+                    {result === '미완료' ? (
                         <>
+                            (<>
+                                <div><button onClick={() => handleClickBtn(1, title)}>응모하기</button></div>
+                                <div><button onClick={() => handleClickBtn(0, title)}>응모하기</button></div>
+                            </>)
+
+                        </>) :
+                        (<>
                             {result === 1 ?
                                 (<>
                                     <div className='letspredictEnd swirl-in-fwd'><button>응모완료</button></div>
@@ -99,10 +106,6 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
                                     <div className='letspredictEnd swirl-in-fwd'><button>응모완료</button></div>
                                 </>)
                             }
-                        </>) :
-                        (<>
-                            <div><button onClick={() => handleClickBtn(1, title)}>응모하기</button></div>
-                            <div><button onClick={() => handleClickBtn(0, title)}>응모하기</button></div>
                         </>)
                     }
                 </div>
