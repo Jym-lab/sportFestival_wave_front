@@ -15,6 +15,25 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
     const [second, setSecond] = useState(0);
     const serverTimeRef = useRef(null)
 
+    const convertCategoryToEnglish = (category) => {
+        switch (category) {
+            case '축구':
+                return 'soccer';
+            case '농구':
+                return 'basketball';
+            case '손족구':
+                return 'handball';
+            case '발야구':
+                return 'kickbaseball';
+            case '족구':
+                return 'football';
+            case '피구':
+                return 'dodgeball';
+            default:
+                return category;
+        }
+    };
+
     const TimerOn = (start_time) => {
         if (!serverTimeRef.current)
             serverTimeRef.current = new Date(start_time);
@@ -29,7 +48,8 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
 
     const loading = async () => {
         try {
-            const response = await APIClient().get(`/game/${category}`);
+            const englishCategory = convertCategoryToEnglish(category);
+            const response = await APIClient().get(`/game/${englishCategory}`);
             setOngoing(response.data.is_start);
             setScoreA(response.data.score_A);
             setScoreB(response.data.score_B)

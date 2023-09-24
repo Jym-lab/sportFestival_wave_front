@@ -93,9 +93,9 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
             const formattedDateTime = formatDate(currentDateTime); // 시간 형식
 
             try {
-                // const englishCategory = convertCategoryToEnglish(category);
+                const englishCategory = convertCategoryToEnglish(category);
                 const formData = {
-                    category: category,
+                    category: englishCategory,
                     time: formattedDateTime
                 }
                 const response = await authenticate(getToken()).post(`game/start/${category}`, formData);

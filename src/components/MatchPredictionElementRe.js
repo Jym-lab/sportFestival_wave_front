@@ -43,15 +43,17 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
 
         if (userConfirmed) {
             try {
-                // const englishCategory = convertCategoryToEnglish(title);
+                const englishCategory = convertCategoryToEnglish(title);
                 const formData = {
-                    "category": title, "predict": buttonIndex
+                    "category": englishCategory, "predict": buttonIndex
                 }
                 const response = await authenticate(getToken()).post(`/user/game`, formData);
+                console.log('res[title]');
 
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
+
                 const res = response.data;
                 const resultValue = await res[title];
                 setResult(resultValue)
