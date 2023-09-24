@@ -48,14 +48,13 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
                     "category": englishCategory, "predict": buttonIndex
                 }
                 const response = await authenticate(getToken()).post(`/user/game`, formData);
-                console.log('res[title]');
+                console.log(res[title]);
 
                 if (!response.data) {
                     throw new Error(`오류 : ${response.status}`);
                 }
-
                 const res = response.data;
-                const resultValue = await res[title];
+                const resultValue = await res[englishCategory];
                 setResult(resultValue)
             } catch (error) {
                 console.error('오류 발생:', error);

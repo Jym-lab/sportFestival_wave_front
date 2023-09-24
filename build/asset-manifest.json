@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bd4c7f31.css",
+    "main.js": "/static/js/main.8f29aaa8.js",
+    "static/media/chineseFont.ttf": "/static/media/chineseFont.40db43e990f204c373ba.ttf",
+    "static/media/NanumGothicBold.otf": "/static/media/NanumGothicBold.2bcc768d9a2b3a1f9b3a.otf",
+    "static/media/NanumGothicExtraBold.otf": "/static/media/NanumGothicExtraBold.9d67f581296d8d41b532.otf",
+    "static/media/NanumGothic.otf": "/static/media/NanumGothic.13ddaacbbbc836512c0b.otf",
+    "static/media/about-background.png": "/static/media/about-background.970594b7698d162c966c.png",
+    "static/media/background.png": "/static/media/background.55188b12a52d14014a15.png",
+    "static/media/NanumSquare_acL.ttf": "/static/media/NanumSquare_acL.6299d42abaf5726d8c89.ttf",
+    "static/media/NanumSquare_acR.ttf": "/static/media/NanumSquare_acR.4e7e79f44291f1287d1d.ttf",
+    "static/media/NanumSquare_acB.ttf": "/static/media/NanumSquare_acB.ac4e2f27234150ae0de3.ttf",
+    "static/media/NanumSquare_acEB.ttf": "/static/media/NanumSquare_acEB.0367d0c13d221c0ba33f.ttf",
+    "static/media/NanumGothicLight.otf": "/static/media/NanumGothicLight.1c46f7604d689f94de08.otf",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.bd4c7f31.css.map": "/static/css/main.bd4c7f31.css.map",
+    "main.8f29aaa8.js.map": "/static/js/main.8f29aaa8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd4c7f31.css",
+    "static/js/main.8f29aaa8.js"
+  ]
+}
