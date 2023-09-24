@@ -39,7 +39,7 @@ export const Callback = () => {
 export const getToken = () => localStorage.getItem('token');
 
 export const authenticate = (token) => axios.create({
-    baseURL: 'http://127.0.0.1:8000',
+    baseURL: 'http://wave-renew.sku-sku.com:8000',
     headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -47,7 +47,7 @@ export const authenticate = (token) => axios.create({
 });
 
 export const APIClient = () => axios.create({
-	baseURL: 'http://127.0.0.1:8000',
+	baseURL: 'http://wave-renew.sku-sku.com:8000',
 	headers: {
 		'Content-Type': 'application/json',
 	}
@@ -61,7 +61,7 @@ export const get_current_user = async () => {
 const LoginBtn = () => {
     const Login = () => {
         localStorage.setItem('last', window.location.href)
-        window.location.href = 'http://127.0.0.1:8000/login';
+        window.location.href = 'http://wave-renew.sku-sku.com:8000/login';
     }
     return (
         <button className="bg-white py-2 px-4 rounded border shadow" onClick={Login}>
