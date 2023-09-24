@@ -93,7 +93,9 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
         // 1초마다 현재 날짜와 시간 업데이트
         const interval = setInterval(() => {
             setCurrentDateTime(new Date());
+            console.log('hi');
         }, 1000)
+        return () => clearInterval(interval)
     });
 
     function formatDate(date) {

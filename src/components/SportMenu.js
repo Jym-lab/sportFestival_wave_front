@@ -5,7 +5,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import '../css/sportMenu.css';
 import Navbar from './Navbar';
 import DecidedMatch from './DecidedMatch';
-import MainMatch from './MainMatch';
 import ScrollToTop from './ScrollToTop';
 import { useNavbar } from '../utils/navbar-context';
 import MainMatchRe from './MainMatchRe';

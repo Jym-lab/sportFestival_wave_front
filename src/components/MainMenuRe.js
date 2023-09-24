@@ -1,4 +1,3 @@
-import SportMenu from "./SportMenu";
 import SingleSlider from "./SingleSlider";
 import Mainbottom from "./Mainbottom";
 
