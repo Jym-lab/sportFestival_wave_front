@@ -61,6 +61,8 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                 }
             } catch (error) {
                 console.error('오류 발생:', error);
+                localStorage.removeItem('token');
+                window.location.reload();
             }
         }
         // setScores({ scoreA: '', scoreB: '' });
@@ -83,6 +85,8 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                 }
             } catch (error) {
                 console.error('오류 발생:', error);
+                localStorage.removeItem('token');
+                window.location.reload();
             }
         }
     }
@@ -108,6 +112,8 @@ const AdminEachgame = ({ category, teamA, teamB }) => {
                 }
             } catch (error) {
                 console.error('오류 발생:', error);
+                localStorage.removeItem('token');
+                window.location.reload();
             }
         }
     }

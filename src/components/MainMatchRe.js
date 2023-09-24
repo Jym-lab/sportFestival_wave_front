@@ -60,6 +60,8 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
             TimerOn(response.data.start_time);
         } catch (error) {
             console.error(error);
+            localStorage.removeItem('token');
+            window.location.reload();
         }
     }
 

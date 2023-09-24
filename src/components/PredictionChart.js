@@ -108,6 +108,8 @@ const PredictionChart = ({ sport, result }) => {
                 }));
             } catch (error) {
                 console.error(error);
+                localStorage.removeItem('token');
+                window.location.reload();
             }
         };
 

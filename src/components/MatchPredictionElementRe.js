@@ -47,6 +47,8 @@ const MatchPredictionElement = ({ title, teamA, teamB, TimeOut }) => {
 
             } catch (error) {
                 console.error('오류 발생:', error);
+                localStorage.removeItem('token');
+                window.location.reload();
             }
         }
     }
@@ -62,6 +64,8 @@ const MatchPredictionElement = ({ title, teamA, teamB, TimeOut }) => {
                 setResult("미완료");
         } catch (error) {
             console.error(error);
+            localStorage.removeItem('token');
+            window.location.reload();
         }
     }
 

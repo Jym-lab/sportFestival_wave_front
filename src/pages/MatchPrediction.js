@@ -18,7 +18,7 @@ const MatchPrediction = () => {
     const [t_handball, setT_handball] = useState(false);
     const [t_kickbaseball, setT_kickbaseball] = useState(false);
 
-    const TimeOut_basketball = new Date(2023, 8, 25, 10, 49, 59);
+    const TimeOut_basketball = new Date(2023, 8, 24, 10, 49, 59);
     const TimeOut_football = new Date(2023, 8, 25, 16, 19, 59);
     const TimeOut_dodgeball = new Date(2023, 8, 25, 12, 49, 59);
     const TimeOut_soccer = new Date(2023, 8, 25, 13, 29, 59);
@@ -66,6 +66,7 @@ const MatchPrediction = () => {
                         <div className={`flex flex-col justify-center items-center`}>
                             <div className='text-sm text-center'>
                                 <p className='mb-1'>추후 개별 문자로 당첨 결과가 전송될 예정입니다.</p>
+                                <p className='text-xs NanumSquareB text-red-500'>응모하기는 해당 경기 10분 전 마감됩니다.</p>
                                 <p className='text-xs NanumSquareL'>확인 버튼을 누르시면 수정 혹은 재참여가 불가합니다.</p>
                             </div>
                         </div>

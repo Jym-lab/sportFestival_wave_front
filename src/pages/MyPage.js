@@ -23,6 +23,8 @@ const MyPage = () => {
         })
             .catch(error => {
                 console.error(error);
+                localStorage.removeItem('token');
+                window.location.reload();
             })
     }, []);
 
@@ -44,6 +46,8 @@ const MyPage = () => {
                 window.location.href = localStorage.getItem('last')
         } catch (e) {
             console.error(e)
+            localStorage.removeItem('token');
+            window.location.reload();
             //에러 처리
         }
     }

@@ -20,7 +20,13 @@ export const Callback = () => {
                 else
                     window.location.href = '/mypage'
             })
-            .catch(e => console.error(e))
+            .catch(e => {
+                console.error(e)
+                localStorage.removeItem('token');
+                window.location.reload();
+            }
+            )
+
     }
     console.log('에러메시지 출력 후 홈으로 돌아가는 버튼 출력');
     return (
