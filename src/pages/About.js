@@ -27,7 +27,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="NanumSquareR text-xs text-center py-16">
-                        성결대학교 제39대 RE:NEW 총학생회에서 축제를 기획하였습니다.<br />
+                        성결대학교 제39대 RE:NEW 총학생회에서 2023 영암체전을 기획하였습니다.<br />
                         성결대학교 멋쟁이사자처럼 대학 11기에서 웹 사이트를 제작하였습니다.
                     </div>
 
@@ -61,8 +61,8 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                <img className="w-40 mx-auto py-20" src={images.seven_rings} alt="칠륜기" />
-                <ScrollToTop />
+                    <img className="w-40 mx-auto py-20" src={images.seven_rings} alt="칠륜기" />
+                    <ScrollToTop />
                 </div>
             </div>
         </>
