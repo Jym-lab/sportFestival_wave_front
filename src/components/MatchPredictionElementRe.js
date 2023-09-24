@@ -43,9 +43,9 @@ const MatchPredictionElement = ({ title, teamA, teamB }) => {
 
         if (userConfirmed) {
             try {
-                const englishCategory = convertCategoryToEnglish(title);
+                // const englishCategory = convertCategoryToEnglish(title);
                 const formData = {
-                    "category": englishCategory, "predict": buttonIndex
+                    "category": title, "predict": buttonIndex
                 }
                 const response = await authenticate(getToken()).post(`/user/game`, formData);
 
