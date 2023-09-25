@@ -25,17 +25,15 @@ import axios from 'axios';
 import { isMobile } from 'react-device-detect';
 
 function App() {
-  const isOpenInBrowserRequired = () => {
-    return /KAKAOTALK/i.test(navigator.userAgent);
-  }
+  const openInBrowser = () => {
+    window.location.href = 'https://wave-renew.sku-sku.com';
+  };
 
-  const handleOpenInBrowser = () => {
-    window.open('https://wave-renew.sku-sku.com', '_blank');
-  }
-
-  if (isOpenInBrowserRequired()){
-    handleOpenInBrowser();
-  }
+  useEffect(() => {
+    if (isMobile && /KAKAOTALK/i.test(navigator.userAgent)) {
+      openInBrowser();
+    }
+  }, []);
   useEffect(() => {
     const cookie = getCookie('visitor');
     if (!cookie) {
