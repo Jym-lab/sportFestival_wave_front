@@ -22,7 +22,6 @@ import AdminEachgame from './adminPage/AdminEachgame';
 import { useEffect } from 'react';
 import { getCookie, setCookie } from './utils/cookie';
 import axios from 'axios';
-import { isMobile } from 'react-device-detect';
 
 function App() {
   const openInBrowser = () => {
@@ -31,7 +30,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (isMobile && /KAKAOTALK/i.test(navigator.userAgent)) {
+    if (/KAKAOTALK/i.test(navigator.userAgent)) {
       openInBrowser();
     }
   }, []);
