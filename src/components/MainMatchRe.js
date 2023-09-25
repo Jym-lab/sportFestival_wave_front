@@ -73,7 +73,6 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
                 setResult(response.data.result)
             else
                 setResult("진행중");
-            console.log('a')
         } catch (error) {
             console.error(error);
         }

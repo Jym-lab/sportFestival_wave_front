@@ -22,8 +22,20 @@ import AdminEachgame from './adminPage/AdminEachgame';
 import { useEffect } from 'react';
 import { getCookie, setCookie } from './utils/cookie';
 import axios from 'axios';
+import { isMobile } from 'react-device-detect';
 
 function App() {
+  const isOpenInBrowserRequired = () => {
+    return /KAKAOTALK/i.test(navigator.userAgent);
+  }
+
+  const handleOpenInBrowser = () => {
+    window.open('https://wave-renew.sku-sku.com', '_blank');
+  }
+
+  if (isOpenInBrowserRequired()){
+    handleOpenInBrowser();
+  }
   useEffect(() => {
     const cookie = getCookie('visitor');
     if (!cookie) {
