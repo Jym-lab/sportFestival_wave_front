@@ -60,15 +60,33 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
             TimerOn(response.data.start_time);
         } catch (error) {
             console.error(error);
-            localStorage.removeItem('token');
-            window.location.reload();
+        }
+    }
+    const refresh = async () => {
+        try {
+            const englishCategory = convertCategoryToEnglish(category);
+            const response = await APIClient().get(`/game/${englishCategory}`);
+            setOngoing(response.data.is_start);
+            setScoreA(response.data.score_A);
+            setScoreB(response.data.score_B)
+            if (response.data.result !== null)
+                setResult(response.data.result)
+            else
+                setResult("진행중");
+            console.log('a')
+        } catch (error) {
+            console.error(error);
         }
     }
 
     useEffect(() => {
         loading();
         const interval = setInterval(() => TimerOn(), 1000)
-        return () => clearInterval(interval);
+        const refreshInterval = setInterval(() => refresh(), 60000);
+        return () => {
+            clearInterval(interval);
+            clearInterval(refreshInterval);
+        };
     }, []);
 
     return (

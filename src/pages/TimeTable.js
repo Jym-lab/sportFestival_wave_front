@@ -19,8 +19,8 @@ const TimeTable = () => {
                     <div className="NanumSquareR">
                         <TimeTableCircle content={'이벤트 게임 및 프로그램'} color={'orange'} />
                         <TimeTableCircle content={'총학생회 및 단과대학 주관 게임'} color={'green'} />
-                        <TimeTableCircle content={'개막식, 폐막식'} color={'blue'} />
-                        <TimeTableCircle content={'종목별 결승전'} color={'white'} />
+                        <TimeTableCircle content={'개막식, 폐막식'} color={'white'} />
+                        <TimeTableCircle content={'종목별 결승전'} color={'blue'} />
                     </div>
                 </div>
 
