@@ -26,7 +26,13 @@ import { isMobile } from 'react-device-detect';
 
 function App() {
   const openInBrowser = () => {
-    window.location.href = 'https://wave-renew.sku-sku.com';
+    window.location.href = 'kakaotalk://inappbrowser/close';
+    if (navigator.userAgent.match(/iPhone|iPad/i)){
+      console.log("[접속 모바일] + [아이폰]");
+    }
+    else {
+      window.location.href = 'intent://'+ window.location.href.replace(/https?:\/\//i,'')+'#Intent;scheme=http;package=com.android.chrome;end';
+    }
   };
 
   useEffect(() => {
