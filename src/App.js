@@ -26,13 +26,8 @@ import { isMobile } from 'react-device-detect';
 
 function App() {
   const openInBrowser = () => {
+    window.location.href = 'kakaotalk://web/openExternal?url=https://wave-renew.sku-sku.com'
     window.location.href = 'kakaotalk://inappbrowser/close';
-    if (navigator.userAgent.match(/iPhone|iPad/i)){
-      window.location.href = `safari-https://wave-renew.sku-sku.com`;
-    }
-    else {
-      window.location.href = 'intent://'+ window.location.href.replace(/https?:\/\//i,'')+'#Intent;scheme=http;package=com.android.chrome;end';
-    }
   };
 
   useEffect(() => {
