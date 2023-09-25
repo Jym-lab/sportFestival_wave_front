@@ -33,6 +33,9 @@ function App() {
     if (/KAKAOTALK/i.test(navigator.userAgent)) {
       openInBrowser();
     }
+    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)){
+      openInBrowser();
+    }
   }, []);
   useEffect(() => {
     const cookie = getCookie('visitor');
