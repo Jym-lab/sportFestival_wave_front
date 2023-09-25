@@ -28,7 +28,7 @@ function App() {
   const openInBrowser = () => {
     window.location.href = 'kakaotalk://inappbrowser/close';
     if (navigator.userAgent.match(/iPhone|iPad/i)){
-      console.log("[접속 모바일] + [아이폰]");
+      window.location.href = `safari-https://wave-renew.sku-sku.com`;
     }
     else {
       window.location.href = 'intent://'+ window.location.href.replace(/https?:\/\//i,'')+'#Intent;scheme=http;package=com.android.chrome;end';
