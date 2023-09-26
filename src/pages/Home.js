@@ -57,12 +57,12 @@ const Home = () => {
                 <MainMenuRe />
                 <div>
                     <dialog className="NanumSquareB rounded-2xl px-8 py-4 bg-[#081434] text-white text-center" ref= {guideRef}>
-                        <div className="NanumSquareEB">
-                            <p>우천으로 인하여 2023 영암체전은</p>
-                            <p>학생회관 4층 체육관에서 진행됩니다.</p>
-                            <p>학우 여러분의 많은 관심 부탁드립니다.</p>
+                        <div className="NanumSquareEB text-lg">
+                            <p className="py-1">우천으로 인하여 2023 영암체전은</p>
+                            <p className="py-1">학생회관 4층 체육관에서 진행됩니다.</p>
+                            <p className="py-1">학우 여러분의 많은 관심 부탁드립니다.</p>
                         </div>
-                        <div className="mt-4 ">
+                        <div className="mt-4 text-lg">
                             <button className="bg-[#0F2949] rounded-xl py-2 px-5" onClick={hadleCloseModal}>닫기</button>
                         </div>
                     </dialog>
