@@ -91,6 +91,8 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
     return (
         <div>
             <div className='text-center flex flex-col'>
+                <div className={`${category === "발야구" ? '' : 'hidden'} mt-10 NanumSquareB text-red-500`}>우천으로 인하여 발야구 결승은 취소되었습니다.</div>
+
                 <div className={`${ongoing && result === "진행중" ? 'pulsate-fwd' : ''} NanumGothicEB text-center my-8 text-3xl`}>{category}</div>
                 <div className={`${ongoing ? '' : 'notReal'} realTime NanumSquareB`}>
                     {result === "진행중" ? <span className='text-sm'>경기 진행 {`${minute}분 ${second}초`}</span> : ''}
@@ -98,31 +100,36 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
 
                 <div className='w-10/12 mx-auto flex justify-around items-center text-center'>
                     <div className={result === "진행중" ? '' : result ? 'LoseTeam' : ''}>
-                        <div className='team px-5 py-7 mt-6 mx-2'>
-                            <div>
-                                <img className='w-20' src={images[teamA]} alt="임시" />
+                        <div className={`${category === "발야구" ? 'LoseTeam' : ''}`}>
+                            <div className='team px-5 py-7 mt-6 mx-2'>
+                                <div>
+                                    <img className='w-20' src={images[teamA]} alt="임시" />
 
-                                <p className='NanumGothicB text-black pt-3 flex justify-center items-center'>
-                                    {teamA}
-                                    {result === "진행중" ? '' : result ? '' : <img src={images.gold} className='winTeam ml-1' alt="메달" />}
-                                </p>
+                                    <p className='NanumGothicB text-black pt-3 flex justify-center items-center'>
+                                        {teamA}
+                                        {result === "진행중" ? '' : result ? '' : <img src={images.gold} className='winTeam ml-1' alt="메달" />}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className={`${ongoing ? '' : 'notReal'} real realScore NanumSquareEB text-xl`}>
                             <p>{scoreA}</p>
                         </div>
                     </div>
-
-                    <p className='NanumGothicB text-4xl'>VS</p>
+                    <div className={`${category === "발야구" ? 'LoseTeam' : ''}`}>
+                        <p className='NanumGothicB text-4xl'>VS</p>
+                    </div>
 
                     <div className={result === "진행중" ? '' : result ? '' : 'LoseTeam'}>
-                        <div className='team px-5 py-7 mt-6 mx-2'>
-                            <div>
-                                <img className='w-20' src={images[teamB]} alt="임시" />
-                                <p className='NanumGothicB text-black pt-3 flex justify-center items-center'>
-                                    {teamB}
-                                    {result === "진행중" ? '' : result ? <img src={images.gold} className='winTeam ml-1' alt="메달" /> : ''}
-                                </p>
+                        <div className={`${category === "발야구" ? 'LoseTeam' : ''}`}>
+                            <div className='team px-5 py-7 mt-6 mx-2'>
+                                <div>
+                                    <img className='w-20' src={images[teamB]} alt="임시" />
+                                    <p className='NanumGothicB text-black pt-3 flex justify-center items-center'>
+                                        {teamB}
+                                        {result === "진행중" ? '' : result ? <img src={images.gold} className='winTeam ml-1' alt="메달" /> : ''}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className={`${ongoing ? '' : 'notReal'} real realScore NanumSquareEB text-xl`}>
@@ -145,7 +152,7 @@ const MainMatchRe = ({ category, teamA, teamB, time }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
