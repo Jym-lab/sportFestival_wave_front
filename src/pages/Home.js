@@ -2,9 +2,33 @@ import Navbar from "../components/Navbar";
 import { images } from "../utils/images";
 import { useNavbar } from "../utils/navbar-context";
 import MainMenuRe from "../components/MainMenuRe";
+import { useEffect, useRef } from "react";
 
 const Home = () => {
     const { isOpen } = useNavbar();
+    const guideRef = useRef();
+
+    useEffect(() => {
+        const handleClickOutsideModal = (event) => {
+          if (event.target === guideRef.current) {
+            guideRef.current.close();
+          }
+        };
+    
+        document.addEventListener('mousedown', handleClickOutsideModal);
+    
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutsideModal);
+        };
+      }, []);
+
+    useEffect(()=> {
+        guideRef.current.showModal();
+    }, [])
+    const hadleCloseModal = () => {
+        guideRef.current.close()
+    }
+
     return (
         <>
         <div className="about-background">
@@ -31,6 +55,18 @@ const Home = () => {
                     <img className="w-40 fade-in" src={images.seven_rings} alt="칠륜기" style={{ animationDelay: '3.5s' }} />
                 </div>
                 <MainMenuRe />
+                <div>
+                    <dialog className="NanumSquareB rounded-2xl px-8 py-4 bg-[#081434] text-white text-center" ref= {guideRef}>
+                        <div className="NanumSquareEB">
+                            <p>우천으로 인하여 2023 영암체전은</p>
+                            <p>학생회관 4층 체육관에서 진행됩니다.</p>
+                            <p>학우 여러분의 많은 관심 부탁드립니다.</p>
+                        </div>
+                        <div className="mt-4 ">
+                            <button className="bg-[#0F2949] rounded-xl py-2 px-5" onClick={hadleCloseModal}>닫기</button>
+                        </div>
+                    </dialog>
+                </div>
             </div>
         </div>
         </>

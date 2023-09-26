@@ -24,19 +24,6 @@ import { getCookie, setCookie } from './utils/cookie';
 import axios from 'axios';
 
 function App() {
-  const openInBrowser = () => {
-    window.location.href = 'kakaotalk://web/openExternal?url=https://wave-renew.sku-sku.com'
-    window.location.href = 'kakaotalk://inappbrowser/close';
-  };
-
-  useEffect(() => {
-    if (/KAKAOTALK/i.test(navigator.userAgent)) {
-      openInBrowser();
-    }
-    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)){
-      openInBrowser();
-    }
-  }, []);
   useEffect(() => {
     const cookie = getCookie('visitor');
     if (!cookie) {
